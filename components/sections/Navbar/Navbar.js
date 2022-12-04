@@ -3,9 +3,11 @@ import { useTheme } from "next-themes";
 import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
+import GUIcon from "./GUIcon";
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(null);
 
@@ -24,17 +26,18 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    setCurrentTheme(theme === "system" ? systemTheme : theme);
-  }, []);
+    setMounted(true);
+    if (mounted) {
+      setCurrentTheme(theme === "system" ? systemTheme : theme);
+    }
+  }, [mounted]);
   return (
     <>
       <nav className="w-min-screen h-[50px] top-0 sticky z-100 bg-white  dark:bg-black flex justify-between items-center transition-all duration-700 relative">
         <div className="pl-[25px]">
-          <img
-            src="/images/GUIcon.svg"
-            alt="GU Icon"
-            className="z-101 w-[35px] h-[35px]"
-          />
+          <div className="z-101 w-[30px] h-[30px]">
+            <GUIcon />
+          </div>
         </div>
         <div className="positionCenter">
           <ToggleSwitch toggleTheme={toggleTheme} theme={currentTheme} />
