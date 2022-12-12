@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import Layout from "../components/sections/Layout";
+import { appWithTranslation } from "next-i18next";
 
 function MyApp({ Component, pageProps }) {
   const appHeight = () => {
@@ -22,4 +23,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

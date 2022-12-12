@@ -1,9 +1,18 @@
 import React from "react";
 
-const Landing = () => {
+export function getStaticProps({ locale }) {
+  return {
+    props: {
+      locale,
+    },
+  };
+}
+
+const Landing = ({ props }) => {
+  let page;
   return (
-    <div className="min-full-height flex justify-center items-center text-[3rem]">
-      Landing
+    <div className="flex justify-center items-center w-full min-h-screen border-b border-black dark:border-white">
+      landing page
     </div>
   );
 };
