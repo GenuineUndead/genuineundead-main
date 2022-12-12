@@ -21,7 +21,7 @@ const Art = ({ t }) => {
         <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-none font-didot flex flex-col">
           <span>
             {t("aHeading1a")}{" "}
-            <span className="font-teko font-extrabold text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem]">
+            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
               {t("aHeading1b")}{" "}
             </span>
             {t("aHeading1c")}

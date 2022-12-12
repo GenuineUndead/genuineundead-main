@@ -22,7 +22,7 @@ const Ethos = ({ t }) => {
           </span>
           <span>
             {t("eHeading2a")}{" "}
-            <span className="font-teko font-extrabold text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem]">
+            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
               {t("eHeading2b")}
             </span>
           </span>

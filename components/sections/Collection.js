@@ -16,7 +16,7 @@ const Collection = ({ t }) => {
         <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-none font-didot flex flex-col">
           <span>
             {t("cHeading1a")} <i>{t("cHeading1b")} </i>
-            <span className="font-teko font-extrabold text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem]">
+            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
               {t("cHeading1c")}{" "}
             </span>
             {t("cHeading1d")}

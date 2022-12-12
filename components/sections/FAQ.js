@@ -42,7 +42,7 @@ const FAQ = () => {
       <div className="flex flex-col items-center w-full my-24 ">
         <header className="mb-[3rem] flex justify-center">
           <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-none font-didot flex">
-            <span className="font-teko font-extrabold text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem]">
+            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.5rem]">
               FA
             </span>
             QS
@@ -85,7 +85,7 @@ const AccordionItemMotion = ({ question, answer, idx, questionsLength }) => {
     if (mounted) {
       setCurrentTheme(theme === "system" ? systemTheme : theme);
     }
-  }, [mounted]);
+  }, [mounted, theme]);
   return (
     <motion.div
       className={` w-[90%] md:w-[70%] border-t  ${
