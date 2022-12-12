@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
       <main className="overflow-x-hidden bg-white text-black dark:bg-black dark:text-white px-[3.2rem] transition-all duration-700 mt-[-50px] z-10">
         {children}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

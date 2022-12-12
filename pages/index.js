@@ -12,7 +12,11 @@ import Footer from "../components/sections/Footer";
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["home", "navigation"])),
+      ...(await serverSideTranslations(locale, [
+        "home",
+        "navigation",
+        "common",
+      ])),
       locale,
     },
   };
@@ -116,13 +120,11 @@ export default function Home(props) {
         </div>
       </div> */}
       <Landing pageRefs={{ landingRef, titleRef }} />
-
       <Collection />
       <Art />
       <Story />
       <Ethos />
       <FAQ />
-      {/* <Footer /> */}
     </div>
   );
 }
