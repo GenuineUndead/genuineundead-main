@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Footer = ({ t }) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row lg:justify-between pt-[1rem] pb-[5rem] text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem]">
+    <div className="w-full flex flex-col lg:flex-row lg:justify-between pt-[1rem] pb-[5rem] text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-white dark:bg-black transition-all duration-700">
       <div>@ {t("genuineUndead")} 2023</div>
       <div>
         <ul>
