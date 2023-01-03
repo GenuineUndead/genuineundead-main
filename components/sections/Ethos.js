@@ -13,7 +13,7 @@ as a whole.`;
 
 const Ethos = ({ t }) => {
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white">
+    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white">
       <div className="w-full lg:w-[55%]"></div>
       <div className="w-full lg:w-[45%] min-h-fu5ll mt-[50px] flex flex-col justify-center gap-[3rem]">
         <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-none font-didot flex flex-col">
@@ -32,7 +32,7 @@ const Ethos = ({ t }) => {
           {t("ourEthos")}
         </MainButton>
       </div>
-    </div>
+    </section>
   );
 };
 

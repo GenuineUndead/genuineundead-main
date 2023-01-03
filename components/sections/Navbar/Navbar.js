@@ -33,7 +33,10 @@ const Navbar = () => {
   }, [mounted]);
   return (
     <>
-      <nav className="w-min-screen h-[50px] top-0 sticky bg-white dark:bg-black flex justify-between items-center transition-all duration-700 relative">
+      <nav
+        id="navbar"
+        className="w-min-screen h-[50px] top-0 sticky bg-white dark:bg-black flex justify-between items-center transition-all duration-700 relative above-all"
+      >
         <div className="pl-[2.5rem] md:pl-[3.2rem]">
           <div className="z-101 w-[30px] h-[30px]">
             <GUIcon />

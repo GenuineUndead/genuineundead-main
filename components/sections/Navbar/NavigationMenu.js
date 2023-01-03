@@ -65,7 +65,7 @@ const NavigationMenu = ({ menuOpen, t }) => {
                     whileTap={{ scale: 0.95 }}
                     i={i}
                     key={i}
-                    className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer ${
+                    className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot ${
                       router.pathname === link.path ? "italic underline" : ""
                     }`}
                   >

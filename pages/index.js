@@ -111,15 +111,9 @@ export default function Home(props) {
   }, []);
 
   return (
-    <div>
-      {/* <div className="w-screen min-h-[400vh] bg-black">
-        <div className="w-screen h-[500px] bg-red-500 fixed top-12">
-          <h1>title 1</h1>
-          <h1>title 2</h1>
-          {translate("home:landing-heading-1")}
-        </div>
-      </div> */}
+    <div className="page-container">
       <Landing pageRefs={{ landingRef, titleRef }} />
+      <div className="min-h-[200vh]"></div>
       <Collection />
       <Art />
       <Story />
