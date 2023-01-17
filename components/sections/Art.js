@@ -1,6 +1,8 @@
 import React from "react";
 import MainButton from "../MainButton";
+import MainParagraphWrapper from "../MainParagraphWrapper";
 import { withTranslation } from "next-i18next";
+import MainHeaderWrapper from "../MainHeaderWrapper";
 
 //OVER 200 HAND DRAWN TRAITS
 let content = `OVER 200 HAND \n DRAWN TRAITS`;
@@ -15,10 +17,10 @@ makes GU the best pixel art collection to ever exist.`;
 
 const Art = ({ t }) => {
   return (
-    <div className="min-h-screen w-full flex flex-col  lg:flex-row border-b border-black dark:border-white ">
+    <section className="min-h-screen w-full flex flex-col  lg:flex-row border-b border-black dark:border-white ">
       <div className="w-full lg:w-[55%] min-h-[50%]"></div>
-      <div className="w-full min-h-[50%] lg:w-[45%] lg:min-h-full mt-[50px] flex flex-col justify-center gap-[3rem]">
-        <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-none font-didot flex flex-col">
+      <div className="w-full min-h-[50%] lg:w-[45%] lg:min-h-full mt-[50px] flex flex-col justify-center">
+        <MainHeaderWrapper>
           <span>
             {t("aHeading1a")}{" "}
             <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
@@ -30,13 +32,13 @@ const Art = ({ t }) => {
             <i>{t("aHeading2a")} </i>
             {t("aHeading2b")}
           </span>
-        </h2>
-        <p className="text-[.9rem] w-[90%] md:w-[75%]">{t("aContent")}</p>
+        </MainHeaderWrapper>
+        <MainParagraphWrapper>{t("aContent")}</MainParagraphWrapper>
         <MainButton link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221">
           {t("theArt")}
         </MainButton>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,8 @@
 import React from "react";
 import MainButton from "../MainButton";
 import { withTranslation } from "next-i18next";
+import MainHeaderWrapper from "../MainHeaderWrapper";
+import MainParagraphWrapper from "../MainParagraphWrapper";
 
 const heading1a = "HERE TO";
 const heading1b = "MAKE";
@@ -15,8 +17,9 @@ const Ethos = ({ t }) => {
   return (
     <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white">
       <div className="w-full lg:w-[55%]"></div>
-      <div className="w-full lg:w-[45%] min-h-fu5ll mt-[50px] flex flex-col justify-center gap-[3rem]">
-        <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-none font-didot flex flex-col">
+      <div className="w-full lg:w-[45%] min-h-fu5ll mt-[50px] flex flex-col justify-center">
+        <MainHeaderWrapper>
+          {" "}
           <span>
             {t("eHeading1a")} <i>{t("eHeading1b")}</i>
           </span>
@@ -26,8 +29,8 @@ const Ethos = ({ t }) => {
               {t("eHeading2b")}
             </span>
           </span>
-        </h2>
-        <p className="text-[.9rem] w-[85%] md:w-[70%]">{t("eContent")}</p>
+        </MainHeaderWrapper>{" "}
+        <MainParagraphWrapper>{t("eContent")}</MainParagraphWrapper>
         <MainButton link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221">
           {t("ourEthos")}
         </MainButton>

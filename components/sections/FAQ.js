@@ -98,10 +98,12 @@ const AccordionItemMotion = ({ question, answer, idx, questionsLength }) => {
           onClick={() => setIsOpen(!isOpen)}
           className="w-full flex py-[1rem] text-[.9rem] md:text-[1rem]"
         >
-          <span className="w-[10%] font-didot mr-[5px]">
+          <span className="w-[10%] font-didot mr-[5px] text-[1.25rem]">
             <i>0{idx + 1}</i>
           </span>
-          <span className="w-full">{question}</span>
+          <span className="w-full text-[1.25rem]">
+            {question.toUpperCase()}
+          </span>
           <span className="w-[5%] ml-[5px] cursor-pointer flex my-auto h-full">
             {isOpen ? <FaMinus /> : <FaPlus />}
           </span>

@@ -5,7 +5,7 @@ import { withTranslation } from "next-i18next";
 const MainButton = ({ link, children }) => {
   return (
     <motion.button
-      className="border border-black dark:border-white py-[12px] text-[.9rem] w-[160px]"
+      className="border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px]"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
