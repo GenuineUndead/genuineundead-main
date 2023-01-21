@@ -21,12 +21,14 @@ all sharing the same ethos of creativity, decentralization, sustainability, incl
 
 const Story = ({ t }) => {
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden">
-      <div className="w-full min-h-[50%] lg:w-[55%] lg:min-h-full mt-[50px] flex flex-col justify-center">
+    <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden relative">
+      <div className="w-full min-h-[50%] lg:ml-[10%] lg:w-[70%] lg:min-h-full mt-[50px] flex flex-col justify-center z-10">
         <MainHeaderWrapper>
-          <span>{t("sHeading1")}</span>
           <span>
-            {t("sHeading2a")} <TekoHeading> {t("sHeading2b")}</TekoHeading> 3
+            {t("sHeading1")} <i>{t("sHeading1a")}</i>{" "}
+          </span>
+          <span>
+            {t("sHeading2a")} <TekoHeading> {t("sHeading2b")}</TekoHeading>3
           </span>
         </MainHeaderWrapper>{" "}
         <MainParagraphWrapper>{t("sContent")}</MainParagraphWrapper>
@@ -35,14 +37,14 @@ const Story = ({ t }) => {
         </MainButton>
       </div>
       <div
-        className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/boney-light.png')] dark:bg-[url('/images/background/boney.png')] bg-cover bg-center flex items-center justify-center`}
+        className={`w-full lg:w-[50%] min-h-[50%] absolute top-0 right-0 h-full z-1 bg-[url('/images/background/boney-light.png')] dark:bg-[url('/images/background/boney.png')] bg-cover bg-center flex items-center justify-center`}
       >
         <Parallax speed={-20}>
           {" "}
           <Image
             src="/images/gu/miner.png"
-            width={600}
-            height={600}
+            width={550}
+            height={550}
             alt="Miner"
           />{" "}
         </Parallax>

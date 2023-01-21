@@ -3,6 +3,8 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import styles from "../../styles/FAQ.module.css";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import MainHeaderWrapper from "../MainHeaderWrapper";
+import TekoHeading from "../TekoHeading";
 
 const heading1a = "FA";
 const heading1b = "QS";
@@ -40,14 +42,10 @@ const FAQ = () => {
       className="flex flex-col h-full w-full border-b border-black dark:border-white"
     >
       <div className="flex flex-col items-center w-full my-24 ">
-        <header className="mb-[3rem] flex justify-center">
-          <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-none font-didot flex">
-            <span className="font-teko font-extrabold text-[2.5rem] md:text-[3.7rem] lg:text-[4.5rem]">
-              FA
-            </span>
-            QS
-          </h2>
-        </header>
+        <h2 className="text-[2rem] md:text-[4rem] lg:text-[5.5rem] leading-none font-didot flex mb-[80px]">
+          <TekoHeading>FA</TekoHeading>
+          QS
+        </h2>
         <div className="flex justify-center w-full">
           <Accordion faqQuestions={hiddenTexts} />
         </div>

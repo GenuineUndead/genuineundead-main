@@ -20,7 +20,7 @@ makes GU the best pixel art collection to ever exist.`;
 
 const Art = ({ t }) => {
   return (
-    <section className="min-h-screen w-full flex flex-col  lg:flex-row border-b border-black dark:border-white overflow-hidden">
+    <section className="min-h-screen w-full flex flex-col  lg:flex-row gap-[2.5rem] border-b border-black dark:border-white overflow-hidden">
       <div
         className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/golem-light.png')] dark:bg-[url('/images/background/golem.png')] bg-cover bg-center flex items-center justify-center`}
       >
@@ -28,8 +28,8 @@ const Art = ({ t }) => {
           {" "}
           <Image
             src="/images/gu/viking-rose.png"
-            width={600}
-            height={600}
+            width={550}
+            height={550}
             alt="Viking"
           />{" "}
         </Parallax>

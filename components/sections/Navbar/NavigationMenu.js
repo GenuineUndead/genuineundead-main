@@ -62,17 +62,15 @@ const NavigationMenu = ({ menuOpen, t }) => {
                 className="h-full flex flex-col justify-around"
               >
                 {pageLinks.map((link, i) => (
-                  <motion.li
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <li
                     i={i}
                     key={i}
-                    className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot ${
-                      router.pathname === link.path ? "italic underline" : ""
+                    className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                      router.pathname === link.path ? "underline" : ""
                     }`}
                   >
                     {t(`${link.i18n}`)}
-                  </motion.li>
+                  </li>
                 ))}
               </motion.ul>
             </div>
@@ -80,9 +78,7 @@ const NavigationMenu = ({ menuOpen, t }) => {
             <div className="h-[35vh] w-screen md:w-full flex items-center justify-center md:justify-start">
               <ul>
                 {socialLinks.map((link, i) => (
-                  <motion.li
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <li
                     i={i}
                     key={i}
                     className="text-[2vh] text-center md:text-left text-white dark:text-black cursor-pointer text-center md:text-left"
@@ -90,7 +86,7 @@ const NavigationMenu = ({ menuOpen, t }) => {
                     <a href={link.link} target="_blank">
                       {t(`${link.i18n}`)}
                     </a>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
