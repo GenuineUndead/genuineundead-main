@@ -20,7 +20,7 @@ const Ethos = ({ t }) => {
   return (
     <section className="min-h-screen w-full flex flex-col lg:flex-row gap-[2.5rem] border-b border-black dark:border-white overflow-hidden">
       <div
-        className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/zombie-light.png')] dark:bg-[url('/images/background/zombie.png')] bg-cover bg-center flex items-center justify-center transition-all duration-700 relative`}
+        className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/zombie-light.png')] dark:bg-[url('/images/background/zombie.png')] bg-cover bg-center flex items-center justify-center relative`}
       >
         <Parallax speed={-20}>
           {" "}
