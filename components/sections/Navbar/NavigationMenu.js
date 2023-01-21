@@ -51,7 +51,7 @@ const NavigationMenu = ({ menuOpen, t }) => {
           exit={{ opacity: 0 }}
           className={`min-full-height fixed bg-black dark:bg-white transition ease-in-out duration-700 absolute w-screen top-0 md:w-[500px] md:pr-[20%] md:right-0 ${
             menuOpen ? "opacity-100" : "opacity-0 "
-          } mt-[50px] overflow-hidden`}
+          } overflow-hidden`}
         >
           <div className="flex flex-col h-full p-0 md:pl-[3rem] md:pt-[2rem]">
             <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start">

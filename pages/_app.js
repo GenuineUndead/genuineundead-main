@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import Layout from "../components/sections/Layout";
 import { appWithTranslation } from "next-i18next";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function MyApp({ Component, pageProps }) {
   const appHeight = () => {
@@ -15,11 +16,13 @@ function MyApp({ Component, pageProps }) {
     appHeight();
   }, []);
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <ParallaxProvider>
+      <ThemeProvider enableSystem={true} attribute="class">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </ParallaxProvider>
   );
 }
 

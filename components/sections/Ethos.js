@@ -3,6 +3,9 @@ import MainButton from "../MainButton";
 import { withTranslation } from "next-i18next";
 import MainHeaderWrapper from "../MainHeaderWrapper";
 import MainParagraphWrapper from "../MainParagraphWrapper";
+import TekoHeading from "../TekoHeading";
+import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
 
 const heading1a = "HERE TO";
 const heading1b = "MAKE";
@@ -15,19 +18,28 @@ as a whole.`;
 
 const Ethos = ({ t }) => {
   return (
-    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white">
-      <div className="w-full lg:w-[55%]"></div>
-      <div className="w-full lg:w-[45%] min-h-fu5ll mt-[50px] flex flex-col justify-center">
+    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden">
+      <div
+        className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/zombie-light.png')] dark:bg-[url('/images/background/zombie.png')] bg-cover bg-center flex items-center justify-center`}
+      >
+        <Parallax speed={-20}>
+          {" "}
+          <Image
+            src="/images/gu/zombie.png"
+            width={600}
+            height={600}
+            alt="Viking"
+          />{" "}
+        </Parallax>
+      </div>{" "}
+      <div className="w-full lg:w-[45%] min-h-full mt-[50px] flex flex-col justify-center">
         <MainHeaderWrapper>
           {" "}
           <span>
             {t("eHeading1a")} <i>{t("eHeading1b")}</i>
           </span>
           <span>
-            {t("eHeading2a")}{" "}
-            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
-              {t("eHeading2b")}
-            </span>
+            {t("eHeading2a")} <TekoHeading>{t("eHeading2b")}</TekoHeading>{" "}
           </span>
         </MainHeaderWrapper>{" "}
         <MainParagraphWrapper>{t("eContent")}</MainParagraphWrapper>

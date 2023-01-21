@@ -3,6 +3,9 @@ import MainButton from "../MainButton";
 import MainParagraphWrapper from "../MainParagraphWrapper";
 import { withTranslation } from "next-i18next";
 import MainHeaderWrapper from "../MainHeaderWrapper";
+import TekoHeading from "../TekoHeading";
+import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
 
 //OVER 200 HAND DRAWN TRAITS
 let content = `OVER 200 HAND \n DRAWN TRAITS`;
@@ -17,15 +20,24 @@ makes GU the best pixel art collection to ever exist.`;
 
 const Art = ({ t }) => {
   return (
-    <section className="min-h-screen w-full flex flex-col  lg:flex-row border-b border-black dark:border-white ">
-      <div className="w-full lg:w-[55%] min-h-[50%]"></div>
+    <section className="min-h-screen w-full flex flex-col  lg:flex-row border-b border-black dark:border-white overflow-hidden">
+      <div
+        className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/golem-light.png')] dark:bg-[url('/images/background/golem.png')] bg-cover bg-center flex items-center justify-center`}
+      >
+        <Parallax speed={-20}>
+          {" "}
+          <Image
+            src="/images/gu/viking-rose.png"
+            width={600}
+            height={600}
+            alt="Viking"
+          />{" "}
+        </Parallax>
+      </div>
       <div className="w-full min-h-[50%] lg:w-[45%] lg:min-h-full mt-[50px] flex flex-col justify-center">
         <MainHeaderWrapper>
           <span>
-            {t("aHeading1a")}{" "}
-            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
-              {t("aHeading1b")}{" "}
-            </span>
+            {t("aHeading1a")} <TekoHeading> {t("aHeading1b")} </TekoHeading>{" "}
             {t("aHeading1c")}
           </span>
           <span>
@@ -33,7 +45,9 @@ const Art = ({ t }) => {
             {t("aHeading2b")}
           </span>
         </MainHeaderWrapper>
-        <MainParagraphWrapper>{t("aContent")}</MainParagraphWrapper>
+        <MainParagraphWrapper width="w-[90%] lg:w-[80%]">
+          {t("aContent")}
+        </MainParagraphWrapper>
         <MainButton link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221">
           {t("theArt")}
         </MainButton>

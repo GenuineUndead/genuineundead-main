@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import MainButton from "../MainButton";
 import { withTranslation } from "next-i18next";
 import MainHeaderWrapper from "../MainHeaderWrapper";
+import TekoHeading from "../TekoHeading";
 
 const Collection = ({ t }) => {
   return (
@@ -11,10 +12,7 @@ const Collection = ({ t }) => {
           {" "}
           <span>
             {t("cHeading1a")} <i>{t("cHeading1b")} </i>
-            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
-              {t("cHeading1c")}{" "}
-            </span>
-            {t("cHeading1d")}
+            <TekoHeading>{t("cHeading1c")} </TekoHeading> {t("cHeading1d")}
           </span>
           <span>{t("cHeading2")}</span>
           <span>{t("cHeading3")}</span>

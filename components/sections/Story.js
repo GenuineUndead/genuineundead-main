@@ -3,6 +3,9 @@ import MainButton from "../MainButton";
 import MainParagraphWrapper from "../MainParagraphWrapper";
 import { withTranslation } from "next-i18next";
 import MainHeaderWrapper from "../MainHeaderWrapper";
+import TekoHeading from "../TekoHeading";
+import { Parallax } from "react-scroll-parallax";
+import Image from "next/image";
 
 let heading1 = `A PIVOTAL `;
 let heading2a = `MOMENT IN`;
@@ -18,16 +21,12 @@ all sharing the same ethos of creativity, decentralization, sustainability, incl
 
 const Story = ({ t }) => {
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white">
+    <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden">
       <div className="w-full min-h-[50%] lg:w-[55%] lg:min-h-full mt-[50px] flex flex-col justify-center">
         <MainHeaderWrapper>
           <span>{t("sHeading1")}</span>
           <span>
-            {t("sHeading2a")}{" "}
-            <span className="font-teko font-extrabold text-[2.7rem] md:text-[3.7rem] lg:text-[4.7rem]">
-              {t("sHeading2b")}
-            </span>
-            3
+            {t("sHeading2a")} <TekoHeading> {t("sHeading2b")}</TekoHeading> 3
           </span>
         </MainHeaderWrapper>{" "}
         <MainParagraphWrapper>{t("sContent")}</MainParagraphWrapper>
@@ -35,7 +34,19 @@ const Story = ({ t }) => {
           {t("ourStory")}
         </MainButton>
       </div>
-      <div className="w-full md:w-[45%]"></div>
+      <div
+        className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/boney-light.png')] dark:bg-[url('/images/background/boney.png')] bg-cover bg-center flex items-center justify-center`}
+      >
+        <Parallax speed={-20}>
+          {" "}
+          <Image
+            src="/images/gu/miner.png"
+            width={600}
+            height={600}
+            alt="Miner"
+          />{" "}
+        </Parallax>
+      </div>{" "}
     </div>
   );
 };
