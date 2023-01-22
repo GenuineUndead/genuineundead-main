@@ -24,17 +24,16 @@ const Art = ({ t }) => {
       <div
         className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/golem-light.png')] dark:bg-[url('/images/background/golem.png')] bg-cover bg-center flex items-center justify-center`}
       >
-        <Parallax speed={-20}>
+        <Parallax speed={-20} className="w-full flex justify-center">
           {" "}
-          <Image
+          <img
             src="/images/gu/viking-rose.png"
-            width={550}
-            height={550}
+            className="w-[60%] aspect-square"
             alt="Viking"
           />{" "}
         </Parallax>
       </div>
-      <div className="w-full min-h-[50%] lg:w-[45%] lg:min-h-full mt-[50px] flex flex-col justify-center">
+      <div className="w-full min-h-[50%] lg:w-[45%] lg:min-h-full flex flex-col justify-center my-[50px] text-container relative">
         <MainHeaderWrapper>
           <span>
             {t("aHeading1a")} <TekoHeading> {t("aHeading1b")} </TekoHeading>{" "}

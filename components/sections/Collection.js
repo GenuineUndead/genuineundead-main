@@ -7,7 +7,7 @@ import TekoHeading from "../TekoHeading";
 const Collection = ({ t }) => {
   return (
     <section className="min-h-screen w-full flex border-b border-t border-black dark:border-white">
-      <div className="w-full md:w-[90%] min-h-full mt-[50px] flex flex-col justify-center gap-[3rem]">
+      <div className="w-full md:w-[90%] min-h-full flex flex-col justify-center gap-[3rem] collection-container relative overflow-hidden">
         <MainHeaderWrapper>
           {" "}
           <span>

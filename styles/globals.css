@@ -91,6 +91,54 @@ input:checked ~ .dot {
 .white-border {
   border: 1px solid #f8f8f4;
 }
+.text-container,
+.collection-container {
+  padding: 150px 0px;
+}
+
+.text-container::before,
+.text-container::after {
+  content: "";
+  position: absolute;
+  left: 25%; /* Adjust as needed */
+  transform: translateX(
+    -50%
+  ); /* This will center the line on the left property*/
+  width: 1px; /* Adjust as needed */
+  background-color: white; /* Adjust as needed */
+}
+
+.collection-container::before,
+.collection-container::after {
+  content: "";
+  position: absolute;
+  left: 25%; /* Adjust as needed */
+  transform: translateX(
+    -50%
+  ); /* This will center the line on the left property*/
+  width: 1px; /* Adjust as needed */
+  background-color: white;
+}
+
+.collection-container::before {
+  top: -200px; /* Adjust as needed */
+  height: 350px;
+}
+
+.collection-container::after {
+  bottom: -200px; /* Adjust as needed */
+  height: 350px; /* This will make the line go from bottom to top*/
+}
+
+.text-container::before {
+  top: -200px; /* Adjust as needed */
+  height: 300px; /* This will make the line go from top to bottom*/
+}
+
+.text-container::after {
+  bottom: -200px; /* Adjust as needed */
+  height: 300px; /* This will make the line go from bottom to top*/
+}
 
 /* //SCROLL TRIGGER TESTING */
 .smooth-scroller {
