@@ -3,12 +3,13 @@ import { useIsomorphicLayoutEffect } from "../../helpers/isomorphicEffect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTheme } from "next-themes";
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 function Landing() {
   const { systemTheme, theme } = useTheme();
-
   const [width, setWidth] = useState(null);
+  const [gImage, setGImage] = useState(null);
+  const [uImage, setUImage] = useState(null);
   const genuine = useRef(null);
   const undead = useRef(null);
   const pinTarget = useRef(null);
@@ -24,7 +25,6 @@ function Landing() {
 
   useEffect(() => {
     const pt = pinTarget.current;
-
     const ctx = gsap.context(() => {
       // window.addEventListener("resize", appWidth);
       // appWidth();
@@ -39,30 +39,29 @@ function Landing() {
           end: "+=400% bottom",
           markers: true,
           pin: true,
+          pinSpacing: false,
           scrub: true,
         },
       });
       tl.add("start");
       tl.fromTo(g, { x: 0 }, { x: 1500, duration: 3 }, "start");
       tl.fromTo(u, { x: 0 }, { x: -1500, duration: 3 }, "start");
-
-      var tl2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: pt,
-          end: "+=200% bottom",
-          markers: true,
-          pin: true,
-          scrub: true,
-        },
-      });
-
-      tl2.add("startImage");
-      tl2.fromTo(imgDiv1, { y: 0 }, { y: -2000, duration: 3 }, "startImage");
-      tl2.fromTo(imgDiv2, { y: 0 }, { y: 2000, duration: 3 }, "startImage");
+      tl.fromTo(imgDiv1, { y: 0 }, { y: -2000, duration: 3 }, "start");
+      tl.fromTo(imgDiv2, { y: 0 }, { y: 2000, duration: 3 }, "start");
     }, pt); // <- Scope!
 
     return () => ctx.revert();
   }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      setGImage("/images/animation/genuine1.svg");
+      setUImage("/images/animation/undead1.svg");
+    } else {
+      setGImage("/images/animation/genuine2.svg");
+      setUImage("/images/animation/undead2.svg");
+    }
+  }, [theme]);
   return (
     <div ref={main}>
       <div
@@ -70,24 +69,19 @@ function Landing() {
         className="relative pin-target min-h-screen w-full flex flex-col items-center justify-center overflow-y-hidden"
       >
         <img
-          // src={`/images/animation/${
-          //   theme === "dark" ? "genuine1" : "genuine2"
-          // }.svg`}
-          src="/images/animation/genuine1.svg"
+          src={gImage}
           alt="GENUINE"
-          className="w-[80%] text-center mb-[5px]"
+          className="w-[80%] text-center mb-[5px] z-10"
           ref={genuine}
         />
         <img
-          // src={`/images/animation/${
-          //   theme === "dark" ? "undead1" : "undead2"
-          // }.svg`}
-          src="/images/animation/undead1.svg"
-          alt="GENUINE"
-          className="w-[80%] text-center mt-[5px]"
+          src={uImage}
+          alt="UNDEAD"
+          className="w-[80%] text-center mt-[5px] z-5"
           ref={undead}
         />
         <div
+          id="rightSideImages"
           className="absolute bottom-[-110%] right-[5%] flex flex-col gap-[225px]"
           ref={imageDiv1}
         >
@@ -105,6 +99,7 @@ function Landing() {
           />
         </div>
         <div
+          id="leftSideImages"
           className="absolute top-[-110%] left-[5%] flex flex-col gap-[225px]"
           ref={imageDiv2}
         >
