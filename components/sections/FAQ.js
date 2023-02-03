@@ -39,7 +39,7 @@ const FAQ = () => {
   return (
     <section
       id="faqs"
-      className="flex flex-col h-full w-full border-b border-black dark:border-white"
+      className="flex flex-col h-full w-full border-b border-black dark:border-white px-[3.2rem]"
     >
       <div className="flex flex-col items-center w-full my-24 ">
         <h2 className="text-[2rem] md:text-[4rem] lg:text-[5.5rem] leading-none font-didot flex mb-[80px]">

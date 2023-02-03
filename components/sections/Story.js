@@ -21,7 +21,7 @@ all sharing the same ethos of creativity, decentralization, sustainability, incl
 
 const Story = ({ t }) => {
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden relative">
+    <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden relative px-[3.2rem]">
       <div className="w-full min-h-[50%] lg:ml-[10%] lg:w-[70%] lg:min-h-full my-[50px] flex flex-col justify-center z-10 relative text-container">
         <MainHeaderWrapper>
           <span>

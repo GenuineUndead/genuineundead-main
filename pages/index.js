@@ -7,6 +7,7 @@ import Art from "../components/sections/Art";
 import Story from "../components/sections/Story";
 import Ethos from "../components/sections/Ethos";
 import FAQ from "../components/sections/FAQ";
+import Carousel from "../components/sections/Carousel";
 import Footer from "../components/sections/Footer";
 
 export async function getStaticProps({ locale }) {
@@ -30,7 +31,8 @@ export default function Home(props) {
   return (
     <div className="page-container">
       <Landing pageRefs={{ landingRef, titleRef }} />
-      <div className="min-h-[200vh]"></div>
+      {/* <div className="min-h-[200vh]"></div> */}
+      {/* <Carousel /> */}
       <Collection />
       <Art />
       <Story />
