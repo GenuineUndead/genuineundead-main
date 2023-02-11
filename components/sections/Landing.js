@@ -38,7 +38,7 @@ function Landing() {
         scrollTrigger: {
           trigger: pt,
           end: "+=400% bottom",
-          markers: true,
+          markers: false,
           pin: true,
           pinSpacing: true,
           scrub: true,
@@ -48,29 +48,29 @@ function Landing() {
       tl.fromTo(
         g,
         { x: 0 },
-        { x: window.innerWidth + 200, duration: 3 },
+        { x: window.innerWidth + 700, duration: 3 },
         "start"
       );
       tl.fromTo(
         u,
         { x: 0 },
-        { x: -(window.innerWidth + 200), duration: 3 },
+        { x: -(window.innerWidth + 700), duration: 3 },
         "start"
       );
       tl.fromTo(
         imgDiv2,
         { y: 0 },
-        { y: -(window.innerHeight + 1500), duration: 3 },
+        { y: -(window.innerHeight + 2000), duration: 3 },
         "start"
       );
       tl.fromTo(
         imgDiv1,
         { y: 0 },
-        { y: window.innerHeight + 1500, duration: 3 },
+        { y: window.innerHeight + 2000, duration: 3 },
         "start"
       );
-      tl.fromTo(rs, { opacity: 0 }, { opacity: 1, delay: -0.5, duration: 0.3 });
-      tl.fromTo(rs, { scale: 0.1 }, { scale: 0.9, duration: 1 });
+      tl.fromTo(rs, { opacity: 0 }, { opacity: 1, delay: -1.5, duration: 0.3 });
+      tl.fromTo(rs, { scale: 0.1 }, { scale: 0.9, delay: -1, duration: 2 });
     }, pt);
 
     return () => ctx.revert();
@@ -90,31 +90,32 @@ function Landing() {
     <div ref={main}>
       <div
         ref={pinTarget}
-        className="relative pin-target min-h-screen w-full flex flex-col items-center justify-center overflow-y-hidden"
+        className="relative pin-target min-h-screen w-full flex flex-col items-center justify-center overflow-hidden"
       >
         <img
           src={gImage}
           alt="GENUINE"
-          className="h-[18%] w-full text-center mb-[5px] z-10"
+          className="h-[4.5%] md:h-[7%] lg:h-[18%] text-center mb-[5px] z-10"
           ref={genuine}
         />
         <img
           src={uImage}
           alt="UNDEAD"
-          className="h-[18%] text-center mt-[5px] z-5"
+          className="h-[4.5%] md:h-[7%] lg:h-[18%] text-center mt-[5px] z-5"
           ref={undead}
         />
         <div>
           <h1
             ref={riseAndShine}
-            className="positionCenter opactiy-0 w-screen text-center font-didot"
+            className="positionCenter opactiy-0 w-screen text-center font-didot text-[10vw]"
           >
-            RISE AND SHINE
+            <span className="font-teko font-bold text-[11vw]">RISE</span>{" "}
+            <i>AND</i> SHINE
           </h1>
         </div>
         <div
           id="rightSideImages"
-          className={`absolute top-[calc(-100vw_+_17vw)] xl:top-[calc(-100vw_+_25vw)] xxl:top-[calc(-100vw_+_32vw)] right-[20%] flex flex-col gap-[250px] w-[20vw]`}
+          className={`absolute top-[-200vh] right-[8%] lg:right-[20%] flex flex-col gap-[250px] w-[40vw] md:w-[30vw] lg:w-[20vw]`}
           ref={imageDiv1}
         >
           <img
@@ -132,7 +133,7 @@ function Landing() {
         </div>
         <div
           id="leftSideImages"
-          className="absolute bottom-[calc(-100vw_+_17vw)] xl:bottom-[calc(-100vw_+_25vw)] xxl:bottom-[calc(-100vw_+_30vw)] left-[20%] flex flex-col gap-[250px] w-[20vw]"
+          className="absolute bottom-[-200vh] left-[8%] lg:left-[20%] flex flex-col gap-[250px] w-[40vw] md:w-[30vw] lg:w-[20vw]"
           ref={imageDiv2}
         >
           <img

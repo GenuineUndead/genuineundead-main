@@ -20,11 +20,11 @@ makes GU the best pixel art collection to ever exist.`;
 
 const Art = ({ t }) => {
   return (
-    <section className="min-h-screen w-full flex flex-col  lg:flex-row gap-[2.5rem] border-b border-black dark:border-white overflow-hidden">
+    <section className="min-h-[100vh] lg:min-h-screen w-full flex flex-col lg:flex-row lg:gap-[2.5rem] border-b border-black dark:border-white overflow-hidden">
       <div
-        className={`w-full lg:w-[55%] min-h-[50%] bg-[url('/images/background/golem-light.png')] dark:bg-[url('/images/background/golem.png')] bg-cover bg-center flex items-center justify-center`}
+        className={`w-full lg:w-[50%] lg:min-h-[50%] bg-[url('/images/background/golem-light.png')] dark:bg-[url('/images/background/golem.png')] bg-cover bg-center flex items-center justify-center flex-1`}
       >
-        <Parallax speed={-20} className="w-full flex justify-center">
+        <Parallax speed={-20} className="w-full hidden lg:flex justify-center">
           {" "}
           <img
             src="/images/gu/viking-rose.png"
@@ -32,8 +32,13 @@ const Art = ({ t }) => {
             alt="Viking"
           />{" "}
         </Parallax>
+        <img
+          src="/images/gu/viking-rose.png"
+          className="w-[70%] aspect-square lg:hidden"
+          alt="Viking"
+        />{" "}
       </div>
-      <div className="w-full min-h-[50%] lg:w-[45%] lg:min-h-full flex flex-col justify-center my-[50px] text-container relative">
+      <div className="w-full h-[40%] lg:min-h-[50%] lg:w-[50%] lg:min-h-full flex flex-col justify-center lg:my-[50px] text-container relative px-[1.6rem] pb-[100px] mt-[20px]">
         <MainHeaderWrapper>
           <span>
             {t("aHeading1a")} <TekoHeading> {t("aHeading1b")} </TekoHeading>{" "}
