@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { withTranslation } from "next-i18next";
+import Link from "next/link";
 
 const variants = {
   open: {
@@ -16,12 +17,16 @@ const variants = {
 
 //CHANGE -- THESE i18n NEED TO BE IN ALL CAPITALS
 const pageLinks = [
-  { title: "Portal", path: "", i18n: "portal" },
-  { title: "Art", path: "/art", i18n: "art" },
-  { title: "Story", path: "/story", i18n: "story" },
-  { title: "Community", path: "/community", i18n: "community" },
-  { title: "Ethos", path: "/ethos", i18n: "ethos" },
-  { title: "Home", path: "/", i18n: "home" },
+  {
+    title: "PORTAL",
+    path: "https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221",
+    i18n: "portal",
+  },
+  { title: "ART", path: "/art", i18n: "art" },
+  { title: "STORY", path: "/story", i18n: "story" },
+  { title: "COMMUNITY", path: "/community", i18n: "community" },
+  { title: "ETHOS", path: "/ethos", i18n: "ethos" },
+  { title: "HOME", path: "/", i18n: "home" },
 ];
 
 const socialLinks = [
@@ -62,15 +67,17 @@ const NavigationMenu = ({ menuOpen, t }) => {
                 className="h-full flex flex-col justify-around"
               >
                 {pageLinks.map((link, i) => (
-                  <li
-                    i={i}
-                    key={i}
-                    className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
-                      router.pathname === link.path ? "underline" : ""
-                    }`}
-                  >
-                    {t(`${link.i18n}`)}
-                  </li>
+                  <Link key={i} href={link.path}>
+                    <li
+                      i={i}
+                      className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                        router.pathname === link.path ? "underline" : ""
+                      }`}
+                      onClick={() => {}}
+                    >
+                      {t(`${link.title}`)}
+                    </li>
+                  </Link>
                 ))}
               </motion.ul>
             </div>

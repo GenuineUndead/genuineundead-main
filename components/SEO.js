@@ -1,0 +1,58 @@
+import React from "react";
+import { NextSeo } from "next-seo";
+
+const baseUrl = "https://www.genuineundead.io/";
+
+const SEO = ({ title, description, imagePath, path }) => {
+  return (
+    <NextSeo
+      title={title}
+      description={description}
+      canonical={path ? `${baseUrl}/${path}` : baseUrl}
+      openGraph={{
+        url: path ? `${baseUrl}/${path}` : baseUrl,
+        title,
+        description: "Something is fundamentally wrong. H3lp M3 D3bu8 Th15",
+        images: [
+          {
+            url: "/GU-BANNER.jpeg",
+            width: 800,
+            height: 600,
+            alt: "Og Image Alt",
+            type: "image/jpeg",
+          },
+          {
+            url: "/GU-BANNER.jpeg",
+            width: 900,
+            height: 800,
+            alt: "Og Image Alt Second",
+            type: "image/jpeg",
+          },
+        ],
+        site_name: "GenuineUndead",
+      }}
+      twitter={{
+        handle: "@GenuineUndead",
+        site: baseUrl,
+        cardType: "summary_large_image",
+      }}
+      additionalLinkTags={[{ rel: "icon", href: "/images/GUIcon.svg" }]}
+      additionalMetaTags={[
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "keywords",
+          content:
+            "pixel art, genuine, undead, rise and shine, nft, nft collection, best pixel art",
+        },
+      ]}
+      robotsProps={{
+        nosnippet: true,
+        notranslate: true,
+        noimageindex: true,
+        noarchive: true,
+      }}
+    />
+  );
+};
+
+export default SEO;

@@ -48,29 +48,33 @@ function Landing() {
       tl.fromTo(
         g,
         { x: 0 },
-        { x: window.innerWidth + 700, duration: 3 },
+        { x: window.innerWidth * 2.5, duration: 3 },
         "start"
       );
       tl.fromTo(
         u,
         { x: 0 },
-        { x: -(window.innerWidth + 700), duration: 3 },
+        { x: -(window.innerWidth * 2.5), duration: 3 },
         "start"
       );
       tl.fromTo(
         imgDiv2,
         { y: 0 },
-        { y: -(window.innerHeight + 2000), duration: 3 },
+        { y: -(window.innerHeight * 3.5), duration: 3 },
         "start"
       );
       tl.fromTo(
         imgDiv1,
         { y: 0 },
-        { y: window.innerHeight + 2000, duration: 3 },
+        { y: window.innerHeight * 3.5, duration: 3 },
         "start"
       );
-      tl.fromTo(rs, { opacity: 0 }, { opacity: 1, delay: -1.5, duration: 0.3 });
-      tl.fromTo(rs, { scale: 0.1 }, { scale: 0.9, delay: -1, duration: 2 });
+      tl.fromTo(rs, { opacity: 0 }, { opacity: 1, delay: -2, duration: 0.3 });
+      tl.fromTo(
+        rs,
+        { scale: 0.1 },
+        { scale: 0.9, delay: -1.75, duration: 2.75 }
+      );
     }, pt);
 
     return () => ctx.revert();
@@ -115,7 +119,7 @@ function Landing() {
         </div>
         <div
           id="rightSideImages"
-          className={`absolute top-[-200vh] right-[8%] lg:right-[20%] flex flex-col gap-[250px] w-[40vw] md:w-[30vw] lg:w-[20vw]`}
+          className={`absolute top-[-110vh] lg:top-[-200vh] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]`}
           ref={imageDiv1}
         >
           <img
@@ -133,7 +137,7 @@ function Landing() {
         </div>
         <div
           id="leftSideImages"
-          className="absolute bottom-[-200vh] left-[8%] lg:left-[20%] flex flex-col gap-[250px] w-[40vw] md:w-[30vw] lg:w-[20vw]"
+          className="absolute bottom-[-110vh] lg:bottom-[-200vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
           ref={imageDiv2}
         >
           <img

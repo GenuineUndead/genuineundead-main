@@ -1,61 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import styles from "../../styles/FAQ.module.css";
+import styles from "../styles/FAQ.module.css";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import MainHeaderWrapper from "../MainHeaderWrapper";
-import TekoHeading from "../TekoHeading";
-
-const heading1a = "FA";
-const heading1b = "QS";
-
-const FAQ = () => {
-  const hiddenTexts = [
-    {
-      question: "What is Genuine Undead?",
-      answer:
-        "Genuine Undead is an NFT project focused on art, connection and community.",
-    },
-    {
-      question: "What is the story behind Genuine Undead?",
-      answer:
-        "Genuine Undead was released in August 2022 as a free mint. The artist and developer of the project is anonymous. Shortly after the project was launched, the founder handed over control of the project to the community, unleashing the #UndeadArmy.",
-    },
-    {
-      question: "What network/chain is this on?",
-      answer: "Ethereum ERC-721A",
-    },
-    {
-      question: "Where can I buy Genuine Undead?",
-      answer: "OS, Looksrare, X2y2, Gem, Sudo",
-    },
-    {
-      question: "What royalties are involved?",
-      answer:
-        "The founder takes a 2.5% royalty on all sales, plus any fees charged by exchange platforms.",
-    },
-  ];
-
-  return (
-    <section
-      id="faqs"
-      className="flex flex-col h-full w-full border-b border-black dark:border-white lg:px-[3.2rem]"
-    >
-      <div className="flex flex-col items-center w-full my-24 ">
-        <h2 className="text-[2.3rem] md:text-[3rem] lg:text-[4.0rem] xl:text-[4.5rem] xxl:text-[5.5rem]  leading-none font-didot flex mb-[80px]">
-          {" "}
-          <TekoHeading>FA</TekoHeading>
-          QS
-        </h2>
-        <div className="flex justify-center w-full">
-          <Accordion faqQuestions={hiddenTexts} />
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default FAQ;
 
 const Accordion = ({ faqQuestions }) => {
   return (
@@ -132,3 +79,5 @@ const AccordionItemMotion = ({ question, answer, idx, questionsLength }) => {
     </motion.div>
   );
 };
+
+export default Accordion;

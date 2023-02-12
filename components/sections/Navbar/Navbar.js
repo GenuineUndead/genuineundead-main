@@ -39,7 +39,12 @@ const Navbar = () => {
       >
         <div className="pl-[1.6rem] md:pl-[3.2rem]">
           <div className="z-101 w-[30px] h-[30px]">
-            <GUIcon theme={currentTheme} />
+            {/* <GUIcon theme={currentTheme} /> */}
+            {currentTheme === "dark" ? (
+              <img src="/images/GUicon.svg" />
+            ) : (
+              <img src="/images/GUiconlight.svg" />
+            )}
           </div>
         </div>
         <div className="positionCenter">

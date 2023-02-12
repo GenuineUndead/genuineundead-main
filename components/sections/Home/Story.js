@@ -1,9 +1,9 @@
 import React from "react";
-import MainButton from "../MainButton";
-import MainParagraphWrapper from "../MainParagraphWrapper";
+import MainButton from "../../MainButton";
+import MainParagraphWrapper from "../../MainParagraphWrapper";
 import { withTranslation } from "next-i18next";
-import MainHeaderWrapper from "../MainHeaderWrapper";
-import TekoHeading from "../TekoHeading";
+import MainHeaderWrapper from "../../MainHeaderWrapper";
+import TekoHeading from "../../TekoHeading";
 import { Parallax } from "react-scroll-parallax";
 import Image from "next/image";
 
