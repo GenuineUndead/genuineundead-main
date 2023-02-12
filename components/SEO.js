@@ -12,7 +12,7 @@ const SEO = ({ title, description, imagePath, path }) => {
       openGraph={{
         url: path ? `${baseUrl}/${path}` : baseUrl,
         title,
-        description: "Something is fundamentally wrong. H3lp M3 D3bu8 Th15",
+        description: "Genuine Undead Banner",
         images: [
           {
             url: "/GU-BANNER.jpeg",
