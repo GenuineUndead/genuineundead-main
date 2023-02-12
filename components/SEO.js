@@ -16,16 +16,9 @@ const SEO = ({ title, description, imagePath, path }) => {
         images: [
           {
             url: "/GU-BANNER.jpeg",
-            width: 800,
-            height: 600,
+            width: 1500,
+            height: 500,
             alt: "Og Image Alt",
-            type: "image/jpeg",
-          },
-          {
-            url: "/GU-BANNER.jpeg",
-            width: 900,
-            height: 800,
-            alt: "Og Image Alt Second",
             type: "image/jpeg",
           },
         ],
@@ -36,7 +29,7 @@ const SEO = ({ title, description, imagePath, path }) => {
         site: baseUrl,
         cardType: "summary_large_image",
       }}
-      additionalLinkTags={[{ rel: "icon", href: "/images/GUIcon.svg" }]}
+      additionalLinkTags={[{ rel: "icon", href: "/images/GUicon.svg" }]}
       additionalMetaTags={[
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
