@@ -4,6 +4,8 @@ import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
 import GUIcon from "./GUIcon";
+import { AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -38,14 +40,24 @@ const Navbar = () => {
         className="w-min-screen h-[50px] top-0 sticky bg-white dark:bg-black flex justify-between items-center relative above-all bg-opacity-10 backdrop-filter backdrop-blur-lg"
       >
         <div className="pl-[1.6rem] md:pl-[3.2rem]">
-          <div className="z-101 w-[30px] h-[30px]">
-            {/* <GUIcon theme={currentTheme} /> */}
-            {currentTheme === "dark" ? (
-              <img src="/images/GUicon.svg" />
-            ) : (
-              <img src="/images/GUiconlight.svg" />
-            )}
-          </div>
+          <Link href="/">
+            <div
+              className={`z-101 ${
+                currentTheme === "dark"
+                  ? "w-[30px] h-[30px]"
+                  : "w-[35px] h-[35px]"
+              }`}
+            >
+              {currentTheme === "dark" ? (
+                <img src="/images/GUicon.svg" className="cursor-pointer" />
+              ) : (
+                <img
+                  src="/images/GUicon-light.svg"
+                  className="cursor-pointer"
+                />
+              )}
+            </div>
+          </Link>
         </div>
         <div className="positionCenter">
           <ToggleSwitch toggleTheme={toggleTheme} theme={currentTheme} />

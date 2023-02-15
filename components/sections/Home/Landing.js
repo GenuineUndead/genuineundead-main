@@ -26,8 +26,6 @@ function Landing() {
     appWidth();
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
-      // window.addEventListener("resize", appWidth);
-      // appWidth();
       const rs = riseAndShine.current;
       const g = genuine.current;
       const u = undead.current;
@@ -70,11 +68,7 @@ function Landing() {
         "start"
       );
       tl.fromTo(rs, { opacity: 0 }, { opacity: 1, delay: -2, duration: 0.3 });
-      tl.fromTo(
-        rs,
-        { scale: 0.1 },
-        { scale: 0.9, delay: -1.75, duration: 2.75 }
-      );
+      tl.fromTo(rs, { scale: 0.1 }, { scale: 1.1, delay: -1.75, duration: 2 });
     }, pt);
 
     return () => ctx.revert();
@@ -119,7 +113,7 @@ function Landing() {
         </div>
         <div
           id="rightSideImages"
-          className={`absolute top-[-110vh] lg:top-[-200vh] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]`}
+          className={`absolute top-[-110vh] lg:top-[-195vh] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]`}
           ref={imageDiv1}
         >
           <img
@@ -137,7 +131,7 @@ function Landing() {
         </div>
         <div
           id="leftSideImages"
-          className="absolute bottom-[-110vh] lg:bottom-[-200vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
+          className="absolute bottom-[-110vh] lg:bottom-[-195vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
           ref={imageDiv2}
         >
           <img
