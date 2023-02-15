@@ -40,7 +40,7 @@ const socialLinks = [
   { title: "Opensea", link: "/comic", i18n: "opensea" },
 ];
 
-const NavigationMenu = ({ menuOpen, t }) => {
+const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
   const router = useRouter();
   return (
     <>
@@ -73,7 +73,7 @@ const NavigationMenu = ({ menuOpen, t }) => {
                       className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
                         router.pathname === link.path ? "underline" : ""
                       }`}
-                      onClick={() => {}}
+                      onClick={toggleMenu}
                     >
                       {t(`${link.title}`)}
                     </li>

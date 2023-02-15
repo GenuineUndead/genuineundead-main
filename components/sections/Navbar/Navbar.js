@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           <MenuButton menuOpen={menuOpen} theme={currentTheme} />
         </div>
-        <NavigationMenu menuOpen={menuOpen} />
+        <NavigationMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
       </nav>
     </>
   );
