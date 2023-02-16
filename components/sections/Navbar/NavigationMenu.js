@@ -4,16 +4,16 @@ import { useRouter } from "next/router";
 import { withTranslation } from "next-i18next";
 import Link from "next/link";
 
-const variants = {
-  open: {
-    opacity: 1,
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    opacity: 0,
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-};
+// const variants = {
+//   open: {
+//     opacity: 1,
+//     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+//   },
+//   closed: {
+//     opacity: 0,
+//     transition: { staggerChildren: 0.05, staggerDirection: -1 },
+//   },
+// };
 
 //CHANGE -- THESE i18n NEED TO BE IN ALL CAPITALS
 const pageLinks = [
@@ -51,27 +51,15 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
             animate={{
               opacity: 1,
               transition: {
-                duration: 0.2,
+                duration: 0.4,
               },
             }}
-            exit={{
-              opacity: 0,
-              transition: {
-                duration: 0.3,
-              },
-            }}
-            className={`min-full-height fixed bg-black dark:bg-white transition ease-in-out duration-700 absolute w-screen top-0 md:w-[500px] md:pr-[20%] md:right-0 ${
-              menuOpen ? "opacity-100" : "opacity-0 "
-            } overflow-hidden`}
+            exit={{ opacity: 0, transition: { duration: 0.4 } }}
+            className={`min-full-height fixed bg-black dark:bg-white absolute w-screen top-0 md:w-[500px] md:pr-[20%] md:right-0 overflow-hidden`}
           >
             <div className="flex flex-col h-full p-0 md:pl-[3rem] md:pt-[2rem]">
               <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start">
-                <motion.ul
-                  variants={variants}
-                  initial="closed"
-                  animate={menuOpen ? "open" : "closed"}
-                  className="h-full flex flex-col justify-around"
-                >
+                <ul className="h-full flex flex-col justify-around">
                   {pageLinks.map((link, i) => (
                     <Link key={i} href={link.path}>
                       <li
@@ -85,7 +73,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                       </li>
                     </Link>
                   ))}
-                </motion.ul>
+                </ul>
               </div>
 
               <div className="h-[35vh] w-screen md:w-full flex items-center justify-center md:justify-start">
