@@ -5,7 +5,7 @@ const MainButton = ({ link, children, ariaLabel, styles, page = true }) => {
   return (
     <button
       aria-label={ariaLabel}
-      className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:text-[#ff5277] hover:border-[#ff5277] hover:dark:border-[#ff5277]  transition-all duration-300 ${
+      className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] hover:dark:border-[#ff5277] transition-all duration-300 ${
         page ? "rounded-full" : ""
       } ${styles}`}
     >

@@ -4,17 +4,6 @@ import { useRouter } from "next/router";
 import { withTranslation } from "next-i18next";
 import Link from "next/link";
 
-// const variants = {
-//   open: {
-//     opacity: 1,
-//     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-//   },
-//   closed: {
-//     opacity: 0,
-//     transition: { staggerChildren: 0.05, staggerDirection: -1 },
-//   },
-// };
-
 //CHANGE -- THESE i18n NEED TO BE IN ALL CAPITALS
 const pageLinks = [
   {

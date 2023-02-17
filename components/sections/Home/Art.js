@@ -39,7 +39,7 @@ const Art = ({ t }) => {
           alt="Viking"
         />{" "}
       </div>
-      <div className="w-full h-[40%] lg:min-h-[50%] lg:w-[50%] lg:min-h-full flex flex-col justify-center lg:my-[50px] text-container relative px-[1.6rem] pb-[100px] mt-[20px]">
+      <div className="w-full min-h-[50%] lg:w-[50%] lg:min-h-full lg:my-[50px] flex flex-col justify-center z-10 relative text-container px-[1.6rem] mt-[20px]">
         <MainHeaderWrapper>
           <span>
             {t("aHeading1a")} <TekoHeading> {t("aHeading1b")} </TekoHeading>{" "}
