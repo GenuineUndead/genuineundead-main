@@ -20,7 +20,7 @@ makes GU the best pixel art collection to ever exist.`;
 
 const Art = ({ t }) => {
   return (
-    <section className="min-h-[100vh] lg:min-h-screen w-full flex flex-col lg:flex-row lg:gap-[2.5rem] border-b border-black dark:border-white overflow-hidden">
+    <section className="min-h-[115vh] lg:min-h-[100vh] lg:min-h-screen w-full flex flex-col lg:flex-row lg:gap-[2.5rem] border-b border-black dark:border-white overflow-hidden">
       <div
         className={`w-full lg:w-[50%] lg:min-h-[50%] bg-[url('/images/background/golem-light.png')] dark:bg-[url('/images/background/golem.png')] bg-cover bg-center flex items-center justify-center flex-1`}
       >
