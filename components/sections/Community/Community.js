@@ -10,7 +10,7 @@ const Community = () => {
         <span className="font-teko font-bold text-[9.7vw]">UTILITY</span>
       </h1>
       <Parallax className="w-[80%] lg:w-[50%] aspect-square" speed={-10}>
-        <Image fill src="/images/animation/faceless.png" alt="Image" />
+        <Image fill src="/images/animation/faceless.png" alt="Image" priority />
       </Parallax>
     </section>
   );

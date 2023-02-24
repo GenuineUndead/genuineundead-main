@@ -11,7 +11,7 @@ const Landing = () => {
         <span className="font-teko font-bold text-[14.7vw]"> ART</span>
       </h1>
       <Parallax className="w-[80%] lg:w-[50%] aspect-square" speed={-10}>
-        <Image fill src="/images/carousel/rose.png" alt="Image" />
+        <Image fill src="/images/carousel/rose.png" alt="Image" priority />
       </Parallax>
     </section>
   );

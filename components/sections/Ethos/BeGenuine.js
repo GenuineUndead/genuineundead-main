@@ -10,7 +10,12 @@ const BeGenuine = () => {
         <i>GENUINE</i>
       </h1>
       <Parallax className="w-[80%] lg:w-[50%] aspect-square" speed={-10}>
-        <Image fill src="/images/community/community-landing.png" alt="Image" />
+        <Image
+          fill
+          src="/images/community/community-landing.png"
+          alt="Image"
+          priority
+        />
       </Parallax>
     </section>
   );
