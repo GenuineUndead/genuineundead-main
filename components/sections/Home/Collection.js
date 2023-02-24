@@ -18,7 +18,10 @@ const Collection = ({ t }) => {
           <span>{t("cHeading2")}</span>
           <span>{t("cHeading3")}</span>
         </h2>
-        <MainButton link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221">
+        <MainButton
+          ariaLabel="Link to GU Marketplace"
+          link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+        >
           {t("viewCollection")}
         </MainButton>
       </div>

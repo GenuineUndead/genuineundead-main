@@ -1,5 +1,4 @@
 import React from "react";
-
 import MainButton from "../../MainButton";
 import MainParagraphWrapper from "../../MainParagraphWrapper";
 import { withTranslation } from "next-i18next";
@@ -25,21 +24,17 @@ const Art = ({ t }) => {
       <div
         className={`w-full lg:w-[50%] lg:min-h-[50%] bg-[url('/images/background/golem-light.png')] dark:bg-[url('/images/background/golem.png')] bg-cover bg-center flex items-center justify-center flex-1`}
       >
-        <Parallax speed={-20} className="w-full hidden lg:flex justify-center">
-          {" "}
-          <img
-            src="/images/gu/viking-rose.png"
-            className="w-[60%] aspect-square"
-            alt="Viking"
-          />{" "}
+        <Parallax
+          speed={-20}
+          className="w-full hidden lg:flex justify-center w-[60%]  aspect-square"
+        >
+          <Image src="/images/gu/viking-rose.png" fill alt="Viking" />{" "}
         </Parallax>
-        <img
-          src="/images/gu/viking-rose.png"
-          className="w-[70%] aspect-square lg:hidden"
-          alt="Viking"
-        />{" "}
+        <div className="w-[70%] aspect-square lg:hidden relative">
+          <Image src="/images/gu/viking-rose.png" fill alt="Viking" />{" "}
+        </div>
       </div>
-      <div className="w-full min-h-[50%] lg:w-[50%] lg:min-h-full lg:my-[50px] flex flex-col justify-center z-10 relative text-container px-[1.6rem] mt-[20px]">
+      <div className="w-full min-h-[50%] lg:w-[50%] lg:min-h-full mt-[50px] mb-[100px] lg:my-[50px] flex flex-col justify-center z-10 relative text-container px-[1.6rem]">
         <MainHeaderWrapper>
           <span>
             {t("aHeading1a")} <TekoHeading> {t("aHeading1b")} </TekoHeading>{" "}
@@ -53,7 +48,10 @@ const Art = ({ t }) => {
         <MainParagraphWrapper width="w-[90%] lg:w-[80%]">
           {t("aContent")}
         </MainParagraphWrapper>
-        <MainButton link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221">
+        <MainButton
+          ariaLabel="Link to Art Page"
+          link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+        >
           {t("theArt")}
         </MainButton>
       </div>

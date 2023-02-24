@@ -141,82 +141,60 @@ input:checked ~ .dot {
   height: 300px; /* This will make the line go from bottom to top*/
 }
 
-/* //SCROLL TRIGGER TESTING */
-.smooth-scroller {
-  overflow: hidden;
-}
-
-.hero-scroller {
-  height: 250vh;
-  overflow: hidden;
-}
-
-.section {
-  position: relative;
-  display: flex;
-  min-height: 100vh;
-  padding: 50px;
-  justify-content: center;
-}
-
-.copy {
-  background: #d4cfc0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-wrapper {
-  max-width: 1400px;
-}
-
-.content {
-  width: 100%;
-  max-width: 840px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-h1 {
-  font-size: 100px;
-  font-weight: 400;
-  line-height: 150px;
-  margin: 0px;
-  text-transform: uppercase;
-}
-
-.image-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 50%;
-}
-
-.image {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  width: 50%;
-  height: 50%;
-  object-fit: cover;
-}
-
-p {
-  font-size: 4em;
-  line-height: 1.2em;
-}
-
-.pin-spacer {
-  z-index: 1 !important;
-  overflow: hidden;
-}
-
 .above-all {
   z-index: 100 !important;
 }
 
-.didot-font {
-  font-weight: 300 !important;
+.community-txt-container {
+  /* padding: 150px 0px; */
+  @apply lg:py-[150px];
+}
+
+.community-txt-container::before,
+.community-txt-container::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Adjust as needed */
+  transform: translateX(
+    -50%
+  ); /* This will center the line on the left property*/
+  width: 1px; /* Adjust as needed */
+  @apply dark:bg-white bg-black hidden lg:block/* Adjust as needed */;
+}
+
+.community-txt-container::before {
+  top: -200px; /* Adjust as needed */
+  height: 350px;
+}
+
+.community-txt-container::after {
+  bottom: -200px; /* Adjust as needed */
+  height: 350px; /* This will make the line go from bottom to top*/
+}
+
+.gallery-container {
+  /* padding: 150px 0px; */
+  @apply lg:py-[150px];
+}
+
+.gallery-container::before,
+.gallery-container::after {
+  content: "";
+  position: absolute;
+  left: 19%; /* Adjust as needed */
+  transform: translateX(
+    -50%
+  ); /* This will center the line on the left property*/
+  width: 1px; /* Adjust as needed */
+  @apply dark:bg-white bg-black hidden lg:block/* Adjust as needed */;
+}
+
+.gallery-container::before {
+  top: -200px; /* Adjust as needed */
+  height: 300px; /* This will make the line go from top to bottom*/
+}
+
+.gallery-container::after {
+  bottom: -200px; /* Adjust as needed */
+  height: 300px; /* This will make the line go from bottom to top*/
 }

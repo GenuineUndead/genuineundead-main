@@ -3,8 +3,6 @@ import { useTheme } from "next-themes";
 import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
-import GUIcon from "./GUIcon";
-import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -49,10 +47,15 @@ const Navbar = () => {
               }`}
             >
               {currentTheme === "dark" ? (
-                <img src="/images/GUicon.svg" className="cursor-pointer" />
+                <img
+                  src="/images/GUicon.svg"
+                  alt="gu icon dark"
+                  className="cursor-pointer"
+                />
               ) : (
                 <img
                   src="/images/GUicon-light.svg"
+                  alt="gu icon light"
                   className="cursor-pointer"
                 />
               )}

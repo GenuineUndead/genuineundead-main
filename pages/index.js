@@ -37,11 +37,11 @@ export default function Home(props) {
       />
       <div className="page-container">
         <Landing pageRefs={{ landingRef, titleRef }} />
-        {/* <Carousel /> */}
         <Collection />
         <Art />
         <MobileStory />
         <Story />
+        {/* <Carousel /> */}
         <Ethos />
         <FAQ />
       </div>

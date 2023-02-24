@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import { useTheme } from "next-themes";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +86,7 @@ function Landing() {
     }
   }, [theme]);
   return (
-    <div ref={main}>
+    <div ref={main} syle={{ scrollBehavior: "smooth" }}>
       <div
         ref={pinTarget}
         className="relative pin-target min-h-screen w-full flex flex-col items-center justify-center overflow-hidden"
@@ -123,10 +124,12 @@ function Landing() {
           <img
             src="/images/animation/louhorns.gif"
             className="w-full aspect-square"
+            alt="louhorns"
           />
           <img
             src="/images/animation/paint.png"
             className="w-full aspect-square"
+            alt="paint"
           />
         </div>
         <div
@@ -136,15 +139,18 @@ function Landing() {
         >
           <img
             src="/images/animation/titanium.png"
+            alt="Titanium"
             className="h-full aspect-square"
           />
           <img
             src="/images/animation/bowler.png"
             className="h-full aspect-square"
+            alt="bowler"
           />
           <img
             src="/images/animation/openmind.png"
             className="h-full aspect-square"
+            alt="openmind"
           />
         </div>
       </div>

@@ -39,12 +39,11 @@ const Story = ({ t }) => {
       <div
         className={`w-full lg:w-[50%] min-h-[50%] absolute top-0 right-0 h-full z-1 bg-[url('/images/background/boney-light.png')] dark:bg-[url('/images/background/boney.png')] bg-cover bg-center flex items-center justify-center`}
       >
-        <Parallax speed={-20} className="w-full flex justify-center">
-          <img
-            src="/images/gu/miner.png"
-            className="w-[55%] aspect-square"
-            alt="Miner"
-          />
+        <Parallax
+          speed={-20}
+          className="w-full flex justify-center w-[55%] aspect-square relative"
+        >
+          <Image src="/images/gu/miner.png" fill alt="Miner" />
         </Parallax>
       </div>
     </div>

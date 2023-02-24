@@ -3,12 +3,6 @@ import TekoHeading from "../../TekoHeading";
 import MainButton from "../../MainButton";
 
 const PFP = () => {
-  const getTokenURIs = (ids) => {
-    let uri =
-      "https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/";
-    return ids?.map((id) => `${uri}${id}.png`);
-  };
-
   const [ids, setIds] = useState([]);
   useEffect(() => {
     let randomIds = [];
@@ -20,15 +14,15 @@ const PFP = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
-      <div className="min-h-[50%] w-full lg:max-h-screen flex justify-center items-center flex-1 overflow-y-hidden">
-        <div class="grid grid-cols-3 gap-[2rem] w-[60%]">
+      <div className="min-h-[50%] w-full lg:max-h-screen flex justify-center items-center flex-1 overflow-y-hidden py-[50px] lg:py-0">
+        <div class="grid grid-cols-3 gap-[2rem] w-[80%] lg:w-[60%]">
           {ids?.map((id) => {
             return <GUImage key={id} id={id} />;
           })}
         </div>
       </div>
-      <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center flex-1 ">
-        <div className="flex flex-col gap-[2.5rem] w-full lg:w-[60%] ">
+      <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center flex-1 community-txt-container relative overflow-y-hidden">
+        <div className="flex flex-col gap-[2.5rem] w-full lg:w-[60%] pb-[50px] lg:py-0">
           <h2
             className={`text-[2.3rem] md:text-[3rem] lg:text-[4.0rem] xl:text-[4.5rem] xxl:text-[5.5rem] leading-none font-didot flex flex-col `}
           >
@@ -57,7 +51,7 @@ export default PFP;
 const GUImage = ({ id }) => {
   const [isOverlay, setIsOverlay] = useState(false);
   return (
-    <div class="w-full aspect-square relative cursor-pointer flex justify-center items-center">
+    <div className="w-full aspect-square relative cursor-pointer flex justify-center items-center">
       <div
         className={`w-full aspect-square rounded-full bg-center bg-contain z-1 relative transition-all duration-300 ${
           isOverlay ? "grayscale" : ""

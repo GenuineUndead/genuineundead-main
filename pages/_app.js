@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <ParallaxProvider>
-      <ThemeProvider enableSystem={true} attribute="class">
+      <ThemeProvider enableSystem={false} attribute="class">
         <Layout>
           <Component {...pageProps} />
         </Layout>

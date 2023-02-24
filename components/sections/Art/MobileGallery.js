@@ -1,12 +1,15 @@
-import Image from "next/image";
 import React from "react";
 import MainButton from "../../MainButton";
+import MainParagraphWrapper from "../../MainParagraphWrapper";
+import { withTranslation } from "next-i18next";
+import MainHeaderWrapper from "../../MainHeaderWrapper";
 import TekoHeading from "../../TekoHeading";
+import Image from "next/image";
 
-const Gallery = () => {
+const MobileGallery = () => {
   return (
-    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden relative px-[3.2rem] hidden lg:flex">
-      <div className="w-full min-h-[50%] lg:ml-[10%] lg:w-[70%] lg:min-h-full my-[50px] flex flex-col justify-center gap-[2rem] z-10 relative gallery-container">
+    <section className="w-full flex flex-col lg:flex-row lg:gap-[2.5rem] border-b border-black dark:border-white overflow-hidden lg:hidden">
+      <div className="w-full h-[40%] lg:min-h-[50%] lg:w-[50%] lg:min-h-full flex flex-col justify-center gap-[2rem] lg:my-[50px] text-container relative px-[1.6rem] pb-[100px] mt-[50px]">
         <h2
           className={`text-[2.3rem] md:text-[3rem] lg:text-[4.0rem] xl:text-[4.5rem] xxl:text-[5.5rem] leading-none font-didot flex flex-col`}
         >
@@ -31,7 +34,7 @@ const Gallery = () => {
         </MainButton>
       </div>
       <div
-        className={`w-full lg:w-[50%] min-h-[50%] absolute top-0 right-0 h-full z-1 flex items-center justify-center`}
+        className={`w-full lg:w-[50%] lg:min-h-[50%] flex items-center justify-center pb-[50px]`}
       >
         <div className="w-[75%] lg:w-[60%] aspect-square relative">
           <Image
@@ -45,4 +48,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default MobileGallery;
