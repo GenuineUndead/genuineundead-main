@@ -26,7 +26,7 @@ function Landing() {
 
   useEffect(() => {
     appWidth();
-    if (loading) return;
+    // if (loading) return;
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
       const rs = riseAndShine.current;
