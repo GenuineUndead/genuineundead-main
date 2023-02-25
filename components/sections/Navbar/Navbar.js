@@ -37,10 +37,10 @@ const Navbar = () => {
         id="navbar"
         className="w-min-screen h-[50px] top-0 sticky bg-white dark:bg-black flex justify-between items-center relative above-all bg-opacity-10 backdrop-filter backdrop-blur-lg"
       >
-        <div className="pl-[1.6rem] md:pl-[3.2rem]">
+        <div className="pl-[1.6rem] lg:pl-[3.2rem]">
           <Link href="/">
             <div
-              className={`z-101 ${
+              className={`z-101 flex items-center ${
                 currentTheme === "dark"
                   ? "w-[30px] h-[30px]"
                   : "w-[35px] h-[35px]"

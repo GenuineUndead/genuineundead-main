@@ -16,12 +16,12 @@ const Curation = () => {
             <TekoHeading>CURATION</TekoHeading>
           </h2>
           <p className="text-[1rem]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Elementum nisi quis eleifend quam adipiscing vitae proin. Imperdiet
-            nulla malesuada pellentesque elit eget gravida. Mauris nunc congue
-            nisi vitae suscipit tellus. Ac odio tempor orci dapibus ultrices in
-            iaculis.
+            Over 200 hand drawn traits ranging from classic to cyber with a
+            diverse set of base traits. Trait combinations that have been
+            curated to compliment one another providing context and a deep
+            narrative within the collection. Nomenclature that invokes a sense
+            of imagination and spontaneous storytelling. A magically inspiring
+            collection. Art not limited to the pixels but rather, Art above art.
           </p>
           <MainButton
             ariaLabel="Explore Traits Coming Soon"

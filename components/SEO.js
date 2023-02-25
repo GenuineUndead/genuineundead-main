@@ -32,7 +32,7 @@ const SEO = ({ title, description, imagePath, path }) => {
       }}
       additionalLinkTags={[{ rel: "icon", href: "/images/GUicon.svg" }]}
       additionalMetaTags={[
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "viewport", content: "width=device-width, initial-scale=1.0" },
         {
           name: "keywords",
           content:

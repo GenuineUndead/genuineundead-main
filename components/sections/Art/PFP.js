@@ -32,10 +32,11 @@ const PFP = () => {
             </span>
           </h2>
           <p className="text-[1rem]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Elementum nisi quis eleifend quam adipiscing. Mauris nunc congue
-            nisi vitae suscipit tellus.
+            Surprisingly detailed when condensed. GU art is a testament to both
+            efficiency and skill in the constraints of a 24*24 pixel format.
+            Where other PFPs lose their detail, GU gains detail. On socials such
+            as twitter - GU PFPs stand out, doing justice to this format unlike
+            ever before.
           </p>
           <MainButton page={false} styles=" mb-0">
             MARKETPLACE

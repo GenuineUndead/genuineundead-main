@@ -11,24 +11,24 @@ const Discord = () => {
         </div>
       </div>
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center mb-[100px] mt-[50px] lg:my-0 flex-1 relative community-txt-container overflow-y-hidden">
-        <div className="flex flex-col gap-[1.2rem] w-full lg:w-[60%] mb-[3rem] justify-center">
+        <div className="flex flex-col gap-[1.2rem] w-full lg:w-[70%] mb-[3rem] justify-center">
           <p className="text-[1rem]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Elementum nisi quis eleifend quam adipiscing.
+            Our utility is access to a collective of passionate and motivated
+            creators, developers, investors, academics, collectors, innovators,
+            thinkers, and leaders in the future of Web3.
           </p>
           <p className="text-[1rem]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Elementum nisi quis eleifend quam adipiscing vitae proin. Imperdiet
-            nulla malesuada pellentesque elit eget gravida. Mauris nunc congue
-            nisi vitae suscipit tellus. Ac odio tempor orci dapibus ultrices in
-            iaculis. Rhoncus aenean vel elit scelerisque mauris pellentesque
-            pulvinar pellentesque habitant. Ac auctor augue mauris augue.
+            As a community-led project, the value flows in the opposite
+            direction of a typical “utility” NFT project. Individuals in the
+            community are providing time, energy, skills and passion to enhance
+            and propel the project forward. Instead of waiting for the next
+            announcement, asking “wen?” Genuine Undead members are constantly
+            creating, brainstorming and executing on innovative and genuine ways
+            to add value to the original art collection.
           </p>
           <p className="text-[1rem]">The community is the team.</p>
         </div>
-        <div className="w-full lg:w-[60%]">
+        <div className="w-full lg:w-[70%]">
           <MainButton page={false} ariaLabel="Join Discord">
             JOIN DISCORD
           </MainButton>

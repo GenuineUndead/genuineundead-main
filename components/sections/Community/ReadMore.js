@@ -4,27 +4,29 @@ import Image from "next/image";
 
 const ReadMore = () => {
   return (
-    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
+    <section className="min-h-screen lg:min-h-[110vh] w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center flex-1 community-txt-container relative overflow-y-hidden mt-[100px] mb-[50px] lg:my-0">
-        <div className="flex flex-col gap-[1.2rem] w-full lg:w-[60%] mb-[3rem]">
+        <div className="flex flex-col gap-[1.2rem] w-full lg:w-[70%] mb-[3rem]">
           <p className="text-[1rem]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Elementum nisi quis eleifend quam adipiscing. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Elementum nisi quis eleifend quam
-            adipiscing vitae proin. Imperdiet nulla malesuada pellentesque elit
-            eget gravida. Mauris nunc congue nisi vitae suscipit tellus. Ac odio
-            tempor orci dapibus ultrices in iaculis.
+            There are 9 councils, or departments, designed to organize and
+            deploy an army of literally thousands. Deviating from a traditional
+            DAO model, where the community operates under strict decentralized
+            protocol, Genuine Undead is implementing a hybrid model of
+            decentralized organization. GU acknowledges the proven models of
+            Web2 and has used those models in combination with the innovations
+            and principle ethos of Web 3 to form a Hybrid-W3 structure. The
+            Undead Council, composed of elected and appointed community members,
+            acts as a “Board of Directors” to harness, curate and refine the
+            unending creative passion of contributing members.
           </p>
           <p className="text-[1rem]">
-            lementum nisi quis eleifend quam adipiscing vitae proin. Imperdiet
-            nulla malesuada. Rhoncus aenean vel elit scelerisque mauris
-            pellentesque pulvinar pellentesque habitant. Ac auctor augue mauris
-            augue.
+            By investing in, and continually improving the tools available to
+            contributors, the goal is to provide a platform to elevate creators.
+            Which will in turn elevate the project through curated and
+            sustainable ventures.
           </p>
         </div>
-        <div className="w-full lg:w-[60%]">
+        <div className="w-full lg:w-[70%]">
           <MainButton page={false}>READ MORE</MainButton>
         </div>
       </div>

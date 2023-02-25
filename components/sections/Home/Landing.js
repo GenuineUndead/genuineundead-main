@@ -71,7 +71,6 @@ function Landing() {
       tl.fromTo(rs, { opacity: 0 }, { opacity: 1, delay: -2, duration: 0.3 });
       tl.fromTo(rs, { scale: 0.1 }, { scale: 1.1, delay: -1.75, duration: 2 });
     }, pt);
-
     return () => ctx.revert();
   }, []);
 
@@ -108,7 +107,7 @@ function Landing() {
             ref={riseAndShine}
             className="positionCenter opactiy-0 w-screen text-center font-didot text-[10vw]"
           >
-            <span className="font-teko font-bold text-[11vw]">RISE</span>{" "}
+            <span className="font-teko font-bold text-[11.4vw]">RISE</span>{" "}
             <i>AND</i> SHINE
           </h1>
         </div>
