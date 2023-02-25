@@ -38,7 +38,7 @@ const PFP = () => {
             as twitter - GU PFPs stand out, doing justice to this format unlike
             ever before.
           </p>
-          <MainButton page={false} styles=" mb-0">
+          <MainButton page={true} styles=" mb-0">
             MARKETPLACE
           </MainButton>
         </div>

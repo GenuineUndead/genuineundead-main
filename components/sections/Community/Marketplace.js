@@ -16,7 +16,7 @@ const Marketplace = () => {
           </span>
         </MainHeaderWrapper>
         <MainButton
-          page={false}
+          page={true}
           link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
         >
           MARKETPLACE

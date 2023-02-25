@@ -15,11 +15,11 @@ const Ethos = ({ t }) => {
       >
         <Parallax
           speed={-20}
-          className="w-full hidden lg:flex justify-center w-[60%] aspect-square"
+          className="w-full hidden lg:flex justify-center w-[60%]  aspect-square"
         >
           <Image src="/images/gu/zombie.png" fill alt="Zombie" />{" "}
         </Parallax>
-        <div className="w-[70%] aspect-square lg:hidden relative">
+        <div className="w-[70%] md:w-[55%] aspect-square lg:hidden relative">
           <Image src="/images/gu/zombie.png" fill alt="Zombied" />
         </div>
       </div>

@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 gsap.registerPlugin(ScrollTrigger);
 
 function Landing() {
+  const [loading, setLoading] = useState(true);
   const { systemTheme, theme } = useTheme();
   const [width, setWidth] = useState(0);
   const [gImage, setGImage] = useState(null);
@@ -25,6 +26,7 @@ function Landing() {
 
   useEffect(() => {
     appWidth();
+    if (loading) return;
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
       const rs = riseAndShine.current;
@@ -72,7 +74,7 @@ function Landing() {
       tl.fromTo(rs, { scale: 0.1 }, { scale: 1.1, delay: -1.75, duration: 2 });
     }, pt);
     return () => ctx.revert();
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
     appWidth();
@@ -84,6 +86,12 @@ function Landing() {
       setUImage("/images/animation/undead2.svg");
     }
   }, [theme]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
     <div ref={main} syle={{ scrollBehavior: "smooth" }}>
       <div

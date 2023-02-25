@@ -30,7 +30,7 @@ const Art = ({ t }) => {
         >
           <Image src="/images/gu/viking-rose.png" fill alt="Viking" />{" "}
         </Parallax>
-        <div className="w-[70%] aspect-square lg:hidden relative">
+        <div className="w-[70%] md:w-[55%] aspect-square lg:hidden relative">
           <Image src="/images/gu/viking-rose.png" fill alt="Viking" />{" "}
         </div>
       </div>

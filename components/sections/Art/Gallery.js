@@ -23,7 +23,7 @@ const Gallery = () => {
           GU Art is both abstract and minimalism at its peak.
         </p>
         <MainButton
-          page={false}
+          page={true}
           ariaLabel="Gallery Coming Soon"
           styles="min-w-[250px] mb-0"
         >

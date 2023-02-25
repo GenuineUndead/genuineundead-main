@@ -7,7 +7,7 @@ const Curation = () => {
   return (
     <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center flex-1 community-txt-container relative overflow-y-hidden">
-        <div className="flex flex-col gap-[2.5rem] w-full lg:w-[60%] ">
+        <div className="flex flex-col gap-[2.5rem] w-full lg:w-[60%] md:my-[50px] ">
           <h2
             className={`text-[2.3rem] md:text-[3rem] lg:text-[4.0rem] xl:text-[4.5rem] xxl:text-[5.5rem] leading-none font-didot flex flex-col `}
           >
@@ -25,7 +25,7 @@ const Curation = () => {
           </p>
           <MainButton
             ariaLabel="Explore Traits Coming Soon"
-            page={false}
+            page={true}
             styles="min-w-[300px] mb-0"
           >
             EXPLORE TRAITS (COMING-SOON)
@@ -33,7 +33,7 @@ const Curation = () => {
         </div>
       </div>
       <div className="min-h-[50%] w-full lg:min-h-screen flex justify-center items-center flex-1">
-        <div className="w-[75%] lg:w-[60%] aspect-square relative">
+        <div className="w-[75%] lg:w-[60%] aspect-square relative md:mb-[50px]">
           <Image
             src="/images/carousel/captain.png"
             alt="GALLERY QUALITY GU"

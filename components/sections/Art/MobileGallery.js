@@ -26,7 +26,7 @@ const MobileGallery = () => {
           nisi quis eleifend quam adipiscing.
         </p>
         <MainButton
-          page={false}
+          page={true}
           ariaLabel="Gallery Coming Soon"
           styles="min-w-[250px] mb-0"
         >

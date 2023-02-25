@@ -1,5 +1,4 @@
 import React from "react";
-import MainButton from "../../MainButton";
 import MainHeaderWrapper from "../../MainHeaderWrapper";
 import TekoHeading from "../../TekoHeading";
 
