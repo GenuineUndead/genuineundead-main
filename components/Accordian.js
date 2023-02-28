@@ -42,7 +42,7 @@ const AccordionItemMotion = ({ question, answer, idx, questionsLength }) => {
         <motion.div
           key="question"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full flex py-[1rem] text-[.9rem] md:text-[1rem]"
+          className="w-full flex py-[1rem] text-[.9rem] md:text-[1rem] cursor-pointer"
         >
           <span className="w-[10%] font-didot mr-[5px] text-[1.25rem]">
             <i>0{idx + 1}</i>

@@ -46,18 +46,4 @@ export const homeFAQ = [
     question: "Do you do airdrops?",
     answer: `Airdrops, mutants, and serums are often used as marketing tools to attract new users and drive engagement. While they can be effective in the short term, they tend to dilute the value of projects by flooding the market with new and unproven assets. As such, we have decided not to offer airdrops, mutants, serums and other unsustainable approaches. `,
   },
-
-  {
-    question: "Are there any resources I can access to learn more about GU?",
-    answer: `Excellent Twitter thread by a community member — ${(
-      <a
-        href="https://twitter.com/0xQuetzal/status/1598028695737839616"
-        className="cursor-pointer underline"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LINK
-      </a>
-    )}`,
-  },
 ];
