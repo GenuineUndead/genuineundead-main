@@ -40,26 +40,12 @@ const Navbar = () => {
       >
         <div className="pl-[1.6rem] lg:pl-[3.2rem]">
           <Link href="/">
-            <div
-              className={`z-101 flex items-center ${
-                currentTheme === "dark"
-                  ? "ml-[2px] w-[30px] h-[30px]"
-                  : "w-[35px] h-[35px]"
-              }`}
-            >
-              {currentTheme === "dark" ? (
-                <img
-                  src="/images/GUicon.svg"
-                  alt="gu icon dark"
-                  className="cursor-pointer"
-                />
-              ) : (
-                <img
-                  src="/images/GUicon-light.svg"
-                  alt="gu icon light"
-                  className="cursor-pointer"
-                />
-              )}
+            <div className={`z-101 flex items-center w-[35px] h-[35px] `}>
+              <img
+                src="/images/GUicon-light.svg"
+                alt="gu icon light"
+                className="cursor-pointer"
+              />
             </div>
           </Link>
         </div>
