@@ -29,7 +29,11 @@ const Discord = () => {
           <p className="text-[1rem]">The community is the team.</p>
         </div>
         <div className="w-full lg:w-[70%]">
-          <MainButton page={true} ariaLabel="Join Discord">
+          <MainButton
+            page={true}
+            ariaLabel="Join Discord"
+            link="https://discord.gg/Z5dqQ4NCk3"
+          >
             JOIN DISCORD
           </MainButton>
         </div>

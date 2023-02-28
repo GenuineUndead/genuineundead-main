@@ -27,7 +27,12 @@ const ReadMore = () => {
           </p>
         </div>
         <div className="w-full lg:w-[70%]">
-          <MainButton page={true}>READ MORE</MainButton>
+          <MainButton
+            page={true}
+            link="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
+          >
+            READ MORE
+          </MainButton>
         </div>
       </div>
       <div className="min-h-[50%] w-full lg:min-h-screen flex justify-center items-center flex-1 mb-[100px] mt-[50px] lg:my-0">

@@ -37,8 +37,9 @@ const Ethos = ({ t }) => {
           {t("eContent")}
         </MainParagraphWrapper>
         <MainButton
-          ariaLabel="Link to ethos"
-          link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+          ariaLabel="Link to Ethos page"
+          internalLink={true}
+          link="/ethos"
         >
           {t("ourEthos")}
         </MainButton>

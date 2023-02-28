@@ -1,79 +1,118 @@
 import React from "react";
 import { withTranslation } from "next-i18next";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Footer = ({ t }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row lg:justify-between pt-[2rem] pb-[5rem] text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917]">
-      {/* <div>@ {t("genuineUndead")} 2023</div> */}
       <div>@ GenuineUndead 2023</div>
       <div>
         <ul>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {" "}
-            {/* <a className="cursor-pointer">{t("portal")}</a> */}
-            <a className="cursor-pointer">Portal</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {" "}
-            {/* <a className="cursor-pointer">{t("art")}</a> */}
-            <a className="cursor-pointer">Art</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {" "}
-            {/* <a className="cursor-pointer">{t("story")}</a>{" "} */}
-            <a className="cursor-pointer">Story</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {" "}
-            {/* <a className="cursor-pointer">{t("community")}</a>{" "} */}
-            <a className="cursor-pointer">Community</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {" "}
-            {/* <a className="cursor-pointer">{t("ethos")}</a> */}
-            <a className="cursor-pointer">Ethos</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {" "}
-            {/* <a className="cursor-pointer">{t("home")}</a>{" "} */}
-            <a className="cursor-pointer">Home</a>
-          </motion.li>
+          <li>
+            <a
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              href="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Portal
+            </a>
+          </li>
+          <li>
+            <Link
+              href="/art"
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+            >
+              Art
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/story"
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+            >
+              Story
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/community"
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+            >
+              Community
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/ethos"
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+            >
+              Ethos
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+            >
+              Home
+            </Link>
+          </li>
         </ul>
       </div>
       <div>
         <ul>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {/* <a className="cursor-pointer">{t("guidelines")}</a>{" "} */}
-            <a className="cursor-pointer">Guidelines</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {/* <a className="cursor-pointer">{t("contact")}</a>{" "} */}
-            <a className="cursor-pointer">Contact</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {/* <a className="cursor-pointer">{t("ip")}</a> */}
-            <a className="cursor-pointer">IP</a>
-          </motion.li>
+          <li>
+            <a className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]">
+              Guidelines
+            </a>
+          </li>
+          <li>
+            <a className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]">
+              Contact
+            </a>
+          </li>
+          <li>
+            <a className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]">
+              IP
+            </a>
+          </li>
         </ul>
       </div>
       <div>
         <ul>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {/* <a className="cursor-pointer">{t("discord")}</a> */}
-            <a className="cursor-pointer">Discord</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {/* <a className="cursor-pointer">{t("twitter")}</a>{" "} */}
-            <a className="cursor-pointer">Twitter</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {/* <a className="cursor-pointer">{t("medium")}</a>{" "} */}
-            <a className="cursor-pointer">Medium</a>
-          </motion.li>
+          <li>
+            <a
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              href="https://discord.gg/Z5dqQ4NCk3"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Discord
+            </a>
+          </li>
+          <li>
+            <a
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              href="https://twitter.com/GenuineUndead"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              href="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Medium
+            </a>
+          </li>
         </ul>
       </div>
-      {/* <div>{t("allRightsReserved")}</div> */}
       <div>All Rights Reserved</div>
     </div>
   );
