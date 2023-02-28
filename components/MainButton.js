@@ -19,9 +19,7 @@ const MainButton = ({
             page ? "rounded-full" : ""
           } ${styles}`}
         >
-          <a href={link} target="_blank" rel="noreferrer noopener">
-            {children}
-          </a>
+          {children}
         </button>
       </Link>
     );

@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = ({ t }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row lg:justify-between pt-[2rem] pb-[5rem] text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917]">
-      <div>@ GenuineUndead 2023</div>
+      <div>&#169; GenuineUndead 2023</div>
       <div>
         <ul>
           <li>

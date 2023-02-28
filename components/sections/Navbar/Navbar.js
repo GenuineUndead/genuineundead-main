@@ -43,7 +43,7 @@ const Navbar = () => {
             <div
               className={`z-101 flex items-center ${
                 currentTheme === "dark"
-                  ? "w-[30px] h-[30px]"
+                  ? "ml-[2px] w-[30px] h-[30px]"
                   : "w-[35px] h-[35px]"
               }`}
             >
