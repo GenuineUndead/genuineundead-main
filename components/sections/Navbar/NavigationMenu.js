@@ -24,9 +24,17 @@ const socialLinks = [
     link: "https://twitter.com/GenuineUndead",
     i18n: "twitter",
   },
-  { title: "Discord", link: "/community", i18n: "discord" },
-  { title: "Medium", link: "/gallery", i18n: "medium" },
-  { title: "Opensea", link: "/comic", i18n: "opensea" },
+  { title: "Discord", link: "https://discord.gg/Z5dqQ4NCk3", i18n: "discord" },
+  {
+    title: "Medium",
+    link: "https://medium.com/@GenuineUndead/genuine-undead-f627c448f501",
+    i18n: "medium",
+  },
+  {
+    title: "Opensea",
+    link: "https://opensea.io/collection/genuine-undead",
+    i18n: "opensea",
+  },
 ];
 
 const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
@@ -71,9 +79,13 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                     <li
                       i={i}
                       key={i}
-                      className="text-[2vh] text-center md:text-left text-white dark:text-black cursor-pointer text-center md:text-left"
+                      className="text-[2vh] text-center md:text-left text-white dark:text-black cursor-pointer text-center md:text-left hover:text-[#ff5277] hover:dark:text-[#ff5277]"
                     >
-                      <a href={link.link} target="_blank">
+                      <a
+                        href={link.link}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
                         {t(`${link.title}`)}
                       </a>
                     </li>
