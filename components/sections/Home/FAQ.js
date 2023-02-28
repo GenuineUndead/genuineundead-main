@@ -20,18 +20,18 @@ const FAQ = () => {
       id="faqs"
       className="flex flex-col h-full w-full border-b border-black dark:border-white lg:px-[3.2rem]"
     >
-      <div className="flex flex-col items-center w-full my-24 ">
+      <div className="flex flex-col items-center w-full my-24">
         {theme === "dark" ? (
           <img
             src="/images/title/FAQS-dark.svg"
             alt="FAQS Dark"
-            className="w-[30%] md:w-[20%] xl:w-[17%]"
+            className="w-[30%] md:w-[20%] xl:w-[17%] mb-[24px]"
           />
         ) : (
           <img
             src="/images/title/FAQS-light.svg"
             alt="FAQS Light"
-            className="w-[30%] md:w-[20%] xl:w-[17%]"
+            className="w-[30%] md:w-[20%] xl:w-[17%] mb-[24px]"
           />
         )}
         <div className="flex justify-center w-full">
