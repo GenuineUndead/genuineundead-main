@@ -28,6 +28,7 @@ const Navbar = () => {
   useEffect(() => {
     setMounted(true);
     if (mounted) {
+      console.log(theme);
       setCurrentTheme(theme === "system" ? systemTheme : theme);
     }
   }, [mounted]);

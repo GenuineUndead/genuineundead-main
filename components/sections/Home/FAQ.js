@@ -2,21 +2,38 @@ import React, { useEffect, useState } from "react";
 import TekoHeading from "../../TekoHeading";
 import Accordion from "../../Accordian";
 import { homeFAQ } from "../../../public/data/HomeFAQ";
+import { useTheme } from "next-themes";
 
 const FAQ = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState("dark");
+
+  useEffect(() => {
+    setMounted(true);
+    if (mounted) {
+      setCurrentTheme(theme === "system" ? systemTheme : theme);
+    }
+  }, [mounted]);
   return (
     <section
       id="faqs"
       className="flex flex-col h-full w-full border-b border-black dark:border-white lg:px-[3.2rem]"
     >
       <div className="flex flex-col items-center w-full my-24 ">
-        <h2 className="text-[2.3rem] md:text-[3rem] lg:text-[4.0rem] xl:text-[4.5rem] xxl:text-[5.5rem] font-didot flex">
-          {" "}
-          <span className="mt-[-3px] font-teko font-extrabold text-[2.75rem] md:text-[3.75rem] lg:text-[4.75rem] xl:text-[5.25rem] xxl:text-[6.25rem]">
-            FA
-          </span>
-          QS
-        </h2>
+        {theme === "dark" ? (
+          <img
+            src="/images/title/FAQS-dark.svg"
+            alt="FAQS Dark"
+            className="w-[30%] md:w-[20%] xl:w-[17%]"
+          />
+        ) : (
+          <img
+            src="/images/title/FAQS-light.svg"
+            alt="FAQS Light"
+            className="w-[30%] md:w-[20%] xl:w-[17%]"
+          />
+        )}
         <div className="flex justify-center w-full">
           <Accordion faqQuestions={homeFAQ} />
         </div>
