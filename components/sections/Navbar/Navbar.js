@@ -35,7 +35,7 @@ const Navbar = () => {
     <>
       <nav
         id="navbar"
-        className="w-min-screen h-[50px] top-0 sticky bg-white dark:bg-black flex justify-between items-center relative above-all bg-opacity-10 backdrop-filter backdrop-blur-lg"
+        className="w-min-screen h-[50px] top-0 sticky bg-[#f8f8f4] dark:bg-[#191917] flex justify-between items-center relative above-all bg-opacity-10 backdrop-filter backdrop-blur-lg"
       >
         <div className="pl-[1.6rem] lg:pl-[3.2rem]">
           <Link href="/">
@@ -52,7 +52,7 @@ const Navbar = () => {
           <ToggleSwitch toggleTheme={toggleTheme} theme={currentTheme} />
         </div>
         <div
-          className={`bg-black dark:bg-white transition-all duration-700 overflow-hidden above-all`}
+          className={`bg-[#191917] dark:bg-[#f8f8f4] transition-all duration-700 overflow-hidden above-all`}
           onClick={toggleMenu}
         >
           <MenuButton menuOpen={menuOpen} theme={currentTheme} />

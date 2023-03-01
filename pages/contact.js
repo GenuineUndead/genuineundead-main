@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SEO from "../components/SEO";
 import { ClipLoader } from "react-spinners";
 import { twitterContact } from "../public/data/TwitterContact";
+import { FaTwitter, FaLinkedin } from "react-icons/fa";
+import { useTheme } from "next-themes";
+import { IconContext } from "react-icons";
 
 const contact = () => {
   const [isFormErr, setIsFormErr] = useState(false);
@@ -69,7 +72,7 @@ const contact = () => {
                 Email Address*
               </label>
               <input
-                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-[#191917] border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 type="email"
                 name="email"
@@ -83,7 +86,7 @@ const contact = () => {
                 Name
               </label>
               <input
-                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-[#191917] border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
                 name="name"
@@ -96,7 +99,7 @@ const contact = () => {
                 Subject*
               </label>
               <input
-                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-[#191917] border border-black dark:border-white rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
                 id="subject"
                 type="text"
                 name="subject"
@@ -108,7 +111,7 @@ const contact = () => {
                 Message*
               </label>
               <textarea
-                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-[#191917] border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
                 rows="6"
                 name="message"
@@ -136,7 +139,7 @@ const contact = () => {
             </div>
           </form>
         </div>
-        <div className="flex flex-col items-center my-[20px]">
+        <div className="flex flex-col items-center my-[20px]d">
           <h3 className="font-didot text-[6vw]">REACH OUT ON TWITTER</h3>
           <div className="flex flex-col md:flex-row gap-[3.5rem] my-[50px]">
             {twitterContact.map((contact) => {
@@ -152,19 +155,49 @@ const contact = () => {
 export default contact;
 
 const TwitterContact = ({ info }) => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+  const [currentTheme, setCurrentTheme] = useState(null);
+
+  useEffect(() => {
+    setMounted(true);
+    if (mounted) {
+      setCurrentTheme(theme === "system" ? systemTheme : theme);
+    }
+  }, [mounted]);
+
+  useEffect(() => {
+    setCurrentTheme(theme);
+  }, [theme]);
   return (
-    <div className="flex justify-center items-center gap-[1.5rem] max-h-[100px]">
-      <a href={info.link} target="_blank" rel="noreferrer noopener">
+    <IconContext.Provider
+      value={{
+        color: theme === "dark" ? "#f8f8f4" : "#191917",
+        size: "1.2rem",
+        className: "icons",
+      }}
+    >
+      <div className="flex justify-center items-center gap-[1.5rem] max-h-[100px]">
         <img
           src={info.image}
           alt={info.name}
           className="h-[85px] aspect-square rounded-full"
         />
-      </a>
-      <div className="flex flex-col justify-center">
-        <h6>Title: {info.title}</h6>
-        <h6>Handle: {info.handle}</h6>
+        <div className="flex flex-col justify-center gap-[.3rem]">
+          <h6>Title: {info.title}</h6>
+          <h6>Handle: {info.handle}</h6>
+          <div className="flex gap-[.5rem]">
+            <a href={info.twitter} target="_blank" rel="noreferrer noopener">
+              {" "}
+              <FaTwitter />
+            </a>
+            <a href={info.linkedin} target="_blank" rel="noreferrer noopener">
+              {" "}
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </IconContext.Provider>
   );
 };
