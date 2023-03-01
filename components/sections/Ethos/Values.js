@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TekoHeading from "../../TekoHeading";
 import Accordion from "../../Accordian";
 import { coreValues } from "../../../public/data/CoreValues";
