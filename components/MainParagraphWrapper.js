@@ -3,7 +3,7 @@ import React from "react";
 const MainParagraphWrapper = ({ children, width }) => {
   return (
     <p
-      className={`text-[.94rem] ${
+      className={`leading-6 text-[.94rem] ${
         width ? width : "w-[90%] lg:w-[60%]"
       } leading-[1.4rem] mb-[60px]`}
     >

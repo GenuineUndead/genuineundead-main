@@ -7,7 +7,7 @@ const ReadMore = () => {
     <section className="min-h-screen lg:min-h-[110vh] w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center flex-1 community-txt-container relative overflow-y-hidden mt-[100px] mb-[50px] lg:my-0">
         <div className="flex flex-col gap-[1.2rem] w-full lg:w-[70%] mb-[3rem]">
-          <p className="text-[1rem]">
+          <p className="text-[1rem] leading-6">
             There are 9 councils, or departments, designed to organize and
             deploy an army of literally thousands. Deviating from a traditional
             DAO model, where the community operates under strict decentralized
@@ -19,7 +19,7 @@ const ReadMore = () => {
             acts as a “Board of Directors” to harness, curate and refine the
             unending creative passion of contributing members.
           </p>
-          <p className="text-[1rem]">
+          <p className="text-[1rem] leading-6">
             By investing in, and continually improving the tools available to
             contributors, the goal is to provide a platform to elevate creators.
             Which will in turn elevate the project through curated and

@@ -15,7 +15,7 @@ const Curation = () => {
             <i>METICULOUS</i>
             <TekoHeading>CURATION</TekoHeading>
           </h2>
-          <p className="text-[1rem]">
+          <p className="text-[1rem] leading-6 ">
             Over 200 hand drawn traits ranging from classic to cyber with a
             diverse set of base traits. Trait combinations that have been
             curated to compliment one another providing context and a deep

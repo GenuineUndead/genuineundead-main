@@ -12,12 +12,12 @@ const Discord = () => {
       </div>
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center mb-[100px] mt-[50px] lg:my-0 flex-1 relative community-txt-container overflow-y-hidden">
         <div className="flex flex-col gap-[1.2rem] w-full lg:w-[70%] mb-[3rem] justify-center">
-          <p className="text-[1rem]">
+          <p className="text-[1rem] leading-6 ">
             Our utility is access to a collective of passionate and motivated
             creators, developers, investors, academics, collectors, innovators,
             thinkers, and leaders in the future of Web3.
           </p>
-          <p className="text-[1rem]">
+          <p className="text-[1rem] leading-6 ">
             As a community-led project, the value flows in the opposite
             direction of a typical “utility” NFT project. Individuals in the
             community are providing time, energy, skills and passion to enhance

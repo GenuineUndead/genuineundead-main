@@ -20,7 +20,7 @@ const MobileGallery = () => {
             PIXEL <TekoHeading>ART</TekoHeading>
           </span>
         </h2>
-        <p className="text-[1rem] lg:w-[50%]">
+        <p className="text-[1rem] lg:w-[50%] leading-6 ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum
           nisi quis eleifend quam adipiscing.
