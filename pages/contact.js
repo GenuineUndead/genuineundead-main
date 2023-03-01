@@ -69,11 +69,11 @@ const contact = () => {
             onSubmit={handleOnSubmit}
           >
             <div className="mb-4">
-              <label className="block text-sm font-bold mb-2" htmlFor="email">
+              <label className="block text-[1rem] mb-2" htmlFor="email">
                 Email Address*
               </label>
               <input
-                className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 type="email"
                 name="email"
@@ -83,11 +83,11 @@ const contact = () => {
             </div>
             {/* FOR BOTS */}
             <div className="mb-4 hidden">
-              <label className="block text-sm font-bold mb-2" htmlFor="name">
+              <label className="block text-[1rem] mb-2" htmlFor="name">
                 Name
               </label>
               <input
-                className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
                 name="name"
@@ -96,11 +96,11 @@ const contact = () => {
             </div>
             {/* END FOR BOTS */}
             <div className="mb-4">
-              <label className="block text-sm font-bold mb-2" htmlFor="subject">
+              <label className="block text-[1rem] mb-2" htmlFor="subject">
                 Subject*
               </label>
               <input
-                className="appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
                 id="subject"
                 type="text"
                 name="subject"
@@ -108,11 +108,11 @@ const contact = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-sm font-bold mb-2" htmlFor="message">
+              <label className="block text-[1rem] mb-2" htmlFor="message">
                 Message*
               </label>
               <textarea
-                className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none bg-[#f8f8f4] dark:bg-black border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
                 rows="6"
                 name="message"
@@ -120,12 +120,12 @@ const contact = () => {
               ></textarea>
             </div>
             {isFormErr && (
-              <p className="text-red-600 text-sm text-center mb-[15px]">
+              <p className="text-red-600 text-[1rem] text-center mb-[15px]">
                 Error: Please ensure all fields are filled out
               </p>
             )}
             {isSuccess && (
-              <p className="text-green-600 text-sm text-center mb-[15px]">
+              <p className="text-green-600 text-[1rem] text-center mb-[15px]">
                 Successfully sent email! You should hear back within the next
                 24-48 hours
               </p>
