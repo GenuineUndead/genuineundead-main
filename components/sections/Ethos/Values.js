@@ -6,6 +6,15 @@ import { useTheme } from "next-themes";
 
 const Values = () => {
   const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState("dark");
+
+  useEffect(() => {
+    setMounted(true);
+    if (mounted) {
+      setCurrentTheme(theme === "system" ? systemTheme : theme);
+    }
+  }, [mounted]);
 
   return (
     <section
@@ -13,7 +22,7 @@ const Values = () => {
       className="flex flex-col h-full w-full border-b border-black dark:border-white lg:px-[3.2rem]"
     >
       <div className="flex flex-col items-center w-full  ">
-        {theme === "dark" ? (
+        {currentTheme === "dark" ? (
           <img
             src="/images/title/values-dark.svg"
             alt="Core Values Dark"

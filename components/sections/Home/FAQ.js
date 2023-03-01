@@ -21,7 +21,7 @@ const FAQ = () => {
       className="flex flex-col h-full w-full border-b border-black dark:border-white lg:px-[3.2rem]"
     >
       <div className="flex flex-col items-center w-full my-24">
-        {theme === "dark" ? (
+        {currentTheme === "dark" ? (
           <img
             src="/images/title/FAQS-dark.svg"
             alt="FAQS Dark"
