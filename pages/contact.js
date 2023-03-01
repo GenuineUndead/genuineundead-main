@@ -63,11 +63,7 @@ const contact = () => {
           <i>CONTACT</i> <span className="font-teko text-[11.4vw]">US</span>
         </h1>
         <div className="w-full md:w-[60%] mx-auto">
-          <form
-            className="px-8 pt-6 pb-8"
-            method="post"
-            onSubmit={handleOnSubmit}
-          >
+          <form className="p-8" method="post" onSubmit={handleOnSubmit}>
             <div className="mb-4">
               <label className="block text-[1rem] mb-2" htmlFor="email">
                 Email Address*
@@ -140,7 +136,7 @@ const contact = () => {
             </div>
           </form>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center my-[20px]">
           <h3 className="font-didot text-[6vw]">REACH OUT ON TWITTER</h3>
           <div className="flex flex-col md:flex-row gap-[3.5rem] my-[50px]">
             {twitterContact.map((contact) => {
