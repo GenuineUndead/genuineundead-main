@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { withTranslation } from "next-i18next";
 import Link from "next/link";
+import useOutsideClick from "../../../hooks/useOutsideClick";
 
 //CHANGE -- THESE i18n NEED TO BE IN ALL CAPITALS
 const pageLinks = [
@@ -39,11 +40,31 @@ const socialLinks = [
 
 const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
   const router = useRouter();
+  const menuRef = useRef();
+  const [init, setInit] = useState(false);
+
+  useOutsideClick(menuRef, () => {
+    if (menuOpen && init) {
+      toggleMenu();
+    }
+    setInit(!init);
+  });
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      setInit(false);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router]);
   return (
     <>
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            ref={menuRef}
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -52,7 +73,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
               },
             }}
             exit={{ opacity: 0, transition: { duration: 0.4 } }}
-            className={`min-full-height fixed bg-black dark:bg-white absolute w-screen top-0 lg:w-[500px] lg:pr-[20%] md:right-0 overflow-hidden`}
+            className={`min-full-height fixed bg-black dark:bg-white absolute w-screen top-0 lg:min-w-[500px] xl:w-[600px] lg:pr-[20%] md:right-0 overflow-hidden`}
           >
             <div className="flex flex-col items-center h-full p-0 md:pl-[3rem] md:pt-[2rem]">
               <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start">
@@ -61,7 +82,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                     <Link key={i} href={link.path}>
                       <li
                         i={i}
-                        className={`text-[5.3vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                        className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
                           router.pathname === link.path ? "underline" : ""
                         }`}
                         onClick={toggleMenu}
@@ -90,6 +111,14 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                       </a>
                     </li>
                   ))}
+                  <li>
+                    <Link
+                      href="/contact"
+                      className="text-[2vh] text-center md:text-left text-white dark:text-black cursor-pointer text-center md:text-left hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+                    >
+                      Contact
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
@@ -28,7 +28,6 @@ const Navbar = () => {
   useEffect(() => {
     setMounted(true);
     if (mounted) {
-      console.log(theme);
       setCurrentTheme(theme === "system" ? systemTheme : theme);
     }
   }, [mounted]);
