@@ -61,7 +61,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                     <Link key={i} href={link.path}>
                       <li
                         i={i}
-                        className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                        className={`text-[5.3vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
                           router.pathname === link.path ? "underline" : ""
                         }`}
                         onClick={toggleMenu}
