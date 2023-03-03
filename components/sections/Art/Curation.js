@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Curation = () => {
   return (
-    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
+    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center flex-1 community-txt-container relative overflow-y-hidden">
         <div className="flex flex-col gap-[2.5rem] w-full lg:w-[60%] md:my-[50px] ">
           <h2

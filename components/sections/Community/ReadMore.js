@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ReadMore = () => {
   return (
-    <section className="min-h-screen lg:min-h-[110vh] w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
+    <section className="min-h-screen lg:min-h-[110vh] w-full flex flex-col lg:flex-row border-b border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center flex-1 community-txt-container relative overflow-y-hidden mt-[100px] mb-[50px] lg:my-0">
         <div className="flex flex-col gap-[1.2rem] w-full lg:w-[70%] mb-[3rem]">
           <p className="text-[1rem] leading-6">

@@ -19,9 +19,9 @@ const Values = () => {
   return (
     <section
       id="faqs"
-      className="flex flex-col h-full w-full border-b border-black dark:border-white lg:px-[3.2rem]"
+      className="flex flex-col h-full w-full border-b border-black dark:border-white lg:px-[3.2rem"
     >
-      <div className="flex flex-col items-center w-full  ">
+      <div className="flex flex-col items-center w-full  mb-[100px]">
         {currentTheme === "dark" ? (
           <img
             src="/images/title/values-dark.svg"
@@ -35,7 +35,7 @@ const Values = () => {
             className="w-[37%] md:w-[36%] lg:w-[40%] xl:w-[23%] my-24"
           />
         )}
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center w-full ">
           <Accordion faqQuestions={coreValues} />
         </div>
       </div>

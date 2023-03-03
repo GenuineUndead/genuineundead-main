@@ -13,7 +13,7 @@ const PFP = () => {
   }, []);
 
   return (
-    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
+    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:max-h-screen flex justify-center items-center flex-1 overflow-y-hidden py-[50px] lg:py-0">
         <div className="grid grid-cols-3 gap-[2rem] w-[80%] lg:w-[60%]">
           {ids?.map((id) => {

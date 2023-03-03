@@ -4,7 +4,7 @@ import TekoHeading from "../../TekoHeading";
 
 const Utility = () => {
   return (
-    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-t border-black dark:border-white px-[1.6rem] lg:px-0">
+    <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:min-h-screen flex justify-center items-center flex-1 mt-[100px] mb-[50px] lg:my-0 lg:py-[150px]">
         <div className="w-full h-full flex flex-col justify-center items-center lg:items-start lg:pl-[10%]">
           <h1 className="font-didot text-[17vw] lg:text-[8.5vw]">UTILITY</h1>

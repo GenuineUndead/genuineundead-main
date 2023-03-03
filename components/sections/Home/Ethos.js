@@ -9,7 +9,7 @@ import { Parallax } from "react-scroll-parallax";
 
 const Ethos = ({ t }) => {
   return (
-    <section className="min-h-[115vh] lg:min-h-screen  w-full flex flex-col lg:flex-row lg:gap-[2.5rem] border-b border-t border-black dark:border-white overflow-hidden">
+    <section className="min-h-[115vh] lg:min-h-screen  w-full flex flex-col lg:flex-row lg:gap-[2.5rem] border-b border-black dark:border-white overflow-hidden">
       <div
         className={`w-full lg:w-[50%] lg:min-h-[50%] bg-[url('/images/background/zombie-light.png')] dark:bg-[url('/images/background/zombie.png')] bg-cover bg-center flex items-center justify-center flex-1`}
       >
