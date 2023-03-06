@@ -5,8 +5,8 @@ import Landing from "../components/sections/Story/Landing";
 const story = () => {
   return (
     <>
-      {/* <Landing /> */}
-      <ComingSoon />
+      <Landing />
+      {/* <ComingSoon /> */}
     </>
   );
 };

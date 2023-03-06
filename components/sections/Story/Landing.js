@@ -66,49 +66,45 @@ function Landing() {
       //   { opacity: 0, ease: Power2.easeOut },
       //   "-=2.8"
       // );
-      tl.fromTo(
-        i1,
-        { opacity: 0, y: -10, x: -5 },
-        { opacity: 1, x: 0, y: 0, ease: Power2.easeIn },
-        "-=2.7"
-      );
-      tl.to(
-        i2,
-        {
-          transform: "translateZ(0px)",
-          x: rightX,
-          y: yDir,
-          autoAlpha: 0.4,
-          scale: scale,
-          duration: 4,
-        },
-        "-=2.6"
-      );
       // tl.fromTo(
       //   i2,
-      //   { opacity: 1 },
-      //   { opacity: 0, ease: Power2.easeOut },
-      //   "-=3.4"
+      //   { opacity: 0, y: -10, x: -5 },
+      //   { opacity: 1, x: 0, y: 0, ease: Power2.easeIn },
+      //   "-=2.7"
       // );
 
       tl.fromTo(
-        i3,
+        i2,
         { opacity: 0, y: -10, x: 5 },
-        { opacity: 1, x: 0, y: 0, ease: Power2.easeIn, duration: 0.1 }
-      ),
-        "-=3.6";
-      tl.to(
-        i3,
-        {
-          transform: "translateZ(0px)",
-          x: leftX,
-          y: yDir,
-          autoAlpha: 0.4,
-          scale: scale,
-          duration: dur,
-        },
-        "-=3.7"
+        { opacity: 1, x: 0, y: 0, ease: Power2.easeIn }
       );
+      tl.to(i2, {
+        transform: "translateZ(0px)",
+        x: rightX,
+        y: yDir,
+        autoAlpha: 0.4,
+        scale: scale,
+        duration: dur,
+      });
+
+      // tl.fromTo(
+      //   i3,
+      //   { opacity: 0, y: -10, x: 5 },
+      //   { opacity: 1, x: 0, y: 0, ease: Power2.easeIn, duration: 0.1 }
+      // ),
+      //   "-=3.6";
+      // tl.to(
+      //   i3,
+      //   {
+      //     transform: "translateZ(0px)",
+      //     x: leftX,
+      //     y: yDir,
+      //     autoAlpha: 0.4,
+      //     scale: scale,
+      //     duration: dur,
+      //   },
+      //   "-=3.7"
+      // );
 
       // tl.fromTo(
       //   i4,
@@ -181,13 +177,13 @@ function Landing() {
         >
           <img src="/images/carousel/cowboy.png" className="w-full h-full " />
         </div>
-        <div
+        {/* <div
           ref={image3}
           className="absolute top-0 left-[35%] w-[17%] aspect-square"
         >
           {" "}
           <img src="/images/carousel/human.png" className="w-full h-full " />
-        </div>
+        </div> */}
         {/* <div
           ref={image5}
           className="absolute top-[60px] left-[35%] w-[17%] h-[300px] bg-green-500"
