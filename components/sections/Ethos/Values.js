@@ -16,6 +16,10 @@ const Values = () => {
     }
   }, [mounted]);
 
+  useEffect(() => {
+    setCurrentTheme(theme);
+  }, [theme]);
+
   return (
     <section
       id="faqs"

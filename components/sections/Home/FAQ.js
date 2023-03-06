@@ -15,6 +15,11 @@ const FAQ = () => {
       setCurrentTheme(theme === "system" ? systemTheme : theme);
     }
   }, [mounted]);
+
+  useEffect(() => {
+    console.log(theme);
+    setCurrentTheme(theme);
+  }, [theme]);
   return (
     <section
       id="faqs"
