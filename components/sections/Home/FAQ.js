@@ -17,7 +17,6 @@ const FAQ = () => {
   }, [mounted]);
 
   useEffect(() => {
-    console.log(theme);
     setCurrentTheme(theme);
   }, [theme]);
   return (

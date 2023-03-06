@@ -117,18 +117,8 @@ const contact = () => {
                     placeholder="Message"
                   ></textarea>
                 </div>
-                {isFormErr && (
-                  <p className="text-red-600 text-[1rem] text-center mb-[15px]">
-                    Error: Please ensure all fields are filled out
-                  </p>
-                )}
-                {isSuccess && (
-                  <p className="text-green-600 text-[1rem] text-center mb-[15px]">
-                    Successfully sent email! You should hear back within the
-                    next 24-48 hours
-                  </p>
-                )}
-                <div className="flex justify-start items-center">
+
+                <div className="flex flex-col justify-center items-start gap-[.5rem] ">
                   <button
                     className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] hover:dark:border-[#ff5277] rounded-full transition-all duration-300`}
                     type="submit"
@@ -139,6 +129,16 @@ const contact = () => {
                       "Send Message"
                     )}
                   </button>
+                  {isFormErr && (
+                    <p className="text-[#ff5277] text-[1rem] text-center mb-[15px]">
+                      Error: Please ensure all fields are filled out
+                    </p>
+                  )}
+                  {isSuccess && (
+                    <p className="text-[1rem] text-center mb-[15px]">
+                      THANKS - your message has been sent!
+                    </p>
+                  )}
                 </div>
               </form>
             </div>
@@ -150,9 +150,7 @@ const contact = () => {
               </div>
             </div>
           </div>
-          <div className="md:w-full h-[300px] bg-[url('/born-undead.jpeg')] bg-center bg-cover relative overflow-hidden flex justify-center ">
-            {/* <Image src="/born-undead.jpeg" alt="born undead" fill /> */}
-          </div>
+          <div className="md:w-full h-[300px] bg-[url('/born-undead.jpeg')] bg-center bg-cover relative overflow-hidden flex justify-center "></div>
         </div>
       </div>
     </>
