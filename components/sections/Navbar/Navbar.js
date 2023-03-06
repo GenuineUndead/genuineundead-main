@@ -35,7 +35,7 @@ const Navbar = () => {
     <>
       <nav
         id="navbar"
-        className="w-min-screen h-[50px] top-0 sticky bg-[#f8f8f4] dark:bg-[#191917] flex justify-between items-center relative above-all bg-opacity-10 backdrop-filter backdrop-blur-lg"
+        className="w-min-screen h-[50px] top-0 sticky bg-[#f8f8f4] dark:bg-[#191917] flex justify-between items-center relative above-all bg-opacity-10 dark:bg-opacity-90 dark:backdrop-blur-xl backdrop-filter backdrop-blur-lg"
       >
         <div className="pl-[1.6rem] lg:pl-[3.2rem]">
           <Link href="/">
