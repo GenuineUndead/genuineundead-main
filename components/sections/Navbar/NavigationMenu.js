@@ -115,6 +115,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                     <Link
                       href="/contact"
                       className="text-[2vh] text-center md:text-left text-white dark:text-black cursor-pointer text-center md:text-left hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+                      onClick={toggleMenu}
                     >
                       Contact
                     </Link>
