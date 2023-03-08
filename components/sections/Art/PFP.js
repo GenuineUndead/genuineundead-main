@@ -52,7 +52,7 @@ export default PFP;
 const GUImage = ({ id }) => {
   const [isOverlay, setIsOverlay] = useState(false);
   return (
-    <div className="relative cursor-pointer flex justify-center items-center">
+    <div className="relative cursor-pointer flex justify-center items-center hexagon">
       <div
         className={`w-full aspect-square rounded-full bg-center bg-contain z-1 relative transition-all duration-300 ${
           isOverlay ? "grayscale" : ""
