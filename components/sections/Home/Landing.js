@@ -125,16 +125,16 @@ function Landing() {
           ref={imageDiv1}
         >
           <img
-            src="/images/animation/avaitor.png"
+            src="/images/animation/gu-157.png"
             className="w-full aspect-square"
           />
           <img
-            src="/images/animation/louhorns.gif"
+            src="/images/animation/gu-5658.gif"
             className="w-full aspect-square"
             alt="louhorns"
           />
           <img
-            src="/images/animation/paint.png"
+            src="/images/animation/gu-7759.png"
             className="w-full aspect-square"
             alt="paint"
           />
@@ -145,17 +145,17 @@ function Landing() {
           ref={imageDiv2}
         >
           <img
-            src="/images/animation/titanium.png"
+            src="/images/animation/gu-1279.png"
             alt="Titanium"
             className="h-full aspect-square"
           />
           <img
-            src="/images/animation/bowler.png"
+            src="/images/animation/gu-6117.png"
             className="h-full aspect-square"
             alt="bowler"
           />
           <img
-            src="/images/animation/openmind.png"
+            src="/images/animation/gu-9583.png"
             className="h-full aspect-square"
             alt="openmind"
           />

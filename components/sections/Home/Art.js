@@ -28,10 +28,10 @@ const Art = ({ t }) => {
           speed={-20}
           className="w-full hidden lg:flex justify-center w-[60%]  aspect-square"
         >
-          <Image src="/images/gu/viking-rose.png" fill alt="Viking" />{" "}
+          <Image src="/images/gu/war.png" fill alt="War" />{" "}
         </Parallax>
         <div className="w-[70%] md:w-[55%] aspect-square lg:hidden relative">
-          <Image src="/images/gu/viking-rose.png" fill alt="Viking" />{" "}
+          <Image src="/images/gu/war.png" fill alt="War" />{" "}
         </div>
       </div>
       <div className="w-full min-h-[50%] lg:w-[50%] lg:min-h-full mt-[50px] mb-[100px] lg:my-[50px] flex flex-col justify-center z-10 relative text-container px-[1.6rem]">

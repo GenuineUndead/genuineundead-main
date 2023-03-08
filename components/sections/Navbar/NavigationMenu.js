@@ -12,7 +12,6 @@ const pageLinks = [
     path: "https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221",
     i18n: "portal",
   },
-
   { title: "ART", path: "/art", i18n: "art" },
   { title: "STORY", path: "/story", i18n: "story" },
   { title: "COMMUNITY", path: "/community", i18n: "community" },
