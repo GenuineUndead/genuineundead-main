@@ -13,7 +13,12 @@ const MobileStory = ({ t }) => {
         className={`w-full lg:w-[50%] lg:min-h-[50%] bg-[url('/images/background/boney-light.png')] dark:bg-[url('/images/background/boney.png')] bg-cover bg-center flex items-center justify-center flex-1`}
       >
         <div className="w-[70%] md:w-[55%]  aspect-square relative">
-          <Image src="/images/gu/watchcap.png" fill alt="Watchcap" />
+          <Image
+            src="/images/gu/watchcap.png"
+            fill
+            alt="Watchcap"
+            quality={100}
+          />
         </div>{" "}
       </div>
       <div className="w-full h-[40%] lg:min-h-[50%] lg:w-[50%] lg:min-h-full flex flex-col justify-center lg:my-[50px] text-container relative px-[1.6rem] pb-[100px] mt-[20px]">

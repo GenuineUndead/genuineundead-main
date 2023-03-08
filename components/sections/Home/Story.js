@@ -47,7 +47,12 @@ const Story = ({ t }) => {
           speed={-20}
           className="w-full flex justify-center w-[55%] aspect-square relative"
         >
-          <Image src="/images/gu/watchcap.png" fill alt="Watchcap" />
+          <Image
+            src="/images/gu/watchcap.png"
+            fill
+            alt="Watchcap"
+            quality={100}
+          />
         </Parallax>
       </div>
     </div>
