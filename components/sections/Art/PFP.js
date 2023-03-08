@@ -55,7 +55,7 @@ const GUImage = ({ id }) => {
     <div className="relative cursor-pointer flex justify-center items-center hexagon">
       <div
         className={`w-full aspect-square rounded-full bg-center bg-contain z-1 relative transition-all duration-300 ${
-          isOverlay ? "grayscale" : ""
+          isOverlay ? "" : ""
         }`}
         style={{
           backgroundImage: `url(https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
@@ -67,16 +67,15 @@ const GUImage = ({ id }) => {
         {isOverlay && (
           <div
             onMouseLeave={() => setIsOverlay(!isOverlay)}
-            className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-all duration-300 z-10"
+            className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-all duration-300 z-10 inset-0 bg-opacity-75 bg-[#191917] rounded-full"
+            onClick={() => {
+              window.open(
+                `https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221/tokens/${id}`,
+                "_blank"
+              );
+            }}
           >
-            <a
-              href={`https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221/tokens/${id}`}
-              className="text-white font-teko text-[2rem] font-bold"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              BUY
-            </a>
+            <img src="/plus.svg" alt="plus" className="h-[25%] aspect-square" />
           </div>
         )}
       </div>

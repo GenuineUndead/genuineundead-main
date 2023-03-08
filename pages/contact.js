@@ -119,7 +119,7 @@ const contact = () => {
                   ></textarea>
                 </div>
 
-                <div className="flex flex-col justify-center items-start gap-[.5rem] ">
+                <div className="flex flex-col justify-center items-start gap-[.5rem] h-full">
                   <button
                     className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] hover:dark:border-[#ff5277] rounded-full transition-all duration-300`}
                     type="submit"
