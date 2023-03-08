@@ -3,10 +3,11 @@ import axios from "axios";
 import SEO from "../components/SEO";
 import { ClipLoader } from "react-spinners";
 import { twitterContact } from "../public/data/TwitterContact";
-import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import { IconContext } from "react-icons";
-import Image from "next/image";
+
+const inputClass =
+  "appearance-none placeholder-text-[1.5rem] md:placeholder-text-[2rem]  text-[1.5rem] md:text-[2rem] placeholder-[#191917] dark:placeholder-[#f8f8f4] bg-[#f8f8f4] dark:bg-[#191917] border-b border-black dark:border-white  w-full py-2 leading-tight focus:outline-none focus:shadow-outline";
 
 const contact = () => {
   const [isFormErr, setIsFormErr] = useState(false);
@@ -77,7 +78,7 @@ const contact = () => {
               >
                 <div className="mb-4">
                   <input
-                    className="appearance-none placeholder-[#191917] dark:placeholder-[#f8f8f4] bg-[#f8f8f4] dark:bg-[#191917] border-b border-black dark:border-white  w-full py-2  leading-tight focus:outline-none focus:shadow-outline"
+                    className={inputClass}
                     id="email"
                     type="email"
                     name="email"
@@ -91,7 +92,7 @@ const contact = () => {
                     Name
                   </label>
                   <input
-                    className="appearance-none bg-[#f8f8f4] dark:bg-[#191917] border border-black dark:border-white rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                    className={inputClass}
                     id="name"
                     type="text"
                     name="name"
@@ -101,7 +102,7 @@ const contact = () => {
                 {/* END FOR BOTS */}
                 <div className="mb-4">
                   <input
-                    className="appearance-none placeholder-[#191917] dark:placeholder-[#f8f8f4] bg-[#f8f8f4] dark:bg-[#191917] border-b border-black dark:border-white  w-full py-2  leading-tight focus:outline-none focus:shadow-outline"
+                    className={inputClass}
                     id="subject"
                     type="text"
                     name="subject"
@@ -110,7 +111,7 @@ const contact = () => {
                 </div>
                 <div className="mb-4">
                   <textarea
-                    className="appearance-none placeholder-[#191917] dark:placeholder-[#f8f8f4] bg-[#f8f8f4] dark:bg-[#191917] border-b border-black dark:border-white  w-full py-2  leading-tight focus:outline-none focus:shadow-outline"
+                    className={inputClass}
                     id="message"
                     rows="6"
                     name="message"
@@ -186,7 +187,7 @@ const TwitterContact = ({ info }) => {
         <img
           src={info.image}
           alt={info.name}
-          className="h-[100px] aspect-square rounded-full"
+          className="h-[132px] aspect-square rounded-full"
         />
         <div className="flex flex-col justify-center gap-[.3rem]">
           <h6 className="text-[1.5rem] md:text-[2rem]">{info.handle}</h6>
