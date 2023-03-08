@@ -58,7 +58,8 @@ const GUImage = ({ id }) => {
           isOverlay ? "" : ""
         }`}
         style={{
-          backgroundImage: `url(https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
+          // backgroundImage: `url(https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
+          backgroundImage: `url(https://ipfs.io/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
         }}
         onMouseEnter={() => {
           setIsOverlay(!isOverlay);
