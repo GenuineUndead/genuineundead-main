@@ -11,6 +11,7 @@ function Landing() {
   const [width, setWidth] = useState(0);
   const [gImage, setGImage] = useState(null);
   const [uImage, setUImage] = useState(null);
+  const [rAndSImage, setRAndSImage] = useState(null);
   const genuine = useRef(null);
   const undead = useRef(null);
   const pinTarget = useRef(null);
@@ -71,7 +72,7 @@ function Landing() {
         "start"
       );
       tl.fromTo(rs, { opacity: 0 }, { opacity: 1, delay: -2, duration: 0.3 });
-      tl.fromTo(rs, { scale: 0.1 }, { scale: 1.1, delay: -1.75, duration: 2 });
+      tl.fromTo(rs, { scale: 0.1 }, { scale: 1, delay: -1.75, duration: 1.8 });
     }, pt);
     return () => ctx.revert();
   }, [loading]);
@@ -79,9 +80,11 @@ function Landing() {
   useEffect(() => {
     appWidth();
     if (theme === "dark") {
+      setRAndSImage("/images/animation/rise-dark.svg");
       setGImage("/images/animation/genuine1.svg");
       setUImage("/images/animation/undead1.svg");
     } else {
+      setRAndSImage("/images/animation/rise-light.svg");
       setGImage("/images/animation/genuine2.svg");
       setUImage("/images/animation/undead2.svg");
     }
@@ -113,10 +116,11 @@ function Landing() {
         <div>
           <h1
             ref={riseAndShine}
-            className="positionCenter opactiy-0 w-screen text-center font-didot text-[10vw]"
+            className="positionCenter opactiy-0 w-screen text-center"
           >
-            <span className="font-teko font-bold text-[11.4vw]">RISE</span>{" "}
-            <i>AND</i> SHINE
+            {/* <span className="font-teko font-bold text-[11.4vw]">RISE</span>{" "}
+            <i>AND</i> SHINE */}
+            <img src={rAndSImage} />
           </h1>
         </div>
         <div
