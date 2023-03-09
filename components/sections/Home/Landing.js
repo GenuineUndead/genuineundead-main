@@ -113,10 +113,10 @@ function Landing() {
           className="h-[4.5%] md:h-[7%] lg:h-[18%] text-center mt-[5px] z-5"
           ref={undead}
         />
-        <div>
+        <div className="w-full ">
           <h1
             ref={riseAndShine}
-            className="positionCenter opactiy-0 w-screen text-center"
+            className="positionCenter opactiy-0 w-full text-center px-[1.6rem] lg:px-[3.2rem]"
           >
             {/* <span className="font-teko font-bold text-[11.4vw]">RISE</span>{" "}
             <i>AND</i> SHINE */}
