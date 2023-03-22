@@ -11,6 +11,7 @@ const pageLinks = [
     title: "PORTAL",
     path: "https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221",
     i18n: "portal",
+    external: true,
   },
   { title: "ART", path: "/art", i18n: "art" },
   { title: "STORY", path: "/story", i18n: "story" },
@@ -20,6 +21,7 @@ const pageLinks = [
     title: "EVENTS",
     path: "https://events.genuineundead.io/genuine-undead",
     i18n: "events",
+    external: true,
   },
   { title: "HOME", path: "/", i18n: "home" },
 ];
@@ -83,19 +85,38 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
             <div className="flex flex-col items-center h-full p-0 md:pl-[3rem] md:pt-[2rem]">
               <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start">
                 <ul className="h-full flex flex-col justify-around">
-                  {pageLinks.map((link, i) => (
-                    <Link key={i} href={link.path}>
-                      <li
-                        i={i}
-                        className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
-                          router.pathname === link.path ? "underline" : ""
-                        }`}
-                        onClick={toggleMenu}
-                      >
-                        {t(`${link.title}`)}
-                      </li>
-                    </Link>
-                  ))}
+                  {pageLinks.map((link, i) => {
+                    if (link.external) {
+                      return (
+                        <a
+                          key={i}
+                          className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                            router.pathname === link.path ? "underline" : ""
+                          }`}
+                          onClick={toggleMenu}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          href={link.path}
+                        >
+                          {t(`${link.title}`)}
+                        </a>
+                      );
+                    } else {
+                      return (
+                        <Link key={i} href={link.path}>
+                          <li
+                            i={i}
+                            className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                              router.pathname === link.path ? "underline" : ""
+                            }`}
+                            onClick={toggleMenu}
+                          >
+                            {t(`${link.title}`)}
+                          </li>
+                        </Link>
+                      );
+                    }
+                  })}
                 </ul>
               </div>
 
