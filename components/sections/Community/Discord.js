@@ -39,10 +39,10 @@ const Discord = () => {
         <div className="w-full lg:w-[70%]">
           <MainButton
             page={true}
-            ariaLabel="Join Discord"
-            link="https://discord.gg/Z5dqQ4NCk3"
+            ariaLabel="Read More"
+            link="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
           >
-            JOIN DISCORD
+            READ MORE
           </MainButton>
         </div>
       </div>

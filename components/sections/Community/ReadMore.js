@@ -32,11 +32,8 @@ const ReadMore = () => {
           </p>
         </div>
         <div className="w-full lg:w-[70%]">
-          <MainButton
-            page={true}
-            link="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
-          >
-            READ MORE
+          <MainButton page={true} link="/files/GU_GUIDELINES.pdf">
+            GUIDELINES
           </MainButton>
         </div>
       </div>
