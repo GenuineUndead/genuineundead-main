@@ -7,18 +7,6 @@ import TekoHeading from "../../TekoHeading";
 import { Parallax } from "react-scroll-parallax";
 import Image from "next/image";
 
-let heading1 = `A PIVOTAL `;
-let heading2a = `MOMENT IN`;
-const heading2b = `WEB`;
-
-let content2 = `Created by an anonymous artist and gifted to the people, GU was born in the bear and raised by the community.
-Communicating through three green papers 'The Founder' empowered a collective of like-minded, passionate and willing individuals,
-all sharing the same ethos of creativity, decentralization, sustainability, inclusivity and safety.`;
-
-//NEED TO UPDATE TSHEADING 1 TO PIVITOL AND MAKE IT ITALIC
-//MARGIN BETWEEN MAIN HEADING A P IS 80PX
-//MARGIN BETWEEN P AND B 60PX
-
 const Story = ({ t }) => {
   return (
     <div className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white overflow-hidden relative px-[3.2rem] hidden lg:flex">

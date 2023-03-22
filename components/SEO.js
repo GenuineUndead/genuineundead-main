@@ -10,10 +10,9 @@ const SEO = ({ title, description, imagePath, path }) => {
       description={description}
       canonical={path ? `${baseUrl}/${path}` : baseUrl}
       openGraph={{
-        url: path ? `${baseUrl}/${path}` : baseUrl,
+        url: path ? `${baseUrl}${path}` : baseUrl,
         title,
-        description:
-          "24*24 pixel PFP you have never seen. 5995 classic, 3996 cyberpunk and 8 legendaries, over 200 hand drawn traits with a rich variety.",
+        description: description,
         images: [
           {
             url: "/GU-BANNER.jpeg",
@@ -35,8 +34,38 @@ const SEO = ({ title, description, imagePath, path }) => {
         { name: "viewport", content: "width=device-width, initial-scale=1.0" },
         {
           name: "keywords",
-          content:
-            "pixel art, genuine, undead, rise and shine, nft, nft collection, best pixel art",
+          content: `GenuineUndead, 
+          GU, 
+          UndeadArmy, 
+          UndeadNeverDie, 
+          StayGenuine, 
+          StayG, 
+          GenuineCollective, 
+          PixelArt, 
+          BestPixelArt, 
+          FinePixelArt, 
+          GUniverse, 
+          TheGenuineTimes, 
+          Pixel art NFTs, 
+          Collectible NFTs,
+          Digital art NFTs,
+          Pixelated NFTs,
+          NFT marketplace,
+          Crypto art NFTs,
+          Blockchain-based NFTs,
+          Limited edition NFTs,
+          Rare NFTs,
+          Crypto collectible,
+          Pixel art collectibles,
+          Unique NFTs,
+          Non-fungible tokens,
+          Ethereum NFTs,
+          ERC-721 tokens,
+          ERC-1155 tokens,
+          NFT auctions,
+          NFT trading,
+          NFT investments,
+          NFT ownership`,
         },
       ]}
       robotsProps={{

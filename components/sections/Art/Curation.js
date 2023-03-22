@@ -21,7 +21,7 @@ const Curation = () => {
             curated to compliment one another providing context and a deep
             narrative within the collection. Nomenclature that invokes a sense
             of imagination and spontaneous storytelling. A magically inspiring
-            collection. Art not limited to the pixels but rather, Art above art.
+            collection. Art not limited to the pixels but rather, art above art.
           </p>
           <MainButton
             ariaLabel="Explore Traits Coming Soon"

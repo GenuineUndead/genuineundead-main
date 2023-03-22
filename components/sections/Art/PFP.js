@@ -32,11 +32,12 @@ const PFP = () => {
             </span>
           </h2>
           <p className="text-[1rem] leading-6 ">
-            Surprisingly detailed when condensed. GU art is a testament to both
-            efficiency and skill in the constraints of a 24*24 pixel format.
-            Where other PFPs lose their detail, GU gains detail. On socials such
-            as twitter - GU PFPs stand out, doing justice to this format unlike
-            ever before.
+            Surprisingly detailed when condensed, GU art is a testament to both
+            the skill and efficiency of operating within the constraints of a
+            24*24 pixel format. Where other PFPs lose their detail, GU gains
+            detail when you zoom out. Because of this optical illusion, Genuine
+            Undead PFPs are strikingly recognizable on social platforms such as
+            Twitter, Instagram and Discord.
           </p>
           <MainButton page={true} styles=" mb-0">
             MARKETPLACE

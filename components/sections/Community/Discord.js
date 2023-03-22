@@ -1,6 +1,8 @@
 import React from "react";
 import MainButton from "../../MainButton";
+import MainHeaderWrapper from "../../MainHeaderWrapper";
 import Image from "next/image";
+import TekoHeading from "../../TekoHeading";
 
 const Discord = () => {
   return (
@@ -12,6 +14,12 @@ const Discord = () => {
       </div>
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center mb-[100px] mt-[50px] lg:my-0 flex-1 relative community-txt-container overflow-y-hidden">
         <div className="flex flex-col gap-[1.2rem] w-full lg:w-[70%] mb-[3rem] justify-center">
+          <h2 className="text-[2.3rem] md:text-[3rem] lg:text-[4.0rem] xl:text-[4.5rem] xxl:text-[5.5rem] leading-none font-didot flex flex-col">
+            COMMUNITY{" "}
+            <span>
+              <i>IS</i> <TekoHeading>UTILITY</TekoHeading>
+            </span>
+          </h2>
           <p className="text-[1rem] leading-6 ">
             Our utility is access to a collective of passionate and motivated
             creators, developers, investors, academics, collectors, innovators,

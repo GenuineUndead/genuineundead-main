@@ -1,8 +1,5 @@
 import React from "react";
 import MainButton from "../../MainButton";
-import MainParagraphWrapper from "../../MainParagraphWrapper";
-import { withTranslation } from "next-i18next";
-import MainHeaderWrapper from "../../MainHeaderWrapper";
 import TekoHeading from "../../TekoHeading";
 import Image from "next/image";
 
@@ -21,9 +18,9 @@ const MobileGallery = () => {
           </span>
         </h2>
         <p className="text-[1rem] lg:w-[50%] leading-6 ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum
-          nisi quis eleifend quam adipiscing.
+          Astonishing in its presence both on a screen or on a wall. GU art
+          exercises meticulous and interesting use of colours, layers and depth.
+          GU Art is both abstract and minimalism at its peak.
         </p>
         <MainButton
           page={true}

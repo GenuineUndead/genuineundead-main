@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import TekoHeading from "../../TekoHeading";
 import Accordion from "../../Accordian";
 import { homeFAQ } from "../../../public/data/HomeFAQ";
 import { useTheme } from "next-themes";

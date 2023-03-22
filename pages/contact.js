@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { logPageView } from "../utils/analytics";
 import axios from "axios";
 import SEO from "../components/SEO";
 import { ClipLoader } from "react-spinners";
@@ -6,10 +8,14 @@ import { twitterContact } from "../public/data/TwitterContact";
 import { useTheme } from "next-themes";
 import { IconContext } from "react-icons";
 
+const seoDesc =
+  "Genuine Undead contact us. If you need to contact Genuine Undead for a collaboration, further information or any other reason then do not hesitate to contact us through the inbuilt contact for, or via our social profiles. ";
+
 const inputClass =
   "appearance-none placeholder-text-[1.5rem] md:placeholder-text-[2rem]  text-[1.5rem] md:text-[2rem] placeholder-[#191917] dark:placeholder-[#f8f8f4] bg-[#f8f8f4] dark:bg-[#191917] border-b border-black dark:border-white  w-full py-2 leading-tight focus:outline-none focus:shadow-outline";
 
 const contact = () => {
+  const router = useRouter();
   const [isFormErr, setIsFormErr] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -57,11 +63,16 @@ const contact = () => {
     return valid;
   };
 
+  useEffect(() => {
+    logPageView({ page: router.pathname, title: "Contact" });
+  }, []);
+
   return (
     <>
       <SEO
         title="Contact | Genuine Undead"
-        description="Contact page to send email to the admin of Genuine Undead or reach out via twitter."
+        description={seoDesc}
+        path="contact"
       />
       <div className="w-full min-h-full flex flex-col items-center gap-[2rem] mt-[60px] border-b border-black dark:border-white">
         <h1 className="font-didot text-[10vw]">

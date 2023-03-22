@@ -1,45 +1,29 @@
 export const homeFAQ = [
   {
     question: "What is Genuine Undead?",
-    answer: `GU is forging a new path in the NFT space. Too many projects lay out roadmaps with extravagant promises which end up empty. WIth GU, you get spectacular pixel art, and we have a special saying that The Community is the Utility.
+    answer: `Genuine Undead (GU) is a 10k NFT Pixel Art collection on the Ethereum blockchain. 
 
-      Over 70 community members are working each and every day to move the project forward. These community efforts have already taken the project to significant levels for a free mint, and this growth will continue in the future.`,
+The Genuine Collective is the community that has formed around this art collection and has become the foundations of the whole ecosystem. GU provides value to holders by building the Genuine Undead brand through IP development, propagation of art, storytelling, and through genuine innovations in web3, while representing our collective core values. The strength of our social interactions, business network and community
+activity is our utility. `,
   },
   {
-    question: "Why is there no roadmap?",
-    answer: `GU is forging a new path in the NFT space. Too many projects lay out roadmaps with extravagant promises which end up empty. WIth GU, you get spectacular pixel art, and we have a special saying that The Community is the Utility.\n
-
-    Over 70 community members are working each and every day to move the project forward. These community efforts have already taken the project to significant levels for a free mint, and this growth will continue in the future.`,
+    question: "Where is the Roadmap?",
+    answer: `GU is forging a new path in the NFT space. We always said, from the start, that we are in the business of building roads rather than laying roadmaps. Too many projects lay out roadmaps with extravagant promises which end up empty. With GU, you get spectacular pixel art, a vibrant community and we have a special saying that The Community is the Utility.\n
+    The Councils, populated by the community, are working each and every day on sustainable and value adding initiatives to develop products and/or services that either add value to the GU ecosystem or help to establish the GU IP as a brand. These community efforts have already taken the project to significant levels for a free mint, and GU has had a palpable positive effect on the NFT space as a whole. For each initiative we build detailed business plans and release information in a consistent manner.`,
   },
   {
     question: "Will there be a roadmap in the future?",
-    answer: `There will be no Web3 roadmap. Instead, we will have a well-conceived, intelligent and well-structured business plan. We are committed to building a platform that is driven by the members of our community. We are looking to our members to shape the direction of the project. 
-
+    answer: `There will be no Web3 roadmap. Instead, we will have a well-conceived, intelligent and well-structured business plan. We are committed to building a platform that is driven by the members of our community. 
     In the meantime, we will continue to provide a welcoming and inclusive environment where everyone can feel comfortable participating and contributing.`,
   },
   {
-    question: "How does the GU organization operate?",
-    answer: `Genuine Undead takes the best of what Web2 has to offer and layers on the decentralized approach of Web3. We operate using a system of 9 councils. Each council is responsible for working on a specific agenda and achieving a defined set of goals.
-
-    The councils are made up of community members with expertise in each specific area. The members are elected by their peers to represent their interests and contribute to the growth of the project. The council based governance model allows us to harness the collective knowledge and expertise of the community to drive the success of the project.`,
-  },
-  {
-    question: "Why is there no advertising on this platform?",
-    answer:
-      "We want to create a space that is free from distractions and focused on meaningful conversation and community building. This means we do not allow advertising on our platform.",
-  },
-
-  {
-    question: "Why are there no chatters or shillers allowed?",
-    answer:
-      "We want to foster a community of thoughtful and respectful users who are genuinely interested in engaging with each other. Chatters and shillers often disrupt that atmosphere by spamming messages or promoting their own agendas.",
+    question: "How does the GU organisation operate?",
+    answer: `Genuine Undead takes the best of what Web2 has to offer and layers on the decentralised approach of Web3. We operate using a system of 9 councils. Each council is responsible for working on a specific agenda and achieving a defined set of goals (both long and short-term). The councils are made up of community members with expertise in each specific area. The members are elected by their peers to represent their interests and contribute to the growth of the project. The council based governance model allows us to harness the collective knowledge and expertise of the community in order to drive the success of the project, whilst enabling real-time feedback and community involvement / engagement like never before.`,
   },
 
   {
     question: "Does GU do collaborations?",
-    answer: `As a community run project, GU seeks to benefit all of its holders and contributors. While we are not currently doing any official collaborations, we are open to exploring potential opportunities that would benefit the community.
-
-    In the meantime, we will continue to focus on providing value to our community through the high quality pixel art in our collection and the rich lore that surrounds it. `,
+    answer: `GU takes a strict approach on collaborations and partnerships. We believe that partnering and collaborations affect the brand as  a whole. We have also observed that in the current Web 3 ecosystem, there has been no curation of common interests and as such collaborations tend not to benefit the overall brand or communities involved in meaningful ways. GU will look to form partnerships going forward, but only if they make sense from both a branding perspective and either provide value to their respective communities or it involves true intellectual collaboration and development`,
   },
 
   {

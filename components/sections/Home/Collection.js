@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import MainButton from "../../MainButton";
 import { withTranslation } from "next-i18next";
-import MainHeaderWrapper from "../../MainHeaderWrapper";
 import TekoHeading from "../../TekoHeading";
 
 const Collection = ({ t }) => {

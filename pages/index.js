@@ -1,5 +1,7 @@
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import { logPageView } from "../utils/analytics";
 import Landing from "../components/sections/Home/Landing";
-import { useRef, useEffect } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Collection from "../components/sections/Home/Collection";
@@ -7,7 +9,6 @@ import Art from "../components/sections/Home/Art";
 import Story from "../components/sections/Home/Story";
 import Ethos from "../components/sections/Home/Ethos";
 import FAQ from "../components/sections/Home/FAQ";
-import Carousel from "../components/sections/Home/Carousel";
 import MobileStory from "../components/sections/Home/MobileStory";
 import SEO from "../components/SEO";
 
@@ -24,24 +25,25 @@ export async function getStaticProps({ locale }) {
   };
 }
 
+const seoDesc =
+  "Home of the Genuine Undead (GU). Genuine Undead homepage. Find out about what Genuine Undead is all about, the art work, the history, the community that formed around this masterpiece Pixel Art Collection and why we think GU is the most significant NFT collection / collective to date.";
+
 export default function Home(props) {
+  const router = useRouter();
   const { t: translate } = useTranslation();
-  const landingRef = useRef(null);
-  const titleRef = useRef(null);
+  useEffect(() => {
+    logPageView({ page: router.pathname, title: "Home" });
+  }, []);
 
   return (
     <>
-      <SEO
-        title="Home | Genuine Undead"
-        description="24x24 pixel PFP you have never seen. 5995 Classic, 3996 Cyberpunk and 8 Legendary. Over 200 hand drawn traits, rich variety. ERC-721A contract."
-      />
+      <SEO title="Home | Genuine Undead" description={seoDesc} />
       <div className="page-container">
-        <Landing pageRefs={{ landingRef, titleRef }} />
+        <Landing />
         <Collection />
         <Art />
         <MobileStory />
         <Story />
-        {/* <Carousel /> */}
         <Ethos />
         <FAQ />
       </div>

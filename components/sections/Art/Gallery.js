@@ -19,7 +19,7 @@ const Gallery = () => {
         </h2>
         <p className="text-[1rem] lg:w-[50%] leading-6 ">
           Astonishing in its presence both on a screen or on a wall. GU art
-          exercises meticluous and interesting use of colours, layers and depth.
+          exercises meticulous and interesting use of colours, layers and depth.
           GU Art is both abstract and minimalism at its peak.
         </p>
         <MainButton

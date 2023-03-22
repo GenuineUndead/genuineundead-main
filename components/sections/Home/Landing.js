@@ -17,7 +17,6 @@ function Landing() {
   const pinTarget = useRef(null);
   const main = useRef(null);
   const riseAndShine = useRef(null);
-
   const imageDiv1 = useRef(null);
   const imageDiv2 = useRef(null);
 
@@ -118,50 +117,49 @@ function Landing() {
             ref={riseAndShine}
             className="positionCenter opactiy-0 w-full text-center px-[1.6rem] lg:px-[3.2rem]"
           >
-            {/* <span className="font-teko font-bold text-[11.4vw]">RISE</span>{" "}
-            <i>AND</i> SHINE */}
-            <img src={rAndSImage} />
+            <img src={rAndSImage} alt="RISE AND SHINE" />
           </h1>
         </div>
         <div
           id="rightSideImages"
-          className={`absolute top-[-110vh] lg:top-[-195vh] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]`}
+          className={`absolute top-[-110vh] lg:top-[-195vh] 2xl:top-[-215vh] 3xl:top-[-230vh] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]`}
           ref={imageDiv1}
         >
           <img
             src="/images/animation/gu-157.png"
             className="w-full aspect-square"
+            alt="GU #157"
           />
           <img
             src="/images/animation/gu-5658.gif"
             className="w-full aspect-square"
-            alt="louhorns"
+            alt="GU #5658"
           />
           <img
             src="/images/animation/gu-7759.png"
             className="w-full aspect-square"
-            alt="paint"
+            alt="GU #7759"
           />
         </div>
         <div
           id="leftSideImages"
-          className="absolute bottom-[-110vh] lg:bottom-[-195vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
+          className="absolute bottom-[-110vh] lg:bottom-[-195vh] 2xl:bottom-[-215vh] 3xl:bottom-[-2vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
           ref={imageDiv2}
         >
           <img
             src="/images/animation/gu-1279.png"
-            alt="Titanium"
+            alt="GU #1279"
             className="h-full aspect-square"
           />
           <img
             src="/images/animation/gu-6117.png"
             className="h-full aspect-square"
-            alt="bowler"
+            alt="GU #6117"
           />
           <img
             src="/images/animation/gu-9583.png"
             className="h-full aspect-square"
-            alt="openmind"
+            alt="GU #9583"
           />
         </div>
       </div>

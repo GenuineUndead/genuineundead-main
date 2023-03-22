@@ -151,7 +151,7 @@ input:checked ~ .dot {
 
 .community-txt-container {
   /* padding: 150px 0px; */
-  @apply lg:py-[150px];
+  @apply lg:py-[170px];
 }
 
 .community-txt-container::before,
