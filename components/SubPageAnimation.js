@@ -79,12 +79,12 @@ function SubPageAnimation({
 
   useEffect(() => {
     setImageUrl1(
-      `https://ipfs.io/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${
+      `https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${
         Math.floor(Math.random() * 10000) + 1
       }.png`
     );
     setImageUrl2(
-      `https://ipfs.io/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${
+      `https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${
         Math.floor(Math.random() * 10000) + 1
       }.png`
     );

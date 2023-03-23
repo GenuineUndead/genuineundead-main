@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   i18n,
   images: {
-    domains: ["ipfs.io"],
+    domains: ["ipfs.io", "fafz.mypinata.cloud"],
   },
 };
 

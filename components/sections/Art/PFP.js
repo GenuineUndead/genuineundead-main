@@ -70,7 +70,7 @@ const GUImage = ({ id }) => {
         }}
       >
         <Image
-          src={`https://ipfs.io/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png`}
+          src={`https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png`}
           alt={`GU ${id}`}
           priority
           fill
