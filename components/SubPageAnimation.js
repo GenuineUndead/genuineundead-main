@@ -45,7 +45,7 @@ function SubPageAnimation({
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: pt,
-          end: "+=200% bottom",
+          end: "+=350% bottom",
           markers: false,
           pin: true,
           pinSpacing: true,
@@ -55,11 +55,11 @@ function SubPageAnimation({
       tl.add("start");
       tl.fromTo(imgDiv2, { y: 0 }, { y: -1000, duration: 3 }, "start");
       tl.fromTo(imgDiv1, { y: 0 }, { y: 1000, duration: 3 }, "start");
-      tl.fromTo(maintext, { scale: 0.1 }, { scale: 1, duration: 1.2 }, "start");
+      tl.fromTo(maintext, { scale: 0.1 }, { scale: 1, duration: 1.7 }, "start");
       tl.fromTo(
         mobilemaintext,
         { scale: 0.3 },
-        { scale: 1, duration: 1.2 },
+        { scale: 1, duration: 1.7 },
         "start"
       );
     }, pt);
