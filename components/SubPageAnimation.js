@@ -115,7 +115,13 @@ function SubPageAnimation({
           ref={imageDiv1}
         >
           <div className="h-full aspect-square relative">
-            <Image src={rightImage} alt={`Left GU`} priority fill />
+            <Image
+              src={rightImage}
+              alt={`Left GU`}
+              priority
+              fill
+              quality={100}
+            />
           </div>
         </div>
 
@@ -125,7 +131,13 @@ function SubPageAnimation({
           ref={imageDiv2}
         >
           <div className="h-full aspect-square relative">
-            <Image src={leftImage} alt={`Right GU`} priority fill />
+            <Image
+              src={leftImage}
+              alt={`Right GU`}
+              priority
+              fill
+              quality={100}
+            />
           </div>
         </div>
       </div>
