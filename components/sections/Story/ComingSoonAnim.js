@@ -65,7 +65,7 @@ function ComingSoonAnim() {
           </h1>
           <h1
             ref={comingSoon}
-            className="positionCenter w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center"
+            className="positionCenter w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center font-teko"
           >
             Coming Soon
           </h1>
