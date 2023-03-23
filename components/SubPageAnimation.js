@@ -15,11 +15,7 @@ function SubPageAnimation({
   mobileTextDark,
   mobileTextLight,
 }) {
-  const [loading, setLoading] = useState(true);
   const { systemTheme, theme } = useTheme();
-  const [width, setWidth] = useState(0);
-  // const [imageUrl1, setImageUrl1] = useState(blankImagePath);
-  // const [imageUrl2, setImageUrl2] = useState(blankImagePath);
   const [mainTextImage, setMainTextImage] = useState(blankImagePath);
   const [mainMobileTextImage, setMainMobileTextImage] =
     useState(blankImagePath);
@@ -30,13 +26,7 @@ function SubPageAnimation({
   const imageDiv1 = useRef(null);
   const imageDiv2 = useRef(null);
 
-  const appWidth = () => {
-    setWidth(window.innerWidth);
-  };
-
   useEffect(() => {
-    appWidth();
-    // if (loading) return;
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
       const maintext = mainText.current;
@@ -66,10 +56,9 @@ function SubPageAnimation({
       );
     }, pt);
     return () => ctx.revert();
-  }, [loading, textImageDark]);
+  }, [textImageDark]);
 
   useEffect(() => {
-    appWidth();
     if (theme === "dark") {
       setMainTextImage(textImageLight);
       setMainMobileTextImage(mobileTextLight);
@@ -79,14 +68,6 @@ function SubPageAnimation({
     }
   }, [theme]);
 
-  useEffect(() => {
-    // setImageUrl1(`/images/header-images/GENUINE-UNDEAD-${leftGuNum}.png`);
-    // setImageUrl2(`/images/header-images/GENUINE-UNDEAD${rightGuNum}.png`);
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
   return (
     <div ref={main} syle={{ scrollBehavior: "smooth" }}>
       <div
