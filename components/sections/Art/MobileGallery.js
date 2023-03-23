@@ -35,9 +35,10 @@ const MobileGallery = () => {
       >
         <div className="w-[75%] lg:w-[60%] aspect-square relative">
           <Image
-            src="/images/carousel/cowboy.png"
+            src="/images/art/GENUINE-UNDEAD-6647.png"
             alt="GALLERY QUALITY GU"
             fill
+            quality={100}
           />
         </div>
       </div>

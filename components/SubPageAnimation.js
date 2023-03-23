@@ -8,6 +8,8 @@ const blankImagePath = "/images/blank.png";
 gsap.registerPlugin(ScrollTrigger);
 
 function SubPageAnimation({
+  leftImage,
+  rightImage,
   textImageLight,
   textImageDark,
   mobileTextDark,
@@ -16,8 +18,8 @@ function SubPageAnimation({
   const [loading, setLoading] = useState(true);
   const { systemTheme, theme } = useTheme();
   const [width, setWidth] = useState(0);
-  const [imageUrl1, setImageUrl1] = useState(blankImagePath);
-  const [imageUrl2, setImageUrl2] = useState(blankImagePath);
+  // const [imageUrl1, setImageUrl1] = useState(blankImagePath);
+  // const [imageUrl2, setImageUrl2] = useState(blankImagePath);
   const [mainTextImage, setMainTextImage] = useState(blankImagePath);
   const [mainMobileTextImage, setMainMobileTextImage] =
     useState(blankImagePath);
@@ -78,16 +80,8 @@ function SubPageAnimation({
   }, [theme]);
 
   useEffect(() => {
-    setImageUrl1(
-      `https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${
-        Math.floor(Math.random() * 10000) + 1
-      }.png`
-    );
-    setImageUrl2(
-      `https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${
-        Math.floor(Math.random() * 10000) + 1
-      }.png`
-    );
+    // setImageUrl1(`/images/header-images/GENUINE-UNDEAD-${leftGuNum}.png`);
+    // setImageUrl2(`/images/header-images/GENUINE-UNDEAD${rightGuNum}.png`);
 
     setTimeout(() => {
       setLoading(false);
@@ -121,7 +115,7 @@ function SubPageAnimation({
           ref={imageDiv1}
         >
           <div className="h-full aspect-square relative">
-            <Image src={imageUrl1} alt="Right GU" priority fill />
+            <Image src={rightImage} alt={`Left GU`} priority fill />
           </div>
         </div>
 
@@ -131,7 +125,7 @@ function SubPageAnimation({
           ref={imageDiv2}
         >
           <div className="h-full aspect-square relative">
-            <Image src={imageUrl2} alt="Right GU" priority fill />
+            <Image src={leftImage} alt={`Right GU`} priority fill />
           </div>
         </div>
       </div>

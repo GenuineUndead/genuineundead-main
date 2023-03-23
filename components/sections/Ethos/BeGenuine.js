@@ -4,6 +4,8 @@ import SubPageAnimation from "../../SubPageAnimation";
 const BeGenuine = () => {
   return (
     <SubPageAnimation
+      leftImage="/images/header-images/GENUINE-UNDEAD-6873.gif"
+      rightImage="/images/header-images/GENUINE-UNDEAD-2050.png"
       textImageLight="/images/ethos/be-genuine-light.svg"
       textImageDark="/images/ethos/be-genuine-dark.svg"
       mobileTextLight="/images/ethos/be-genuine-MOB-light.svg"

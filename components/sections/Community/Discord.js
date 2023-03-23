@@ -9,7 +9,12 @@ const Discord = () => {
     <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white px-[1.6rem] lg:px-0">
       <div className="min-h-[50%] w-full lg:min-h-screen flex justify-center items-center flex-1 mt-[100px] mb-[50px] lg:my-0">
         <div className="w-[75%] lg:w-[60%] aspect-square relative">
-          <Image src="/images/carousel/human.png" alt="Join Discord GU" fill />
+          <Image
+            src="/images/carousel/human.png"
+            alt="Join Discord GU"
+            fill
+            quality={100}
+          />
         </div>
       </div>
       <div className="min-h-[50%] w-full lg:min-h-screen flex flex-col justify-center items-center mb-[100px] mt-[50px] lg:my-0 flex-1 relative community-txt-container overflow-y-hidden">

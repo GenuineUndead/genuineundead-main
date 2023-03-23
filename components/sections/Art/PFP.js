@@ -3,14 +3,32 @@ import TekoHeading from "../../TekoHeading";
 import MainButton from "../../MainButton";
 import Image from "next/image";
 
+const guIds = [
+  "485",
+  "743",
+  "2510",
+  "3338",
+  "3488",
+  "3986",
+  "4399",
+  "4881",
+  "5308",
+  "5703",
+  "5771",
+  "7758",
+  "8583",
+  "8604",
+  "8627",
+];
+
 const PFP = () => {
   const [ids, setIds] = useState([]);
+  const shuffleArray = (array) => {
+    setIds(array.sort(() => Math.random() - 0.5));
+  };
+
   useEffect(() => {
-    let randomIds = [];
-    for (let i = 0; i < 21; i++) {
-      randomIds.push(Math.floor(Math.random() * 10000) + 1);
-    }
-    setIds(randomIds);
+    shuffleArray(guIds);
   }, []);
 
   return (
@@ -70,8 +88,8 @@ const GUImage = ({ id }) => {
         }}
       >
         <Image
-          src={`https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png`}
-          alt={`GU ${id}`}
+          src={`/images/pfp-images/GENUINE-UNDEAD-${id}.png`}
+          alt={`GU #${id}`}
           priority
           fill
         />

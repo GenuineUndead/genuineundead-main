@@ -5,7 +5,7 @@ const MissionStatement = () => {
   return (
     <section className="min-h-screen w-full flex flex-col justify-center gap-[2.5rem] border-b border-black dark:border-white px-[1.6rem] lg:px-[3.2rem]">
       <div className="w-full min-h-full flex flex-col justify-center gap-[1.5rem] lg:gap-[3rem] relative overflow-y-hidden mission-container my-[50px] lg:my-0">
-        <h1 className="text-center w-full text-[1.5rem] md:text-[2.5rem] ">
+        <h1 className="text-center w-full text-[2rem] md:text-[3.5rem] font-teko ">
           MISSION STATEMENT
         </h1>
         <div className="w-full min-h-full flex flex-col justify-center gap-[1.5rem] lg:gap-[3rem] relative overflow-y-hidden">
