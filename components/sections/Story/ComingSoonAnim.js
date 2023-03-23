@@ -35,7 +35,8 @@ function ComingSoonAnim() {
       tl.fromTo(
         comingsoon,
         { opacity: 0, scale: 0.1 },
-        { opacity: 1, scale: 1.5 }
+        { opacity: 1, scale: 1.5 },
+        "-=.3"
       );
     }, pt);
     return () => ctx.revert();
