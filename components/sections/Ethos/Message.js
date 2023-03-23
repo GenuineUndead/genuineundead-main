@@ -4,8 +4,8 @@ import TekoHeading from "../../TekoHeading";
 
 const Message = () => {
   return (
-    <section className="min-h-screen w-full flex border-b border-black dark:border-white pl-[1.6rem] lg:pl-[3.2rem]">
-      <div className="w-full min-h-full flex flex-col justify-center gap-[1.5rem] lg:gap-[3rem] relative overflow-y-hidden">
+    <section className="min-h-screen w-full flex border-b border-black dark:border-white pl-[1.6rem] lg:pl-[3.2rem] relative">
+      <div className="w-full min-h-full flex flex-col justify-center gap-[1.5rem] lg:gap-[3rem] relative overflow-y-hidden collection-container">
         <MainHeaderWrapper styles="lg:my-[1rem] ">
           <span className="">
             WE <i>BELIEVE</i> IN A <TekoHeading>BETTER</TekoHeading> WEB3. A

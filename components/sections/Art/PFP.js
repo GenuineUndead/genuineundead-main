@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TekoHeading from "../../TekoHeading";
 import MainButton from "../../MainButton";
+import Image from "next/image";
 
 const PFP = () => {
   const [ids, setIds] = useState([]);
@@ -53,19 +54,27 @@ export default PFP;
 const GUImage = ({ id }) => {
   const [isOverlay, setIsOverlay] = useState(false);
   return (
-    <div className="relative cursor-pointer flex justify-center items-center hexagon">
+    <div className="relative cursor-pointer flex justify-center items-center">
       <div
-        className={`w-full aspect-square rounded-full bg-center bg-contain z-1 relative transition-all duration-300 ${
+        className={`w-full aspect-square rounded-full bg-center bg-contain z-1 relative transition-all duration-300 overflow-hidden ${
           isOverlay ? "" : ""
         }`}
-        style={{
-          // backgroundImage: `url(https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
-          backgroundImage: `url(https://ipfs.io/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
-        }}
+        style={
+          {
+            // backgroundImage: `url(https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
+            // backgroundImage: `url(https://ipfs.io/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png)`,
+          }
+        }
         onMouseEnter={() => {
           setIsOverlay(!isOverlay);
         }}
       >
+        <Image
+          src={`https://ipfs.io/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/${id}.png`}
+          alt={`GU ${id}`}
+          priority
+          fill
+        />
         {isOverlay && (
           <div
             onMouseLeave={() => setIsOverlay(!isOverlay)}

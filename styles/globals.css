@@ -98,7 +98,7 @@ input:checked ~ .dot {
 .text-container,
 .collection-container {
   /* padding: 150px 0px; */
-  @apply lg:py-[150px];
+  @apply lg:py-[170px];
 }
 
 .text-container::before,
@@ -203,4 +203,29 @@ input:checked ~ .dot {
   height: 300px; /* This will make the line go from bottom to top*/
 }
 
-/* TWITTER PFP STYLES*/
+.mission-container {
+  /* padding: 150px 0px; */
+  @apply lg:py-[170px];
+}
+
+.mission-container::before,
+.mission-container::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Adjust as needed */
+  transform: translateX(
+    -50%
+  ); /* This will center the line on the left property*/
+  width: 1px; /* Adjust as needed */
+  @apply dark:bg-white bg-black hidden lg:block;
+}
+
+.mission-container::before {
+  top: -200px; /* Adjust as needed */
+  height: 350px;
+}
+
+.mission-container::after {
+  bottom: -200px; /* Adjust as needed */
+  height: 350px; /* This will make the line go from bottom to top*/
+}

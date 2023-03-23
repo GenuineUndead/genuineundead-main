@@ -30,13 +30,13 @@ const Values = () => {
           <img
             src="/images/title/values-dark.svg"
             alt="Core Values Dark"
-            className="w-[37%] md:w-[36%] lg:w-[40%] xl:w-[23%] my-24"
+            className="w-[50%] md:w-[36%] lg:w-[40%] xl:w-[23%] my-24"
           />
         ) : (
           <img
             src="/images/title/values-light.svg"
             alt="Core Values Light"
-            className="w-[37%] md:w-[36%] lg:w-[40%] xl:w-[23%] my-24"
+            className="w-[50%] md:w-[36%] lg:w-[40%] xl:w-[23%] my-24"
           />
         )}
         <div className="flex justify-center w-full ">

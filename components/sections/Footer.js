@@ -76,8 +76,11 @@ const Footer = ({ t }) => {
             </Link>
           </li>
           <li>
-            <a className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]">
-              IP
+            <a
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              href="#"
+            >
+              IP (Coming Soon)
             </a>
           </li>
         </ul>

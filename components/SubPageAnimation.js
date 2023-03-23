@@ -34,7 +34,6 @@ function SubPageAnimation({
 
   useEffect(() => {
     appWidth();
-    console.log({ width });
     // if (loading) return;
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
@@ -98,12 +97,12 @@ function SubPageAnimation({
     <div ref={main} syle={{ scrollBehavior: "smooth" }}>
       <div
         ref={pinTarget}
-        className="relative pin-target min-h-screen w-full flex flex-col overflow-hidden border-b border-black dark:border-white"
+        className="relative pin-target min-h-screen w-full flex flex-col justify-content items-center overflow-hidden border-b border-black dark:border-white"
       >
         <div className="w-full lg:hidden">
           <h1
             ref={mobileMainText}
-            className="positionCenter w-full text-center px-[1.6rem] lg:px-[3.2rem]"
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center"
           >
             <img src={mainMobileTextImage} alt="Main Mobile Text" />
           </h1>
@@ -111,9 +110,9 @@ function SubPageAnimation({
         <div className="w-full hidden lg:block">
           <h1
             ref={mainText}
-            className="positionCenter w-full text-center px-[1.6rem] lg:px-[3.2rem]"
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center"
           >
-            <img src={mainTextImage} alt="Main Text" />
+            <img src={mainTextImage} alt="Main Text" className="scale-[1]" />
           </h1>
         </div>
         <div

@@ -98,7 +98,7 @@ function Landing() {
     <div ref={main} syle={{ scrollBehavior: "smooth" }}>
       <div
         ref={pinTarget}
-        className="relative pin-target min-h-screen w-full flex flex-col items-center justify-center overflow-hidden"
+        className="relative pin-target min-h-screen w-full flex flex-col items-center justify-center overflow-hidden md:pl-[1.6rem] "
       >
         <img
           src={gImage}
@@ -143,7 +143,7 @@ function Landing() {
         </div>
         <div
           id="leftSideImages"
-          className="absolute bottom-[-110vh] lg:bottom-[-195vh] 2xl:bottom-[-215vh] 3xl:bottom-[-2vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
+          className="absolute bottom-[-110vh] lg:bottom-[-195vh] 2xl:bottom-[-215vh] 3xl:bottom-[-230vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
           ref={imageDiv2}
         >
           <img
