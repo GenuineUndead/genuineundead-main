@@ -63,7 +63,12 @@ const Footer = ({ t }) => {
       <div>
         <ul>
           <li>
-            <a className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]">
+            <a
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              href="/files/GU_GUIDELINES.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               Guidelines
             </a>
           </li>
