@@ -54,14 +54,13 @@ function ComingSoonAnim() {
     <div ref={main} syle={{ scrollBehavior: "smooth" }} className="mb-[-60px]">
       <div
         ref={pinTarget}
-        className="relative pin-target min-h-screen w-screen flex flex-col justify-content items-center overflow-hidden border-b border-black dark:border-white bg-[url('/images/story/GUNIVERSE.jpg')] bg-cover bg-center"
+        className="relative pin-target min-h-screen w-screen flex flex-col justify-content items-center overflow-hidden border-b border-black dark:border-white "
       >
-        <img
+        <div
           ref={background}
-          src="/images/story/GUNIVERSE.jpg"
-          alt="GUNIVERSE BG"
-          className="z-1 absolute top-0 left-0 h-full w-full"
-        />
+          className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.jpg')] bg-cover bg-center"
+        ></div>
+
         <div className="w-full min-h-screen flex flex-col justify-center items-center above-all">
           <h1
             ref={mainText}
@@ -71,7 +70,7 @@ function ComingSoonAnim() {
           </h1>
           <h1
             ref={comingSoon}
-            className="text-center w-full font-teko text-[2.5rem] mt-[15px]  text-[#f8f8f4] "
+            className="bg-black bg-opacity-50 backdrop-blur-lg text-center px-[1rem] rounded-md font-teko text-[2.5rem] lg:mt-[15px]"
           >
             Coming Soon
           </h1>

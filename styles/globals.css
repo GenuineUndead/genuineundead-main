@@ -229,3 +229,8 @@ input:checked ~ .dot {
   bottom: -200px; /* Adjust as needed */
   height: 350px; /* This will make the line go from bottom to top*/
 }
+
+.g-universe-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/story/GUNIVERSE.jpg);
+}
