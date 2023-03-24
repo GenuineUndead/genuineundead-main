@@ -59,6 +59,7 @@ function ComingSoonAnim() {
         <img
           ref={background}
           src="/images/story/GUNIVERSE.jpg"
+          alt="GUNIVERSE BG"
           className="z-1 absolute top-0 left-0 h-full w-full"
         />
         <div className="w-full min-h-screen flex flex-col justify-center items-center above-all">
