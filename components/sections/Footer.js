@@ -1,10 +1,16 @@
 import React from "react";
 import { withTranslation } from "next-i18next";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Footer = ({ t }) => {
+  const router = useRouter();
   return (
-    <div className="w-full flex flex-col lg:flex-row lg:justify-between py-[2rem]  text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917]">
+    <div
+      className={`w-full flex flex-col lg:flex-row lg:justify-between py-[2rem]  text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917] ${
+        router.pathname.includes("story") && "hidden"
+      }`}
+    >
       <div>&#169; GenuineUndead 2023</div>
       <div>
         <ul>

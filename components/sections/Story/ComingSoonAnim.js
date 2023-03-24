@@ -46,7 +46,7 @@ function ComingSoonAnim() {
   }, [theme]);
 
   return (
-    <div ref={main} syle={{ scrollBehavior: "smooth" }}>
+    <div ref={main} syle={{ scrollBehavior: "smooth" }} className="mb-[-60px]">
       <div
         ref={pinTarget}
         className="relative pin-target min-h-screen w-screen flex flex-col justify-content items-center overflow-hidden border-b border-black dark:border-white bg-[url('/images/story/GUNIVERSE.jpg')] bg-cover bg-center"
