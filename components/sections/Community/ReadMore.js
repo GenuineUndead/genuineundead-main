@@ -40,7 +40,7 @@ const ReadMore = () => {
       <div className="min-h-[50%] w-full lg:min-h-screen flex justify-center items-center flex-1 mb-[100px] mt-[50px] lg:my-0">
         <div className="w-[75%] lg:w-[60%] aspect-square relative">
           <Image
-            src="/images/animation/holo.gif"
+            src="/images/community/GENUINE-UNDEAD-2492.gif"
             alt="Read More GU"
             fill
             quality={100}

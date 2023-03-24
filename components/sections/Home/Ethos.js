@@ -18,7 +18,7 @@ const Ethos = ({ t }) => {
           className="w-full hidden lg:flex justify-center w-[60%]  aspect-square"
         >
           <Image
-            src="/images/gu/lou3t.png"
+            src="/images/home/GENUINE-UNDEAD-9919.png"
             fill
             alt="Lou 3 Trait"
             quality={100}
@@ -27,7 +27,7 @@ const Ethos = ({ t }) => {
         </Parallax>
         <div className="w-[70%] md:w-[55%] aspect-square lg:hidden relative">
           <Image
-            src="/images/gu/lou3t.png"
+            src="/images/home/GENUINE-UNDEAD-9919.png"
             fill
             alt="Lou 3 Trait"
             quality={100}

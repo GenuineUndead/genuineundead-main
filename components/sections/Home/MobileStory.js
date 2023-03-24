@@ -14,7 +14,7 @@ const MobileStory = ({ t }) => {
       >
         <div className="w-[70%] md:w-[55%]  aspect-square relative">
           <Image
-            src="/images/gu/watchcap.png"
+            src="/images/home/GENUINE-UNDEAD-20.png"
             fill
             alt="Watchcap"
             quality={100}

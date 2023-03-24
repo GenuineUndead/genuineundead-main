@@ -29,7 +29,7 @@ const Art = ({ t }) => {
           className="w-full hidden lg:flex justify-center w-[60%]  aspect-square"
         >
           <Image
-            src="/images/gu/war.png"
+            src="/images/home/GENUINE-UNDEAD-7843.png"
             fill
             alt="War"
             quality={100}
@@ -38,7 +38,7 @@ const Art = ({ t }) => {
         </Parallax>
         <div className="w-[70%] md:w-[55%] aspect-square lg:hidden relative">
           <Image
-            src="/images/gu/war.png"
+            src="/images/home/GENUINE-UNDEAD-7843.png"
             fill
             alt="War"
             quality={100}
