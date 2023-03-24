@@ -14,9 +14,9 @@ const pageLinks = [
     external: true,
   },
   { title: "ART", path: "/art", i18n: "art" },
-  { title: "STORY", path: "/story", i18n: "story" },
   { title: "COMMUNITY", path: "/community", i18n: "community" },
   { title: "ETHOS", path: "/ethos", i18n: "ethos" },
+  { title: "STORY", path: "/story", i18n: "story" },
   {
     title: "EVENTS",
     path: "https://events.genuineundead.io/genuine-undead",

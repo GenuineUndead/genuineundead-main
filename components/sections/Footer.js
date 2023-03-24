@@ -34,14 +34,6 @@ const Footer = ({ t }) => {
           </li>
           <li>
             <Link
-              href="/story"
-              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
-            >
-              Story
-            </Link>
-          </li>
-          <li>
-            <Link
               href="/community"
               className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
             >
@@ -55,6 +47,24 @@ const Footer = ({ t }) => {
             >
               Ethos
             </Link>
+          </li>
+          <li>
+            <Link
+              href="/story"
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+            >
+              Story
+            </Link>
+          </li>
+          <li>
+            <a
+              className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              href="https://events.genuineundead.io/genuine-undead"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Events
+            </a>
           </li>
           <li>
             <Link
