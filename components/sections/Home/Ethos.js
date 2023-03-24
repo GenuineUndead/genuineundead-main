@@ -22,6 +22,7 @@ const Ethos = ({ t }) => {
             fill
             alt="Lou 3 Trait"
             quality={100}
+            priority
           />{" "}
         </Parallax>
         <div className="w-[70%] md:w-[55%] aspect-square lg:hidden relative">
@@ -30,6 +31,7 @@ const Ethos = ({ t }) => {
             fill
             alt="Lou 3 Trait"
             quality={100}
+            priority
           />
         </div>
       </div>

@@ -40,6 +40,7 @@ const Story = ({ t }) => {
             fill
             alt="Watchcap"
             quality={100}
+            priority
           />
         </Parallax>
       </div>
