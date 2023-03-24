@@ -37,7 +37,7 @@ function SubPageAnimation({
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: pt,
-          end: "+=300% bottom",
+          end: "+=270% bottom",
           markers: false,
           pin: true,
           pinSpacing: true,
