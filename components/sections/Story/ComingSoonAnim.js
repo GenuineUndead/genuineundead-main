@@ -59,7 +59,13 @@ function ComingSoonAnim() {
         <div
           ref={background}
           className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.jpg')] bg-cover bg-center"
-        ></div>
+        >
+          <img
+            src={"/images/story/GUNIVERSE.jpg"}
+            alt="GUNIVERSE"
+            style={{ display: "none" }}
+          />
+        </div>
 
         <div className="w-full min-h-screen flex flex-col justify-center items-center above-all">
           <h1
