@@ -45,7 +45,7 @@ const Discord = () => {
           <MainButton
             page={true}
             ariaLabel="Read More"
-            link="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
+            link=" https://medium.com/@GenuineUndead/community-is-utility-7d6942d1840d"
           >
             READ MORE
           </MainButton>

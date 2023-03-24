@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = ({ t }) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row lg:justify-between pt-[2rem] pb-[5rem] text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917]">
+    <div className="w-full flex flex-col lg:flex-row lg:justify-between py-[2rem]  text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917]">
       <div>&#169; GenuineUndead 2023</div>
       <div>
         <ul>
@@ -60,7 +60,7 @@ const Footer = ({ t }) => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="hidden lg:block">
         <ul>
           <li>
             <a
@@ -90,7 +90,7 @@ const Footer = ({ t }) => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="hidden lg:block">
         <ul>
           <li>
             <a
@@ -123,6 +123,72 @@ const Footer = ({ t }) => {
             </a>
           </li>
         </ul>
+      </div>
+      <div className="flex w-full lg:hidden">
+        <div className="w-[50%] flex flex-col justify-center items-center">
+          <ul>
+            <li>
+              <a
+                className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+                href="/files/GU_GUIDELINES.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Guidelines
+              </a>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <a
+                className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+                href="#"
+              >
+                IP (Coming Soon)
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="w-[50%] flex flex-col justify-center items-center">
+          <ul>
+            <li>
+              <a
+                className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+                href="https://discord.gg/Z5dqQ4NCk3"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Discord
+              </a>
+            </li>
+            <li>
+              <a
+                className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+                href="https://twitter.com/GenuineUndead"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
+                href="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Medium
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div>All Rights Reserved</div>
     </div>

@@ -33,7 +33,8 @@ const MobileStory = ({ t }) => {
         <MainParagraphWrapper>{t("sContent")}</MainParagraphWrapper>
         <MainButton
           ariaLabel="Link to Story Page"
-          link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+          internalLink={false}
+          link="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
         >
           {t("ourStory")}
         </MainButton>

@@ -35,8 +35,8 @@ function ComingSoonAnim() {
       tl.fromTo(
         comingsoon,
         { opacity: 0, scale: 0.1 },
-        { opacity: 1, scale: 1.5 },
-        "-=.3"
+        { opacity: 1, scale: 2 },
+        "-=1"
       );
     }, pt);
     return () => ctx.revert();
@@ -54,18 +54,19 @@ function ComingSoonAnim() {
     <div ref={main} syle={{ scrollBehavior: "smooth" }}>
       <div
         ref={pinTarget}
-        className="relative pin-target min-h-screen w-full flex flex-col justify-content items-center overflow-hidden border-b border-black dark:border-white"
+        className="relative pin-target min-h-screen w-screen flex flex-col justify-content items-center overflow-hidden border-b border-black dark:border-white"
       >
-        <div className="w-full">
+        <div className="w-full min-h-screen flex flex-col justify-center items-center">
           <h1
             ref={mainText}
-            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center"
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem]"
           >
             <img src={mainTextImage} alt="Main Text" className="scale-[1]" />
           </h1>
           <h1
             ref={comingSoon}
-            className="positionCenter w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center font-teko"
+            className="text-center w-full font-teko"
+            // className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center font-teko"
           >
             Coming Soon
           </h1>

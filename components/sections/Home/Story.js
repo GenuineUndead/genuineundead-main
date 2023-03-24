@@ -22,8 +22,8 @@ const Story = ({ t }) => {
         <MainParagraphWrapper>{t("sContent")}</MainParagraphWrapper>
         <MainButton
           ariaLabel="Link to Story page"
-          internalLink={true}
-          link="/story"
+          internalLink={false}
+          link="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
         >
           {t("ourStory")}
         </MainButton>
