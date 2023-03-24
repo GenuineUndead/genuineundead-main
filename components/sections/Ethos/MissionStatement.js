@@ -12,13 +12,10 @@ const MissionStatement = () => {
           {/* <MainHeaderWrapper styles="lg:my-[1rem] text-center text-[2.3rem] md:text-[3rem] xxl:text-[4rem] "> */}
           <h2 className="font-teko font-extrabold text-[2.75rem] md:text-[3.75rem] lg:text-[4.75rem] xxl:text-[4.75rem] text-center">
             <span className="">
-              GENUINE UNDEAD AIMS TO SPEARHEAD A WEB3{" "}
-              {/* <span className="font-teko font-extrabold text-[2.75rem] md:text-[3.75rem] lg:text-[4.75rem] xxl:text-[4.75rem]"> */}
-              RENAISSANCE
-              {/* </span>{" "} */}
-              BY <i>CULTIVATING</i> CREATIVE POTENTIAL, SUSTAINABILITY, SAFETY
-              AND INCLUSIVENESS. IGNITING THE COLLECTIVE THROUGH ARTISTIC
-              EXPRESSION AND EMBRACING A <i>DECENTRALISED </i>
+              GENUINE UNDEAD AIMS TO SPEARHEAD A WEB3 RENAISSANCE BY
+              <i>CULTIVATING</i> CREATIVE POTENTIAL, SUSTAINABILITY, SAFETY AND
+              INCLUSIVENESS. IGNITING THE COLLECTIVE THROUGH ARTISTIC EXPRESSION
+              AND EMBRACING A <i>DECENTRALISED </i>
               FUTURE.
             </span>
           </h2>
