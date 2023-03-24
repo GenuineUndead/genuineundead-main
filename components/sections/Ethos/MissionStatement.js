@@ -9,7 +9,6 @@ const MissionStatement = () => {
           MISSION <i>STATEMENT</i>
         </h1>
         <div className="w-full min-h-full flex flex-col justify-center gap-[1.5rem] lg:gap-[3rem] relative overflow-y-hidden">
-          {/* <MainHeaderWrapper styles="lg:my-[1rem] text-center text-[2.3rem] md:text-[3rem] xxl:text-[4rem] "> */}
           <h2 className="font-teko font-extrabold text-[2.75rem] md:text-[3.75rem] lg:text-[4.75rem] xxl:text-[4.75rem] text-center">
             <span className="">
               GENUINE UNDEAD AIMS TO SPEARHEAD A WEB3 RENAISSANCE BY
@@ -19,7 +18,6 @@ const MissionStatement = () => {
               FUTURE.
             </span>
           </h2>
-          {/* </MainHeaderWrapper> */}
         </div>
       </div>
     </section>
