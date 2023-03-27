@@ -34,7 +34,12 @@ const Curation = () => {
       </div>
       <div className="min-h-[50%] w-full lg:min-h-screen flex justify-center items-center flex-1">
         <div className="w-[75%] lg:w-[60%] aspect-square relative md:mb-[50px]">
-          <Image src="/images/art/GENUINE-UNDEAD-827.png" alt="GU 827" fill />
+          <Image
+            src="/images/art/GENUINE-UNDEAD-827.png"
+            alt="GU 827"
+            fill
+            quality={100}
+          />
         </div>
       </div>
     </section>
