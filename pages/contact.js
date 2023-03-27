@@ -37,6 +37,7 @@ const contact = () => {
     }
     try {
       let data = await axios.post("/api/mail", formData);
+      console.log("SENT EMAIL: ", data);
       setIsSending(false);
       setIsSuccess(true);
       setTimeout(() => {

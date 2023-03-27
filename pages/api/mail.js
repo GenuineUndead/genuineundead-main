@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       html: emailMessage.replace(/\r\n/g, "<br />"),
     };
 
-    mail.send(emailData);
+    await mail.send(emailData);
     res.status(200).json({ message: "Successfully sent email" });
   } catch (err) {
     res.status(500).json({ message: err.message });
