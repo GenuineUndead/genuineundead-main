@@ -17,8 +17,8 @@ const story = () => {
   return (
     <>
       <SEO title="Story | Genuine Undead" description={seoDesc} path="story" />
-      {/* <ComingSoon /> */}
-      <ComingSoonAnim />
+      <ComingSoon />
+      {/* <ComingSoonAnim /> */}
     </>
   );
 };

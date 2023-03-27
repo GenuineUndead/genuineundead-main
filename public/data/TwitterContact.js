@@ -8,7 +8,7 @@ export const twitterContact = [
     linkedin: "https://www.linkedin.com/in/jamal-ahmad-1785b7a2/",
   },
   {
-    title: "Chair of Genuine Undead",
+    title: "Vice-Chair of Genuine Undead",
     handle: "@tMAIS0N",
     image:
       "https://fafz.mypinata.cloud/ipfs/QmVUgP9fnFh9R6HF3eMP3ro2fxvv76fQsrBud7yyPDAMdQ/1303.png",

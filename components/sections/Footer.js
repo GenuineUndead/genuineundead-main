@@ -7,9 +7,7 @@ const Footer = ({ t }) => {
   const router = useRouter();
   return (
     <div
-      className={`w-full flex flex-col lg:flex-row lg:justify-between py-[2rem]  text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917] ${
-        router.pathname.includes("story") && "hidden"
-      }`}
+      className={`w-full flex flex-col lg:flex-row lg:justify-between py-[2rem]  text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917]`}
     >
       <div>&#169; GenuineUndead 2023</div>
       <div>
@@ -131,7 +129,7 @@ const Footer = ({ t }) => {
           <li>
             <a
               className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
-              href="https://medium.com/@GenuineUndead/genuine-undead-f627c448f501"
+              href="https://medium.com/@GenuineUndead"
               target="_blank"
               rel="noreferrer noopener"
             >

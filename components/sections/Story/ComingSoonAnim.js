@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 function ComingSoonAnim() {
   const { systemTheme, theme } = useTheme();
   const [mainTextImage, setMainTextImage] = useState(
-    "/images/story/guniverse-light.svg"
+    "/images/story/guniverse-dark.svg"
   );
   const pinTarget = useRef(null);
   const main = useRef(null);
@@ -58,10 +58,10 @@ function ComingSoonAnim() {
       >
         <div
           ref={background}
-          className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.jpg')] bg-cover bg-center"
+          className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.png')] bg-cover bg-center"
         >
           <img
-            src={"/images/story/GUNIVERSE.jpg"}
+            src={"/images/story/GUNIVERSE.png"}
             alt="GUNIVERSE"
             style={{ display: "none" }}
           />
