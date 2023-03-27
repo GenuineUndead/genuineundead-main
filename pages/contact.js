@@ -194,13 +194,13 @@ const TwitterContact = ({ info }) => {
         className: "icons",
       }}
     >
-      <div className="flex justify-center items-center gap-[1.5rem]">
+      <div className="flex justify-center items-center">
         <img
           src={info.image}
           alt={info.name}
-          className="h-[132px] aspect-square rounded-full"
+          className="h-[132px] aspect-square rounded-full mr-[25px]"
         />
-        <div className="flex flex-col justify-center gap-[.3rem]">
+        <div className="flex flex-col justify-center w-full">
           <h6 className="text-[1.5rem] md:text-[2rem]">{info.handle}</h6>
           <h6 className="text-[.8rem] md:text-[1rem]">
             {info.title.toUpperCase()}
