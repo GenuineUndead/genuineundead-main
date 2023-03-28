@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const ToggleSwitch = ({ toggleTheme, theme }) => {
+  useEffect(() => {}, [theme]);
   return (
     <div className="flex items-center justify-center w-full gap-[5px]">
       <span>Light</span>
