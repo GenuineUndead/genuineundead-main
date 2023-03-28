@@ -65,11 +65,8 @@ function ComingSoonAnim() {
             alt="GUNIVERSE"
             style={{ display: "none" }}
           />
-          <div className="relative">
-            <h1
-              ref={genuineUndead}
-              className="w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
-            >
+          <div className="relative w-full px-[1.6rem] lg:px-[3.2rem]">
+            <h1 ref={genuineUndead} className="w-full text-center  will-change">
               <img
                 src="/images/story/genuine-undead.svg"
                 alt="Main Text"
