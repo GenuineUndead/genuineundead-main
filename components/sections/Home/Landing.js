@@ -148,16 +148,16 @@ function Landing() {
           <img
             src="/images/animation/gu-1279.png"
             alt="GU #1279"
-            className="h-full aspect-square"
+            className="w-full aspect-square"
           />
           <img
             src="/images/animation/gu-6117.png"
-            className="h-full aspect-square"
+            className="w-full aspect-square"
             alt="GU #6117"
           />
           <img
             src="/images/animation/gu-9583.png"
-            className="h-full aspect-square"
+            className="w-full aspect-square"
             alt="GU #9583"
           />
         </div>

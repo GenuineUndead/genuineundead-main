@@ -18,7 +18,9 @@ module.exports = {
 
       xl: "1280px",
       // => @media (min-width: 1280px) { ... }
-
+      "ipad-landscape": {
+        raw: "(min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape)",
+      },
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
       "3xl": "1900px",
