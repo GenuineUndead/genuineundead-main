@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
+import { useTheme } from "next-themes";
 
-const ToggleSwitch = ({ toggleTheme, theme }) => {
-  useEffect(() => {}, [theme]);
+const ToggleSwitch = ({ toggleTheme }) => {
+  const { theme } = useTheme();
   return (
     <div className="flex items-center justify-center w-full gap-[5px]">
       <span>Light</span>

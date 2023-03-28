@@ -31,6 +31,7 @@ const Navbar = () => {
       setCurrentTheme(theme === "system" ? systemTheme : theme);
     }
   }, [mounted]);
+
   return (
     <>
       <nav
