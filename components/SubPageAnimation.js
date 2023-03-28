@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
-import Image from "next/image";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTheme } from "next-themes";
 
@@ -26,7 +25,7 @@ function SubPageAnimation({
   const imageDiv1 = useRef(null);
   const imageDiv2 = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
       const maintext = mainText.current;
@@ -77,7 +76,7 @@ function SubPageAnimation({
         <div className="w-full lg:hidden">
           <h1
             ref={mobileMainText}
-            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center"
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center will-change"
           >
             <img src={mainMobileTextImage} alt="Main Mobile Text" />
           </h1>
@@ -85,41 +84,27 @@ function SubPageAnimation({
         <div className="w-full hidden lg:block">
           <h1
             ref={mainText}
-            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center"
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] min-h-screen flex flex-col items-center justify-center will-change"
           >
             <img src={mainTextImage} alt="Main Text" className="scale-[1]" />
           </h1>
         </div>
         <div
           id="rightSideImages"
-          className="absolute top-[60%] lg:top-[31%] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
+          className="absolute top-[60%] lg:top-[31%] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw] will-change"
           ref={imageDiv1}
         >
           <div className="h-full aspect-square relative">
-            {/* <Image
-              src={rightImage}
-              alt={`Left GU`}
-              priority
-              fill
-              quality={100}
-            /> */}
             <img src={rightImage} alt={`Left GU`} className="h-full w-full" />
           </div>
         </div>
 
         <div
           id="leftSideImages"
-          className="absolute top-[20%] md:top-[20%] lg:top-[31%] left-[8%] lg:left-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
+          className="absolute top-[20%] md:top-[20%] lg:top-[31%] left-[8%] lg:left-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw] will-change"
           ref={imageDiv2}
         >
           <div className="h-full aspect-square relative">
-            {/* <Image
-              src={leftImage}
-              alt={`Right GU`}
-              priority
-              fill
-              quality={100}
-            /> */}
             <img src={leftImage} alt={`Left GU`} className="h-full w-full" />
           </div>
         </div>

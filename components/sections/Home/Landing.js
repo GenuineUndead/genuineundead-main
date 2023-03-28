@@ -26,7 +26,6 @@ function Landing() {
 
   useEffect(() => {
     appWidth();
-    // if (loading) return;
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
       const rs = riseAndShine.current;
@@ -38,7 +37,7 @@ function Landing() {
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: pt,
-          end: "+=400% bottom",
+          end: "+=450% bottom",
           markers: false,
           pin: true,
           pinSpacing: true,
@@ -103,26 +102,26 @@ function Landing() {
         <img
           src={gImage}
           alt="GENUINE"
-          className="h-[4.5%] md:h-[7%] lg:h-[18%] text-center mb-[5px] z-10"
+          className="h-[4.5%] md:h-[7%] lg:h-[18%] text-center mb-[5px] z-10 will-change"
           ref={genuine}
         />
         <img
           src={uImage}
           alt="UNDEAD"
-          className="h-[4.5%] md:h-[7%] lg:h-[18%] text-center mt-[5px] z-5"
+          className="h-[4.5%] md:h-[7%] lg:h-[18%] text-center mt-[5px] z-5 will-change"
           ref={undead}
         />
         <div className="w-full ">
           <h1
             ref={riseAndShine}
-            className="positionCenter opactiy-0 w-full text-center px-[1.6rem] lg:px-[3.2rem]"
+            className="positionCenter opactiy-0 w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
           >
             <img src={rAndSImage} alt="RISE AND SHINE" />
           </h1>
         </div>
         <div
           id="rightSideImages"
-          className={`absolute top-[-110vh] lg:top-[-195vh] 2xl:top-[-215vh] 3xl:top-[-230vh] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]`}
+          className={`absolute top-[-110vh] lg:top-[-195vh] 2xl:top-[-215vh] 3xl:top-[-230vh] right-[8%] lg:right-[20%] flex flex-col  w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw] will-change`}
           ref={imageDiv1}
         >
           <img
@@ -143,7 +142,7 @@ function Landing() {
         </div>
         <div
           id="leftSideImages"
-          className="absolute bottom-[-110vh] lg:bottom-[-195vh] 2xl:bottom-[-215vh] 3xl:bottom-[-230vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw]"
+          className="absolute bottom-[-110vh] lg:bottom-[-195vh] 2xl:bottom-[-215vh] 3xl:bottom-[-230vh] left-[8%] lg:left-[20%] flex flex-col w-[40vw] gap-[40vw] md:w-[30vw] md:gap-[30vw] lg:w-[20vw] lg:gap-[20vw] will-change"
           ref={imageDiv2}
         >
           <img
