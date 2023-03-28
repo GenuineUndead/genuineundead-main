@@ -58,16 +58,16 @@ function ComingSoonAnim() {
       >
         <div
           ref={background}
-          className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.png')] bg-cover bg-center"
+          className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.png')] bg-cover bg-center relative"
         >
           <img
             src={"/images/story/GUNIVERSE.png"}
             alt="GUNIVERSE"
             style={{ display: "none" }}
           />
-        </div>
+          {/* </div> */}
 
-        <div className="w-full min-h-screen relative">
+          {/* <div className="w-full min-h-screen relative"> */}
           <h1
             ref={genuineUndead}
             className="w-full text-center px-[1.6rem] lg:px-[3.2rem] positionCenter will-change"
