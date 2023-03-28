@@ -37,13 +37,13 @@ function ComingSoonAnim() {
       });
       tl.add("start");
       tl.fromTo;
-      tl.fromTo(gu, { scale: 0.1 }, { scale: 0.8, duration: 1.7 });
+      tl.fromTo(gu, { scale: 0.1 }, { scale: 0.5, duration: 1.7 });
       tl.fromTo(gu, { opacity: 1 }, { opacity: 0, duration: 1 });
       tl.fromTo(maintext, { display: "none" }, { display: "block" });
-      tl.fromTo(maintext, { scale: 0.1 }, { scale: 1, duration: 1.7 });
+      tl.fromTo(maintext, { scale: 0.1 }, { scale: 1.5, duration: 1.7 });
       tl.fromTo(maintext, { opacity: 1 }, { opacity: 0, duration: 1 });
       tl.fromTo(comingsoon, { display: "none" }, { display: "block" });
-      tl.fromTo(comingsoon, { scale: 0.1 }, { scale: 0.8, duration: 1.7 });
+      tl.fromTo(comingsoon, { scale: 0.1 }, { scale: 0.5, duration: 1.7 });
       // tl.fromTo(comingsoon, { opacity: 1 }, { opacity: 0, duration: 1 });
       // tl.fromTo(comingsoon, { opacity: 0 }, { opacity: 1, scale: 0.8 }, "-=1");
     }, pt);
@@ -66,11 +66,11 @@ function ComingSoonAnim() {
             style={{ display: "none" }}
           />
           <div className="relative w-full px-[1.6rem] lg:px-[3.2rem]">
-            <h1 ref={genuineUndead} className="w-full text-center  will-change">
+            <h1 ref={genuineUndead} className="w-full text-center will-change">
               <img
                 src="/images/story/genuine-undead.svg"
                 alt="Main Text"
-                className="scale-[1] positionCenter"
+                className="scale-[1] positionTop"
               />
             </h1>
             <h1
@@ -90,7 +90,7 @@ function ComingSoonAnim() {
               <img
                 src="/images/story/coming-soon.svg"
                 alt="Main Text"
-                className="scale-[1] positionCenter"
+                className="scale-[1] positionBottom"
               />
             </h1>
           </div>

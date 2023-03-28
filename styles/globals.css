@@ -36,11 +36,25 @@ a {
   color: #ff5277;
 }
 
+.positionTop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+}
+
 .positionCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.positionBottom {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 10%);
 }
 
 .hide {
