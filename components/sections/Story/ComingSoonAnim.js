@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -9,9 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function ComingSoonAnim() {
   const { systemTheme, theme } = useTheme();
-  const [mainTextImage, setMainTextImage] = useState(
-    "/images/story/guniverse-dark.svg"
-  );
   const pinTarget = useRef(null);
   const main = useRef(null);
   const genuineUndead = useRef(null);
@@ -48,7 +45,7 @@ function ComingSoonAnim() {
       // tl.fromTo(comingsoon, { opacity: 0 }, { opacity: 1, scale: 0.8 }, "-=1");
     }, pt);
     return () => ctx.revert();
-  });
+  }, [theme]);
 
   return (
     <div ref={main} syle={{ scrollBehavior: "smooth" }} className="mb-[-60px]">

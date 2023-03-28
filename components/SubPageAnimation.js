@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTheme } from "next-themes";
@@ -25,7 +25,7 @@ function SubPageAnimation({
   const imageDiv1 = useRef(null);
   const imageDiv2 = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
       const maintext = mainText.current;
