@@ -58,43 +58,45 @@ function ComingSoonAnim() {
       >
         <div
           ref={background}
-          className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.png')] bg-cover bg-center relative"
+          className="z-1 absolute top-0 left-0 h-full w-full bg-[url('/images/story/GUNIVERSE.png')] bg-cover bg-center flex flex-col items-center justify-center"
         >
           <img
             src={"/images/story/GUNIVERSE.png"}
             alt="GUNIVERSE"
             style={{ display: "none" }}
           />
-          <h1
-            ref={genuineUndead}
-            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
-          >
-            <img
-              src="/images/story/genuine-undead.svg"
-              alt="Main Text"
-              className="scale-[1] positionCenter"
-            />
-          </h1>
-          <h1
-            ref={mainText}
-            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
-          >
-            <img
-              src="/images/story/guniverse.svg"
-              alt="Main Text"
-              className="scale-[1] positionCenter"
-            />
-          </h1>
-          <h1
-            ref={comingSoon}
-            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
-          >
-            <img
-              src="/images/story/coming-soon.svg"
-              alt="Main Text"
-              className="scale-[1] positionCenter"
-            />
-          </h1>
+          <div className="relative">
+            <h1
+              ref={genuineUndead}
+              className="w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
+            >
+              <img
+                src="/images/story/genuine-undead.svg"
+                alt="Main Text"
+                className="scale-[1] positionCenter"
+              />
+            </h1>
+            <h1
+              ref={mainText}
+              className="w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
+            >
+              <img
+                src="/images/story/guniverse.svg"
+                alt="Main Text"
+                className="scale-[1] positionCenter"
+              />
+            </h1>
+            <h1
+              ref={comingSoon}
+              className="w-full text-center px-[1.6rem] lg:px-[3.2rem] will-change"
+            >
+              <img
+                src="/images/story/coming-soon.svg"
+                alt="Main Text"
+                className="scale-[1] positionCenter"
+              />
+            </h1>
+          </div>
         </div>
       </div>
     </div>
