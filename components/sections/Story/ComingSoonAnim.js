@@ -37,7 +37,7 @@ function ComingSoonAnim() {
       });
       tl.add("start");
       tl.fromTo;
-      tl.fromTo(gu, { scale: 0.1 }, { scale: 0.8, duration: 1.7 }, "start");
+      tl.fromTo(gu, { scale: 0.1 }, { scale: 0.8, duration: 1.7 });
       tl.fromTo(gu, { opacity: 1 }, { opacity: 0, duration: 1 });
       tl.fromTo(maintext, { display: "none" }, { display: "block" });
       tl.fromTo(maintext, { scale: 0.1 }, { scale: 1, duration: 1.7 });
@@ -65,9 +65,6 @@ function ComingSoonAnim() {
             alt="GUNIVERSE"
             style={{ display: "none" }}
           />
-          {/* </div> */}
-
-          {/* <div className="w-full min-h-screen relative"> */}
           <h1
             ref={genuineUndead}
             className="w-full text-center px-[1.6rem] lg:px-[3.2rem] positionCenter will-change"
