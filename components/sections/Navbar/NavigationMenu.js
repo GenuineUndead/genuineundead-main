@@ -83,7 +83,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
             className={`min-full-height fixed bg-black dark:bg-white absolute w-screen top-0 lg:w-[500px] xl:w-[600px] lg:pr-[20%] md:right-0 overflow-hidden`}
           >
             <div className="flex flex-col items-center h-full p-0 md:pl-[3rem] md:pt-[2rem]">
-              <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start">
+              <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start mt-[20px] md:mt-0">
                 <ul className="h-full flex flex-col justify-around">
                   {pageLinks.map((link, i) => {
                     if (link.external) {

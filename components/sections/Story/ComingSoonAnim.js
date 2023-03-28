@@ -17,6 +17,7 @@ function ComingSoonAnim() {
   const background = useRef(null);
 
   useEffect(() => {
+    console.log("WIDTH: ", window.innerWidth);
     const pt = pinTarget.current;
     const ctx = gsap.context(() => {
       const maintext = mainText.current;
@@ -34,13 +35,25 @@ function ComingSoonAnim() {
       });
       tl.add("start");
       tl.fromTo;
-      tl.fromTo(gu, { scale: 0.1 }, { scale: 0.5, duration: 1.7 });
+      tl.fromTo(
+        gu,
+        { scale: 0.1 },
+        { scale: window.innerWidth < 768 ? 1.8 : 0.5, duration: 1.7 }
+      );
       tl.fromTo(gu, { opacity: 1 }, { opacity: 0, duration: 1 });
       tl.fromTo(maintext, { display: "none" }, { display: "block" });
-      tl.fromTo(maintext, { scale: 0.1 }, { scale: 1.5, duration: 1.7 });
+      tl.fromTo(
+        maintext,
+        { scale: 0.1 },
+        { scale: window.innerWidth < 768 ? 2 : 1, duration: 1.7 }
+      );
       tl.fromTo(maintext, { opacity: 1 }, { opacity: 0, duration: 1 });
       tl.fromTo(comingsoon, { display: "none" }, { display: "block" });
-      tl.fromTo(comingsoon, { scale: 0.1 }, { scale: 0.5, duration: 1.7 });
+      tl.fromTo(
+        comingsoon,
+        { scale: 0.1 },
+        { scale: window.innerWidth < 768 ? 1.8 : 0.5, duration: 1.7 }
+      );
       // tl.fromTo(comingsoon, { opacity: 1 }, { opacity: 0, duration: 1 });
       // tl.fromTo(comingsoon, { opacity: 0 }, { opacity: 1, scale: 0.8 }, "-=1");
     }, pt);
