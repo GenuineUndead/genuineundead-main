@@ -8,7 +8,7 @@ import useOutsideClick from "../../../hooks/useOutsideClick";
 //CHANGE -- THESE i18n NEED TO BE IN ALL CAPITALS
 const pageLinks = [
   {
-    title: "PORTAL",
+    title: "MARKETPLACE",
     path: "https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221",
     i18n: "portal",
     external: true,
