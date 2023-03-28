@@ -14,6 +14,7 @@ function ComingSoonAnim() {
   );
   const pinTarget = useRef(null);
   const main = useRef(null);
+  const genuineUndead = useRef(null);
   const mainText = useRef(null);
   const comingSoon = useRef(null);
   const background = useRef(null);
@@ -23,7 +24,7 @@ function ComingSoonAnim() {
     const ctx = gsap.context(() => {
       const maintext = mainText.current;
       const comingsoon = comingSoon.current;
-      const bg = background.current;
+      const gu = genuineUndead.current;
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: pt,
@@ -35,17 +36,16 @@ function ComingSoonAnim() {
         },
       });
       tl.add("start");
-      tl.fromTo(maintext, { scale: 0.1 }, { scale: 1, duration: 1.7 }, "start");
-      tl.fromTo(
-        bg,
-        {
-          filter: "blur(5px)",
-        },
-        { filter: "blur(0px)", duration: 1.7 },
-        "start"
-      );
+      tl.fromTo;
+      tl.fromTo(gu, { scale: 0.1 }, { scale: 0.8, duration: 1.7 }, "start");
+      tl.fromTo(gu, { opacity: 1 }, { opacity: 0, duration: 1 });
+      tl.fromTo(maintext, { display: "none" }, { display: "block" });
+      tl.fromTo(maintext, { scale: 0.1 }, { scale: 1, duration: 1.7 });
       tl.fromTo(maintext, { opacity: 1 }, { opacity: 0, duration: 1 });
-      tl.fromTo(comingsoon, { opacity: 0 }, { opacity: 1 }, "-=1");
+      tl.fromTo(comingsoon, { display: "none" }, { display: "block" });
+      tl.fromTo(comingsoon, { scale: 0.1 }, { scale: 0.8, duration: 1.7 });
+      // tl.fromTo(comingsoon, { opacity: 1 }, { opacity: 0, duration: 1 });
+      // tl.fromTo(comingsoon, { opacity: 0 }, { opacity: 1, scale: 0.8 }, "-=1");
     }, pt);
     return () => ctx.revert();
   });
@@ -67,18 +67,36 @@ function ComingSoonAnim() {
           />
         </div>
 
-        <div className="w-full min-h-screen flex flex-col justify-center items-center above-all">
+        <div className="w-full min-h-screen relative">
+          <h1
+            ref={genuineUndead}
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] positionCenter will-change"
+          >
+            <img
+              src="/images/story/genuine-undead.svg"
+              alt="Main Text"
+              className="scale-[1]"
+            />
+          </h1>
           <h1
             ref={mainText}
-            className="w-full text-center px-[1.6rem] lg:px-[3.2rem]"
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] positionCenter will-change"
           >
-            <img src={mainTextImage} alt="Main Text" className="scale-[1]" />
+            <img
+              src="/images/story/guniverse.svg"
+              alt="Main Text"
+              className="scale-[1]"
+            />
           </h1>
           <h1
             ref={comingSoon}
-            className="bg-black bg-opacity-50 backdrop-blur-lg text-center px-[1rem] rounded-md font-teko text-[2.5rem] lg:mt-[15px]"
+            className="w-full text-center px-[1.6rem] lg:px-[3.2rem] positionCenter will-change"
           >
-            Coming Soon
+            <img
+              src="/images/story/coming-soon.svg"
+              alt="Main Text"
+              className="scale-[1]"
+            />
           </h1>
         </div>
       </div>
