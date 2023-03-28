@@ -21,7 +21,7 @@ const Footer = ({ t }) => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              Portal
+              Marketplace
             </a>
           </li>
           <li>
