@@ -83,14 +83,14 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
             className={`min-full-height fixed bg-black dark:bg-white absolute w-screen top-0  xl:w-[600px] 2xl:w-[800px] lg:pr-[20%] md:right-0 overflow-hidden`}
           >
             <div className="flex flex-col items-center h-full p-0 md:pl-[3rem] md:pt-[2rem]">
-              <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start mt-[30px]">
+              <div className="h-[60vh] w-screen md:w-full flex items-center justify-center md:justify-start mt-[50px] xl:mt-[30px]">
                 <ul className="h-full flex flex-col justify-around">
                   {pageLinks.map((link, i) => {
                     if (link.external) {
                       return (
                         <a
                           key={i}
-                          className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                          className={`text-[5.5vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
                             router.pathname === link.path ? "underline" : ""
                           }`}
                           onClick={toggleMenu}
