@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { logPageView } from "../utils/analytics";
-import ComingSoon from "../components/sections/Story/ComingSoon";
 import SEO from "../components/SEO";
 import ComingSoonAnim from "../components/sections/Story/ComingSoonAnim";
 
