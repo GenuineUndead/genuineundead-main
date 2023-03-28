@@ -7,7 +7,9 @@ const Footer = ({ t }) => {
   const router = useRouter();
   return (
     <div
-      className={`w-full flex flex-col lg:flex-row lg:justify-between py-[2rem]  text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917]`}
+      className={`w-full flex flex-col lg:flex-row lg:justify-between py-[2rem]  text-[.9rem] gap-[2rem] lg:gap-0 items-center text-center lg:text-left lg:items-start px-[3.2rem] bg-[#f8f8f4] dark:bg-[#191917] ${
+        router.pathname === "/story" && "hidden"
+      }`}
     >
       <div>&#169; GenuineUndead 2023</div>
       <div>
