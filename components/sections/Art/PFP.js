@@ -58,7 +58,11 @@ const PFP = () => {
             Undead PFPs are strikingly recognizable on social platforms such as
             Twitter, Instagram and Discord.
           </p>
-          <MainButton page={true} styles=" mb-0">
+          <MainButton
+            page={true}
+            styles=" mb-0"
+            link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+          >
             MARKETPLACE
           </MainButton>
         </div>

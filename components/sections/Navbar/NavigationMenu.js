@@ -35,7 +35,7 @@ const socialLinks = [
   { title: "Discord", link: "https://discord.gg/Z5dqQ4NCk3", i18n: "discord" },
   {
     title: "Medium",
-    link: "https://medium.com/@GenuineUndead/genuine-undead-f627c448f501",
+    link: "https://medium.com/@GenuineUndead",
     i18n: "medium",
   },
   {
