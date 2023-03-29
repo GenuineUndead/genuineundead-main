@@ -18,8 +18,8 @@ const pageLinks = [
   { title: "ETHOS", path: "/ethos", i18n: "ethos" },
   { title: "STORY", path: "/story", i18n: "story" },
   {
-    title: "EVENTS",
-    path: "https://events.genuineundead.io/genuine-undead",
+    title: "CLUB",
+    path: "https://app.theia.club/collective/GenuineUndead/feed",
     i18n: "events",
     external: true,
   },

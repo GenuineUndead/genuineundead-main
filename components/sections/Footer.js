@@ -59,11 +59,11 @@ const Footer = ({ t }) => {
           <li>
             <a
               className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
-              href="https://events.genuineundead.io/genuine-undead"
+              href="https://app.theia.club/collective/GenuineUndead/feed"
               target="_blank"
               rel="noreferrer noopener"
             >
-              Events
+              Club
             </a>
           </li>
           <li>
