@@ -73,6 +73,9 @@ const SEO = ({ title, description, imagePath, path }) => {
         notranslate: true,
         noimageindex: true,
         noarchive: true,
+        index: true,
+        follow: true,
+        twitter: true,
       }}
     />
   );
