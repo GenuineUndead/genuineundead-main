@@ -42,6 +42,11 @@ const socialLinks = [
     link: "https://opensea.io/collection/genuine-undead",
     i18n: "opensea",
   },
+  {
+    title: "Club",
+    link: "https://app.theia.club/collective/GenuineUndead/feed",
+    i18n: "club",
+  },
 ];
 
 const NavigationMenu = ({

@@ -3,9 +3,13 @@ import Image from "next/image";
 
 const FlipCard = () => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [showFront, setShowFront] = useState(false);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
+    setTimeout(() => {
+      setShowFront(!showFront);
+    }, 150);
   };
 
   return (
@@ -14,7 +18,11 @@ const FlipCard = () => {
         className={`flip-card-inner ${isFlipped ? "flip-card-flipped" : ""}`}
       >
         <div className="flip-card-front flex flex-col border border-black dark:border-white ">
-          <div className="min-h-[40px] flex items-center relative">
+          <div
+            className={`min-h-[40px] flex items-center relative ${
+              showFront && "hidden"
+            }`}
+          >
             <div className="px-2 flex items-center gap-[.2rem]">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex items-center justify-center"></div>
               Active
