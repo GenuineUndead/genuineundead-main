@@ -3,21 +3,6 @@ import { config } from "../../public/data/MintConfig";
 import { useAccount } from "wagmi";
 import ConnectWalletBtn from "../../components/ConnectWalletBtn";
 
-export async function getServerSideProps({ params }) {
-  const { contractAddress } = params;
-  // fetch page content based on the contractAddress parameter
-  let contractData = config.find(
-    (c) => c.contractAddress.toLowerCase() === contractAddress.toLowerCase()
-  );
-
-  return {
-    props: {
-      contractData: JSON.stringify(contractData),
-      // page content
-    },
-  };
-}
-
 const MintPage = ({ contractData }) => {
   let { title, contractAddress, abi, image, imageAlt } =
     JSON.parse(contractData);
@@ -32,5 +17,20 @@ const MintPage = ({ contractData }) => {
     </section>
   );
 };
+
+export async function getServerSideProps({ params }) {
+  const { contractAddress } = params;
+  // fetch page content based on the contractAddress parameter
+  let contractData = config.find(
+    (c) => c.contractAddress.toLowerCase() === contractAddress.toLowerCase()
+  );
+
+  return {
+    props: {
+      contractData: JSON.stringify(contractData),
+      // page content
+    },
+  };
+}
 
 export default MintPage;

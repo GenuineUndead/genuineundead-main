@@ -13,21 +13,12 @@ import {
   lightTheme,
 } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
-
 import { chain, WagmiConfig } from "wagmi";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
-// const darkTheme = {
-//   blurs: {},
-//   colors: {},
-// };
-
-// const lightTheme = {};
-
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,59 +53,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default appWithTranslation(MyApp);
-
-const myCustomTheme = {
-  blurs: {
-    modalOverlay: "...",
-  },
-  colors: {
-    accentColor: "...",
-    accentColorForeground: "...",
-    actionButtonBorder: "...",
-    actionButtonBorderMobile: "...",
-    actionButtonSecondaryBackground: "...",
-    closeButton: "...",
-    closeButtonBackground: "...",
-    connectButtonBackground: "...",
-    connectButtonBackgroundError: "...",
-    connectButtonInnerBackground: "...",
-    connectButtonText: "",
-    connectButtonTextError: "...",
-    connectionIndicator: "...",
-    downloadBottomCardBackground: "...",
-    downloadTopCardBackground: "...",
-    error: "...",
-    generalBorder: "...",
-    generalBorderDim: "...",
-    menuItemBackground: "...",
-    modalBackdrop: "...",
-    modalBackground: "...",
-    modalBorder: "...",
-    modalText: "...",
-    modalTextDim: "...",
-    modalTextSecondary: "...",
-    profileAction: "...",
-    profileActionHover: "...",
-    profileForeground: "...",
-    selectedOptionBorder: "...",
-    standby: "...",
-  },
-  fonts: {
-    body: "...",
-  },
-  radii: {
-    actionButton: "...",
-    connectButton: "...",
-    menuButton: "...",
-    modal: "...",
-    modalMobile: "...",
-  },
-  shadows: {
-    connectButton: "...",
-    dialog: "...",
-    profileDetailsAction: "...",
-    selectedOption: "...",
-    selectedWallet: "...",
-    walletLogo: "...",
-  },
-};

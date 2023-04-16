@@ -32,8 +32,6 @@ const Navbar = () => {
     }
   }, [mounted]);
 
-  useEffect(() => {}, [isConnected, address]);
-
   return (
     <>
       <nav
