@@ -4,11 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper";
 import FlipCard from "./FlipCard";
-import {
-  HiOutlineArrowLongRight,
-  HiOutlineArrowLongLeft,
-} from "react-icons/hi";
-import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { useTheme } from "next-themes";
 
@@ -42,13 +38,13 @@ const Slider = ({ items }) => {
     if (mounted) {
       setCurrentTheme(theme === "system" ? systemTheme : theme);
     }
-  }, [mounted]);
+  }, [mounted, theme]);
 
   return (
-    <div className="relative w-full h-[500px] flex justify-center">
+    <div className="relative w-full h-[510px] flex justify-center">
       <Swiper
         {...params}
-        spaceBetween={140}
+        spaceBetween={130}
         slidesPerView={1.5}
         centeredSlides={true}
         modules={[Navigation]}
@@ -70,11 +66,12 @@ const Slider = ({ items }) => {
         {items.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`w-3/10 h-full flex justify-center items-center transition-all duration-350 ${
+              className={`w-3/10 h-full flex justify-center items-center transition-all duration-350 relative ${
                 activeSlideIndex !== index && "scale-[.85] opacity-75"
               } `}
             >
               <FlipCard />
+              <div className="h-full w-[1px]"></div>
             </div>
           </SwiperSlide>
         ))}
@@ -86,17 +83,21 @@ const Slider = ({ items }) => {
       >
         <button
           ref={navigationPrevRef}
-          className="swiper-navigation-button swiper-navigation-prev absolute top-[-50px] left-[25px] above-all"
+          className={`swiper-navigation-button swiper-navigation-prev absolute top-[-50px] left-[25px] above-all ${
+            activeSlideIndex === 0 && "opacity-50"
+          }`}
           onClick={handleNavigationPrevClick}
         >
-          <FaLongArrowAltLeft size={30} />{" "}
+          <BsArrowLeft size={45} />{" "}
         </button>
         <button
           ref={navigationNextRef}
-          className="swiper-navigation-button swiper-navigation-next absolute bottom-[-50px] right-[25px] above-all"
+          className={`swiper-navigation-button swiper-navigation-next absolute bottom-[-50px] right-[25px] above-all ${
+            activeSlideIndex === items?.length - 1 && "opacity-50"
+          }`}
           onClick={handleNavigationNextClick}
         >
-          <FaLongArrowAltRight size={30} />{" "}
+          <BsArrowRight size={45} />{" "}
         </button>
       </IconContext.Provider>
     </div>

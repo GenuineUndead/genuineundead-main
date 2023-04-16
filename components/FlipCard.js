@@ -9,7 +9,7 @@ const FlipCard = () => {
   };
 
   return (
-    <div className="min-w-[150%] md:min-w-[170%] lg:min-w-full xl:min-w-[80%] h-full perspective-1000">
+    <div className="min-w-[150%] md:min-w-[170%] lg:min-w-[110%] xl:min-w-[85%] h-full perspective-1000 bg-transparent">
       <div
         className={`flip-card-inner ${isFlipped ? "flip-card-flipped" : ""}`}
       >
@@ -30,6 +30,7 @@ const FlipCard = () => {
               alt="STUB NATURE"
               fill
               quality={100}
+              priority
             />
           </div>
           <div className="h-full p-2">Info section</div>
@@ -39,7 +40,7 @@ const FlipCard = () => {
             </h2>
           </div>
         </div>
-        <div className="flip-card-back flex flex-col  text-white border border-black dark:border-white transform rotate-y-180">
+        <div className="flip-card-back flex flex-col border border-black dark:border-white transform rotate-y-180">
           <div className="min-h-[40px] flex items-center relative">
             <div className="px-2 flex items-center gap-[.2rem]">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex items-center justify-center"></div>

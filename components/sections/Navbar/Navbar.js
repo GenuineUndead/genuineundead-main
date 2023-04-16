@@ -25,9 +25,6 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(null);
 
-  const { openConnectModal } = useConnectModal();
-  const { openAccountModal } = useAccountModal();
-
   const toggleTheme = () => {
     if (currentTheme === "dark") {
       setTheme("light");
