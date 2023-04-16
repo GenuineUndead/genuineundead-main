@@ -4,12 +4,6 @@ import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
 import Link from "next/link";
-// import ConnectWalletBtn from "../../ConnectWalletBtn";
-import {
-  useConnectModal,
-  ConnectButton,
-  useAccountModal,
-} from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 
 import dynamic from "next/dynamic";
