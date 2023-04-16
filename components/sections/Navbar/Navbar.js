@@ -1,15 +1,32 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, use } from "react";
 import { useTheme } from "next-themes";
 import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
 import Link from "next/link";
+// import ConnectWalletBtn from "../../ConnectWalletBtn";
+import {
+  useConnectModal,
+  ConnectButton,
+  useAccountModal,
+} from "@rainbow-me/rainbowkit";
+import { useAccount } from "wagmi";
+
+import dynamic from "next/dynamic";
+
+const ConnectWalletBtn = dynamic(() => import("../../ConnectWalletBtn"), {
+  ssr: false,
+});
 
 const Navbar = () => {
+  const { isConnected, address } = useAccount();
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(null);
+
+  const { openConnectModal } = useConnectModal();
+  const { openAccountModal } = useAccountModal();
 
   const toggleTheme = () => {
     if (currentTheme === "dark") {
@@ -25,12 +42,19 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const connect = () => {
+    console.log("clicked");
+    openConnectModal();
+  };
+
   useEffect(() => {
     setMounted(true);
     if (mounted) {
       setCurrentTheme(theme === "system" ? systemTheme : theme);
     }
   }, [mounted]);
+
+  useEffect(() => {}, [isConnected, address]);
 
   return (
     <>

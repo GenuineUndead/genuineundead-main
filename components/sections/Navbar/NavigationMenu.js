@@ -18,10 +18,9 @@ const pageLinks = [
   { title: "ETHOS", path: "/ethos", i18n: "ethos" },
   { title: "STORY", path: "/story", i18n: "story" },
   {
-    title: "EVENTS",
-    path: "https://events.genuineundead.io/genuine-undead",
-    i18n: "events",
-    external: true,
+    title: "MINT",
+    path: "/mint",
+    i18n: "mint",
   },
   { title: "HOME", path: "/", i18n: "home" },
 ];
@@ -45,7 +44,13 @@ const socialLinks = [
   },
 ];
 
-const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
+const NavigationMenu = ({
+  menuOpen,
+  toggleMenu,
+  t,
+  currentTheme,
+  toggleTheme,
+}) => {
   const router = useRouter();
   const menuRef = useRef();
   const [init, setInit] = useState(false);
@@ -90,7 +95,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                       return (
                         <a
                           key={i}
-                          className={`text-[4vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                          className={`text-[5.5vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
                             router.pathname === link.path ? "underline" : ""
                           }`}
                           onClick={toggleMenu}
@@ -106,7 +111,7 @@ const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
                         <Link key={i} href={link.path}>
                           <li
                             i={i}
-                            className={`text-[4.5vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
+                            className={`text-[6vh] text-center md:text-left text-white dark:text-black cursor-pointer font-didot hover:italic transform transition-all duration-500 ${
                               router.pathname === link.path ? "underline" : ""
                             }`}
                             onClick={toggleMenu}
