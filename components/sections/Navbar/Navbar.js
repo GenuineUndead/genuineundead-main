@@ -1,19 +1,11 @@
-import React, { useState, useEffect, useRef, use } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
 import Link from "next/link";
-import { useAccount } from "wagmi";
-
-import dynamic from "next/dynamic";
-
-const ConnectWalletBtn = dynamic(() => import("../../ConnectWalletBtn"), {
-  ssr: false,
-});
 
 const Navbar = () => {
-  const { isConnected, address } = useAccount();
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,11 +23,6 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const connect = () => {
-    console.log("clicked");
-    openConnectModal();
   };
 
   useEffect(() => {
