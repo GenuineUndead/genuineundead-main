@@ -16,6 +16,7 @@ const Slider = ({ items }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [currentTheme, setCurrentTheme] = useState(null);
   const [mounted, setMounted] = useState(false);
+  const [swiper, setSwiper] = useState(null);
 
   const handleSlideChange = (swiper) => {
     setActiveSlideIndex(swiper.realIndex);
@@ -26,6 +27,11 @@ const Slider = ({ items }) => {
 
   const handleNavigationNextClick = () => {
     navigationNextRef.current.swiper?.slideNext();
+  };
+
+  const handleImageViewClick = (index) => {
+    console.log(swiper);
+    swiper.slideTo(index);
   };
 
   useEffect(() => {
@@ -40,6 +46,7 @@ const Slider = ({ items }) => {
       <div className="relative w-full h-[510px] flex justify-center">
         <Swiper
           spaceBetween={100}
+          onSwiper={setSwiper}
           slidesPerView={1.5}
           centeredSlides={true}
           modules={[Navigation]}
@@ -101,9 +108,10 @@ const Slider = ({ items }) => {
           return (
             <div
               key={i}
-              className={`w-[60px] aspect-square relative ${
+              className={`w-[60px] aspect-square relative cursor-pointer ${
                 activeSlideIndex !== i && "opacity-30"
               }`}
+              onClick={() => handleImageViewClick(i)}
             >
               {" "}
               <Image

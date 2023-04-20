@@ -4,7 +4,7 @@ import ConnectWalletBtn from "../../ConnectWalletBtn";
 import TekoHeading from "../../TekoHeading";
 import Image from "next/image";
 
-const Mint = ({ contractAddress, title }) => {
+const Mint = ({ contractData }) => {
   const totalMinted = 9998;
   const maxSupply = 9999;
   return (
@@ -58,7 +58,9 @@ const Mint = ({ contractAddress, title }) => {
                 <div className="flex justify-between text-sm">
                   Contract Address
                 </div>
-                <span className="font-bold text-sm">{contractAddress}</span>
+                <span className="font-bold text-sm">
+                  {contractData?.contractAddress}
+                </span>
               </div>
               <div className="flex flex-col justify-center py-2">
                 <div className="flex justify-between text-sm">

@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { config } from "../../public/data/MintConfig";
 import Mint from "../../components/sections/Mint/Mint";
 
-const MintPage = ({ contractData }) => {
-  let { title, contractAddress, abi, image, imageAlt } =
-    JSON.parse(contractData);
+const MintPage = () => {
+  // let { title, contractAddress, abi, image, imageAlt } =
+  //   JSON.parse(contractData);
+  const router = useRouter();
+  const { contractAddress } = router.query;
+  let contractData = config.find(
+    (c) => c.contractAddress.toLowerCase() === contractAddress.toLowerCase()
+  );
+
   return (
     <>
-      <Mint contractAddress={contractAddress} title={title} />
+      <Mint contractData={contractData} />
     </>
   );
 };
