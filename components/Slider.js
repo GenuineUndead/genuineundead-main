@@ -39,7 +39,7 @@ const Slider = ({ items }) => {
     <>
       <div className="relative w-full h-[510px] flex justify-center">
         <Swiper
-          spaceBetween={130}
+          spaceBetween={100}
           slidesPerView={1.5}
           centeredSlides={true}
           modules={[Navigation]}
@@ -56,12 +56,12 @@ const Slider = ({ items }) => {
               slidesPerView: 3,
             },
           }}
-          className="h-[500px]"
+          className="h-auto"
         >
           {items.map((itemData, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="">
               <div
-                className={`w-3/10 h-full flex justify-center items-center transition-all duration-350 relative ${
+                className={`w-[95%] md:w-[400px] h-full flex justify-center items-center transition-all duration-350 relative ${
                   activeSlideIndex !== index && "scale-[.85] opacity-75 blur-sm"
                 } `}
               >

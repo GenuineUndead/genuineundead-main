@@ -19,7 +19,7 @@ const ConnectWalletBtn = () => {
       ) : (
         <button
           aria-label="Mint Button"
-          className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] hover:dark:border-[#ff5277] transition-all duration-300`}
+          className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem]  hover:border-[#ff5277] hover:dark:border-[#ff5277] transition-all duration-300 rounded-full w-full`}
           onClick={openConnectModal}
         >
           CONNECT WALLET

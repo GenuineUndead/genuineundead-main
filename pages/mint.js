@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import { useAccount } from "wagmi";
-import Slider from "../components/Slider";
+import MintMenu from "../components/sections/Mint/MintMenu";
 import SEO from "../components/SEO";
-import { config } from "../public/data/MintConfig";
 
 const seoDesc = "Description of the mint page";
 
@@ -10,12 +8,7 @@ const mint = () => {
   return (
     <>
       <SEO title="Mint | Genuine Undead" description={seoDesc} path="mint" />
-      <section className="min-h-screen w-full flex flex-col lg:flex-row border-b border-black dark:border-white px-[1.6rem]  lg:px-0 relative">
-        <div className="w-full min-h-full flex flex-col items-center justify-center gap-[1rem] positionCenter">
-          <h1 className="text-[2rem] font-teko">Mint Menu</h1>
-          <Slider items={config} />
-        </div>
-      </section>
+      <MintMenu />
     </>
   );
 };

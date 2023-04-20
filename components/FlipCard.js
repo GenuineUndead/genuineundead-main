@@ -50,25 +50,11 @@ const FlipCard = ({ data }) => {
       <div
         className={`flip-card-inner ${isFlipped ? "flip-card-flipped" : ""}`}
       >
-        <div className="flip-card-front flex flex-col border border-black dark:border-white ">
-          <div
-            className={`min-h-[40px] flex items-center relative ${
-              showFront && "hidden"
-            }`}
-          >
-            <div className="px-2 flex items-center gap-[.2rem]">
-              <div
-                className={`w-2 h-2 ${
-                  totalMinted === maxSupply ? "bg-red-500" : "bg-green-500"
-                } rounded-full animate-pulse flex items-center justify-center`}
-              ></div>
-              {totalMinted === maxSupply ? "Ended" : "Active"}
-            </div>
-            <h1 className="positionCenter font-teko mt-[3px] text-[1.7rem]">
-              {data?.title}
-            </h1>
+        <div className="flip-card-front flex flex-col border border-black dark:border-white px-[15px] ">
+          <div className="min-h-[13%] flex justify-center items-center text-[2rem] font-teko">
+            TITLE
           </div>
-          <div className="min-h-[75%] relative">
+          <div className="min-h-[60%] relative">
             {" "}
             <Image
               src={data?.image}
@@ -78,16 +64,42 @@ const FlipCard = ({ data }) => {
               priority
             />
           </div>
-          <div className="h-full p-2">
-            Mint Status: {totalMinted}/{maxSupply}
+          <div
+            className={`min-h-[50px] flex items-center relative justify-between ${
+              showFront && "hidden"
+            }`}
+          >
+            <div className=" flex items-center gap-[.2rem] text-sm">
+              <div
+                className={`w-2 h-2 ${
+                  totalMinted === maxSupply ? "bg-red-500" : "bg-green-500"
+                } rounded-full animate-pulse flex items-center justify-center`}
+              ></div>
+              {totalMinted === maxSupply ? "Ended" : "Active"}
+            </div>
+            <span className="text-sm">
+              Mint Status: {totalMinted}/{maxSupply}
+            </span>
           </div>
-          <div className="flex justify-between items-center px-2">
-            <Link href={`/mint/${data?.contractAddress}`}>
-              <h2>MINT</h2>
-            </Link>
-            <h2 onClick={handleFlip} className="cursor-pointer">
-              VIEW STATISTICS
-            </h2>
+          <div className="flex items-center w-full h-full border-t border-gray-500">
+            <div className="w-[50%] flex justify-center items-center">
+              {" "}
+              <Link
+                href={`/mint/${data?.contractAddress}`}
+                className="hover:text-[#ff5277]"
+              >
+                <h2>MINT</h2>
+              </Link>
+            </div>
+            <div className="w-[50%] flex justify-center items-center border-l border-gray-500 h-[80%]">
+              {" "}
+              <h2
+                onClick={handleFlip}
+                className="cursor-pointer hover:text-[#ff5277]"
+              >
+                VIEW STATS
+              </h2>
+            </div>
           </div>
         </div>
         <div className="flip-card-back flex flex-col border border-black dark:border-white transform rotate-y-180">
