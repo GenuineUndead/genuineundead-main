@@ -100,6 +100,7 @@ const Slider = ({ items }) => {
         {items.map((item, i) => {
           return (
             <div
+              key={i}
               className={`w-[60px] aspect-square relative ${
                 activeSlideIndex !== i && "opacity-30"
               }`}

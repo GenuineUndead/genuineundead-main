@@ -5,7 +5,7 @@ export const config = [
     title: "NTR",
     contractAddress: "0x209e639a0EC166Ac7a1A4bA41968fa967dB30221",
     abi: guABI,
-    image: "/images/mint/stub-nature.jpg",
+    image: "/images/mint/NTR-stub.png",
     imageAlt: "NTR Hero",
   },
   {
