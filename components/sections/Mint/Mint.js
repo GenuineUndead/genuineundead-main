@@ -112,18 +112,28 @@ const Mint = ({ contractData }) => {
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur.{" "}
               </p>
-              <div className="flex gap-[1rem]">
-                <div className="flex flex-col py-4 w-1/3">
-                  <span className="text-sm">Edition</span>
-                  <span className="font-bold">{maxSupply || "TBD"}</span>
+              <div className="flex flex-col lg:flex-row lg:gap-[2rem]">
+                <div className="flex gap-[2rem]">
+                  <div className="flex flex-col py-4">
+                    <span className="text-sm">Edition</span>
+                    <span className="font-bold">{maxSupply || "TBD"}</span>
+                  </div>
+                  <div className="flex flex-col py-4">
+                    <span className="text-sm">Minted</span>
+                    <span className="font-bold">{totalMinted || 0}</span>
+                  </div>
                 </div>
-                <div className="flex flex-col py-4 w-1/3">
-                  <span className="text-sm">Minted</span>
-                  <span className="font-bold">{totalMinted || 0}</span>
-                </div>
-                <div className="flex flex-col py-4 w-1/3">
-                  <span className="text-sm">Price</span>
-                  <span className="font-bold">{contractData?.price}</span>
+                <div className="flex gap-[2rem]">
+                  <div className="flex flex-col py-4">
+                    <span className="text-sm">GU Holder Price</span>
+                    <span className="font-bold">
+                      {contractData?.holderPrice}
+                    </span>
+                  </div>
+                  <div className="flex flex-col py-4">
+                    <span className="text-sm">Price</span>
+                    <span className="font-bold">{contractData?.price}</span>
+                  </div>
                 </div>
               </div>
               <div className="py-4 flex justify-center items-center">
