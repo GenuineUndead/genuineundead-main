@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import FlipCard from "./FlipCard";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { useTheme } from "next-themes";
 
@@ -30,7 +31,6 @@ const Slider = ({ items }) => {
   };
 
   const handleImageViewClick = (index) => {
-    console.log(swiper);
     swiper.slideTo(index);
   };
 
@@ -45,9 +45,10 @@ const Slider = ({ items }) => {
     <>
       <div className="relative w-full h-[510px] flex justify-center">
         <Swiper
+          rewind={true}
           spaceBetween={100}
           onSwiper={setSwiper}
-          slidesPerView={1.5}
+          slidesPerView={1}
           centeredSlides={true}
           modules={[Navigation]}
           navigation={{
@@ -57,9 +58,6 @@ const Slider = ({ items }) => {
           onSlideChange={handleSlideChange}
           breakpoints={{
             640: {
-              slidesPerView: 1,
-            },
-            768: {
               slidesPerView: 3,
             },
           }}
@@ -68,9 +66,10 @@ const Slider = ({ items }) => {
           {items.map((itemData, index) => (
             <SwiperSlide key={index} className="">
               <div
-                className={`w-[95%] md:w-[400px] h-full flex justify-center items-center transition-all duration-350 relative ${
+                className={`flex justify-center items-center transition-all duration-350 relative ${
                   activeSlideIndex !== index && "scale-[.85] opacity-75 blur-sm"
                 } `}
+                style={{ height: "95.25%" }}
               >
                 <FlipCard data={itemData} />
                 <div className="h-full w-[1px]"></div>
@@ -84,25 +83,24 @@ const Slider = ({ items }) => {
           }}
         >
           <button
-            ref={navigationPrevRef}
-            className={`swiper-navigation-button swiper-navigation-prev absolute top-[-50px] left-[25px] above-all ${
-              activeSlideIndex === 0 && "opacity-50"
-            }`}
-            onClick={handleNavigationPrevClick}
-          >
-            <BsArrowLeft size={45} />{" "}
-          </button>
-          <button
             ref={navigationNextRef}
-            className={`swiper-navigation-button swiper-navigation-next absolute bottom-[-50px] right-[25px] above-all ${
-              activeSlideIndex === items?.length - 1 && "opacity-50"
-            }`}
+            className={`hidden md:block swiper-navigation-button  swiper-navigation-prev absolute top-[40%] transform translate-y-[50%] right-[2%] above-all`}
             onClick={handleNavigationNextClick}
           >
-            <BsArrowRight size={45} />{" "}
+            <FaChevronRight size={45} />{" "}
+          </button>
+          <button
+            ref={navigationPrevRef}
+            className={`hidden md:block swiper-navigation-button swiper-navigation-next absolute top-[40%] transform translate-y-[50%] left-[2%]  above-all `}
+            onClick={handleNavigationPrevClick}
+          >
+            <FaChevronLeft size={45} />
           </button>
         </IconContext.Provider>
       </div>
+      <span className="flex md:hidden font-teko mt-[-1rem] text-xl">
+        SWIPE TO VIEW COLLECTIONS
+      </span>
       <div className="h-[62px] border border-black dark:border-white w-auto flex">
         {items.map((item, i) => {
           return (
@@ -113,7 +111,6 @@ const Slider = ({ items }) => {
               }`}
               onClick={() => handleImageViewClick(i)}
             >
-              {" "}
               <Image
                 src={item?.image}
                 alt={item?.imageAlt}

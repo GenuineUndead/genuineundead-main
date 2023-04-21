@@ -1,12 +1,68 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useAccount } from "wagmi";
 import ConnectWalletBtn from "../../ConnectWalletBtn";
 import TekoHeading from "../../TekoHeading";
 import Image from "next/image";
+import { FaChevronLeft } from "react-icons/fa";
+import { IconContext } from "react-icons";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import { useContractReads } from "wagmi";
+import { ethers } from "ethers";
+import Countdown from "./Countdown";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 const Mint = ({ contractData }) => {
-  const totalMinted = 9998;
-  const maxSupply = 9999;
+  const { theme } = useTheme();
+  const [currentTheme, setCurrentTheme] = useState(null);
+  const [mounted, setMounted] = useState(false);
+  const [totalMinted, setTotalMinted] = useState();
+  const [maxSupply, setMaxSupply] = useState();
+  const browserTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone; // get the browser's time zone
+
+  const handleMint = async () => {
+    alert("This will trigger mint eventually!");
+  };
+
+  const config = {
+    address: contractData?.contractAddress,
+    abi: contractData?.abi,
+  };
+
+  const { data: readData } = useContractReads({
+    contracts: [
+      {
+        ...config,
+        functionName: "totalSupply",
+        watch: true,
+      },
+      {
+        ...config,
+        functionName: "maxSupply",
+      },
+    ],
+  });
+
+  useEffect(() => {
+    setMounted(true);
+    if (mounted) {
+      setCurrentTheme(theme === "system" ? systemTheme : theme);
+    }
+  }, [mounted, theme]);
+
+  useEffect(() => {
+    console.log({ readData });
+    if (readData && readData.length > 0) {
+      setTotalMinted(ethers.utils.formatUnits(readData[0], 0));
+      setMaxSupply(ethers.utils.formatUnits(readData[1], 0));
+    }
+  }, [readData]);
+
   return (
     <section className="min-h-screen w-full flex flex-col border-b border-black dark:border-white px-[1.6rem] lg:px-0 relative">
       <div className="flex flex-col justify-center items-center mt-[50px]">
@@ -16,8 +72,24 @@ const Mint = ({ contractData }) => {
         <div className="w-full lg:w-[50%] flex-1 flex  justify-center">
           <div className="w-full lg:w-[60%] flex flex-col">
             <div className="flex justify-between items-center w-full">
-              <span className="font-teko text-[2rem]">TITLE</span>
-              <div className=" flex items-center gap-[.2rem] text-sm">
+              <span className="font-teko text-[2rem] flex justify-center items-center">
+                <span className="h-full flex justify-center items-center mr-[3px] mt-[-5px]">
+                  {" "}
+                  <IconContext.Provider
+                    value={{
+                      style: {
+                        color: currentTheme === "dark" ? "white " : "black",
+                      },
+                    }}
+                  >
+                    <Link href="/mint">
+                      <FaChevronLeft size={20} />{" "}
+                    </Link>
+                  </IconContext.Provider>
+                </span>
+                <span>TITLE</span>
+              </span>
+              <div className="flex items-center justify-center gap-[.2rem] text-sm">
                 <div
                   className={`w-2 h-2 ${
                     totalMinted === maxSupply ? "bg-red-500" : "bg-green-500"
@@ -26,6 +98,11 @@ const Mint = ({ contractData }) => {
                 {totalMinted === maxSupply ? "Ended" : "Active"}
               </div>
             </div>
+            {contractData?.mintDateTime && (
+              <div className="pt-4">
+                <Countdown toTime={contractData?.mintDateTime} />{" "}
+              </div>
+            )}
             <div className="flex flex-col divide-y divide-gray-700/75">
               <p className="py-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,20 +115,20 @@ const Mint = ({ contractData }) => {
               <div className="flex gap-[1rem]">
                 <div className="flex flex-col py-4 w-1/3">
                   <span className="text-sm">Edition</span>
-                  <span className="font-bold">10,000</span>
+                  <span className="font-bold">{maxSupply || "TBD"}</span>
                 </div>
                 <div className="flex flex-col py-4 w-1/3">
                   <span className="text-sm">Minted</span>
-                  <span className="font-bold">10,000</span>
+                  <span className="font-bold">{totalMinted || 0}</span>
                 </div>
                 <div className="flex flex-col py-4 w-1/3">
                   <span className="text-sm">Price</span>
-                  <span className="font-bold">0.069 ETH</span>
+                  <span className="font-bold">{contractData?.price}</span>
                 </div>
               </div>
               <div className="py-4 flex justify-center items-center">
                 <div className="w-[90%]">
-                  <ConnectWalletBtn />
+                  <ConnectWalletBtn onMint={handleMint} />
                 </div>
               </div>
               <div className="flex flex-col justify-center py-2">
@@ -72,10 +149,17 @@ const Mint = ({ contractData }) => {
                 <div className="flex justify-between text-sm">Blockchain</div>
                 <span className="font-bold text-sm">Ethereum</span>
               </div>
-              <div className="flex flex-col justify-center py-2">
-                <div className="flex justify-between text-sm">Mint Date</div>
-                <span className="font-bold text-sm">17 April 2023</span>
-              </div>
+              {contractData?.mintDateTime && (
+                <div className="flex flex-col justify-center py-2">
+                  <div className="flex justify-between text-sm">Mint Date</div>
+                  <span className="font-bold text-sm">
+                    {dayjs
+                      .utc(contractData?.mintDateTime)
+                      .tz(browserTimeZone)
+                      .format("DD MMMM YYYY h:mm A")}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>

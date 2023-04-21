@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useConnectModal, useAccountModal } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 
-const ConnectWalletBtn = () => {
+const ConnectWalletBtn = ({ onMint }) => {
   const { isConnected, address } = useAccount();
   const { openConnectModal } = useConnectModal();
   const { openAccountModal } = useAccountModal();
@@ -11,14 +11,15 @@ const ConnectWalletBtn = () => {
     <>
       {isConnected ? (
         <button
-          className="dark:text-white text-black"
-          onClick={openAccountModal}
+          aria-label="Mint Button"
+          className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem]  hover:border-[#ff5277] hover:dark:border-[#ff5277] transition-all duration-300 rounded-full w-full`}
+          onClick={onMint}
         >
-          {address}
+          MINT
         </button>
       ) : (
         <button
-          aria-label="Mint Button"
+          aria-label="Connect Wallet Button"
           className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem]  hover:border-[#ff5277] hover:dark:border-[#ff5277] transition-all duration-300 rounded-full w-full`}
           onClick={openConnectModal}
         >

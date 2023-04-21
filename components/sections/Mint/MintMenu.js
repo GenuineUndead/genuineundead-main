@@ -16,7 +16,6 @@ const MintMenu = () => {
             <i> MENU</i>
           </span>
         </h2>
-
         <Slider items={config} />
       </div>
     </section>

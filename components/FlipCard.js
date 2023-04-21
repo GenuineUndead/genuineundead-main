@@ -46,11 +46,11 @@ const FlipCard = ({ data }) => {
   }, [readData]);
 
   return (
-    <div className="min-w-[150%] md:min-w-[170%] lg:min-w-[110%] xl:min-w-[85%] h-full perspective-1000 bg-transparent">
+    <div className="w-[90%] md:min-w-[150%] lg:min-w-[375px] xl:w-[350px] h-full perspective-1000 bg-transparent">
       <div
         className={`flip-card-inner ${isFlipped ? "flip-card-flipped" : ""}`}
       >
-        <div className="flip-card-front flex flex-col border border-black dark:border-white px-[15px] ">
+        <div className="flip-card-front flex flex-col border border-black dark:border-white px-[15px] rounded-md">
           <div className="min-h-[13%] flex justify-center items-center text-[2rem] font-teko">
             TITLE
           </div>
@@ -81,7 +81,7 @@ const FlipCard = ({ data }) => {
               Mint Status: {totalMinted}/{maxSupply}
             </span>
           </div>
-          <div className="flex items-center w-full h-full border-t border-gray-500">
+          <div className="flex items-center w-full h-full border-t border-gray-700/75">
             <div className="w-[50%] flex justify-center items-center">
               {" "}
               <Link
@@ -91,7 +91,7 @@ const FlipCard = ({ data }) => {
                 <h2>MINT</h2>
               </Link>
             </div>
-            <div className="w-[50%] flex justify-center items-center border-l border-gray-500 h-[80%]">
+            <div className="w-[50%] flex justify-center items-center border-l border-gray-700/75 h-[80%]">
               {" "}
               <h2
                 onClick={handleFlip}
