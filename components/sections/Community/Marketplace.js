@@ -14,11 +14,8 @@ const Marketplace = () => {
             DECENTRALIZED <TekoHeading>COMMUNITY.</TekoHeading>
           </span>
         </MainHeaderWrapper>
-        <MainButton
-          page={true}
-          link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
-        >
-          MARKETPLACE
+        <MainButton page={true} link="https://discord.gg/Z5dqQ4NCk3">
+          DISCORD
         </MainButton>
       </div>
     </section>

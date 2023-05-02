@@ -129,28 +129,38 @@ const contact = () => {
                     placeholder="Message"
                   ></textarea>
                 </div>
-
-                <div className="flex flex-col justify-center items-start gap-[.5rem] h-full">
-                  <button
-                    className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] hover:dark:border-[#ff5277] rounded-full transition-all duration-300`}
-                    type="submit"
-                  >
-                    {isSending ? (
-                      <ClipLoader color="#FaFafa" size={20} />
-                    ) : (
-                      "Send Message"
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col justify-center items-start gap-[.5rem] h-full">
+                    <button
+                      className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] hover:dark:border-[#ff5277] rounded-full transition-all duration-300`}
+                      type="submit"
+                    >
+                      {isSending ? (
+                        <ClipLoader color="#FaFafa" size={20} />
+                      ) : (
+                        "Send Message"
+                      )}
+                    </button>
+                    {isFormErr && (
+                      <p className="text-[#ff5277] text-[1rem] text-center mb-[15px]">
+                        Error: Please ensure all fields are filled out
+                      </p>
                     )}
-                  </button>
-                  {isFormErr && (
-                    <p className="text-[#ff5277] text-[1rem] text-center mb-[15px]">
-                      Error: Please ensure all fields are filled out
-                    </p>
-                  )}
-                  {isSuccess && (
-                    <p className="text-[1rem] text-center mb-[15px]">
-                      THANKS - your message has been sent!
-                    </p>
-                  )}
+                    {isSuccess && (
+                      <p className="text-[1rem] text-center mb-[15px]">
+                        THANKS - your message has been sent!
+                      </p>
+                    )}
+                  </div>
+                  <div>
+                    <a
+                      href="https://forms.gle/ARUiWrsgsYM4yUgE7"
+                      target="_blank"
+                      className="hover:text-[#ff5277] cursor-pointer"
+                    >
+                      Make a Proposal
+                    </a>
+                  </div>
                 </div>
               </form>
             </div>
