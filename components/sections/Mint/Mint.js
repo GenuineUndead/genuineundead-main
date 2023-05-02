@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useAccount } from "wagmi";
-import ConnectWalletBtn from "../../ConnectWalletBtn";
 import TekoHeading from "../../TekoHeading";
 import Image from "next/image";
 import { FaChevronLeft } from "react-icons/fa";
@@ -13,6 +12,10 @@ import Countdown from "./Countdown";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import dynamic from "next/dynamic";
+const ConnectWalletBtn = dynamic(() => import("../../ConnectWalletBtn"), {
+  ssr: false,
+});
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

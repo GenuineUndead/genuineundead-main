@@ -3,12 +3,12 @@ import { useTheme } from "next-themes";
 import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
-import { IoWalletOutline } from "react-icons/io5";
-import { IconContext } from "react-icons";
-import { useAccountModal } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
-
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const WalletIcon = dynamic(() => import("./WalletIcon"), {
+  ssr: false,
+});
 
 const Navbar = () => {
   const { isConnected, address } = useAccount();
@@ -16,8 +16,6 @@ const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(null);
-
-  const { openAccountModal } = useAccountModal();
 
   const toggleTheme = () => {
     if (currentTheme === "dark") {
@@ -61,24 +59,7 @@ const Navbar = () => {
           <ToggleSwitch toggleTheme={toggleTheme} theme={currentTheme} />
         </div>
         <div className="flex items-center">
-          {isConnected ? (
-            <div
-              className="mr-[15px] cursor-pointer"
-              onClick={openAccountModal}
-            >
-              <IconContext.Provider
-                value={{
-                  style: {
-                    color: currentTheme === "dark" ? "white " : "black",
-                  },
-                }}
-              >
-                <IoWalletOutline size={30} />
-              </IconContext.Provider>
-            </div>
-          ) : (
-            <div></div>
-          )}
+          <WalletIcon currentTheme={currentTheme} />
           <div
             className={`bg-[#191917] dark:bg-[#f8f8f4] transition-all duration-700 overflow-hidden above-all`}
             onClick={toggleMenu}
