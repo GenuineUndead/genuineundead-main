@@ -6,7 +6,6 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 const Countdown = ({ toTime }) => {
-  toTime = "2023-05-01T12:00:00Z";
   const browserTime = dayjs();
   const [countdownOver, setCountdownOver] = useState(null);
   const [daysLeft, setDaysLeft] = useState(null);

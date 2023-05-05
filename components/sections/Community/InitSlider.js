@@ -4,14 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import FlipCard from "./FlipCard";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import InitCard from "./InitCard";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { IconContext } from "react-icons";
 import { useTheme } from "next-themes";
 
-const Slider = ({ items }) => {
+const InitSlider = ({ items }) => {
   const { theme } = useTheme();
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
@@ -46,11 +44,12 @@ const Slider = ({ items }) => {
     <>
       <div className="relative w-full h-[510px] flex justify-center">
         <Swiper
-          rewind={true}
           spaceBetween={100}
           onSwiper={setSwiper}
           slidesPerView={1}
+          slidesPerGroup={1}
           centeredSlides={true}
+          rewind={true}
           modules={[Navigation]}
           navigation={{
             prevEl: navigationPrevRef.current,
@@ -72,7 +71,7 @@ const Slider = ({ items }) => {
                 } `}
                 style={{ height: "95.25%" }}
               >
-                <FlipCard data={itemData} />
+                <InitCard data={itemData} currentTheme={currentTheme} />
                 <div className="h-full w-[1px]"></div>
               </div>
             </SwiperSlide>
@@ -127,4 +126,4 @@ const Slider = ({ items }) => {
   );
 };
 
-export default Slider;
+export default InitSlider;

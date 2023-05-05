@@ -46,7 +46,7 @@ const FlipCard = ({ data }) => {
   }, [readData]);
 
   return (
-    <div className="w-[90%] md:min-w-[150%] lg:min-w-[375px] xl:w-[350px] h-full perspective-1000 bg-transparent">
+    <div className="min-w-[330px] h-full aspect-w-16 aspect-h-9 lg:w-2/3 perspective-1000 bg-transparent">
       <div
         className={`flip-card-inner ${isFlipped ? "flip-card-flipped" : ""}`}
       >
@@ -86,7 +86,7 @@ const FlipCard = ({ data }) => {
               {" "}
               <Link
                 href={`/mint/${data?.contractAddress}`}
-                className="hover:text-[#ff5277]"
+                className="hover:text-[#ff5277] transition-all duration-300"
               >
                 <h2>MINT</h2>
               </Link>
@@ -95,14 +95,18 @@ const FlipCard = ({ data }) => {
               {" "}
               <h2
                 onClick={handleFlip}
-                className="cursor-pointer hover:text-[#ff5277]"
+                className="cursor-pointer hover:text-[#ff5277] transition-all duration-300"
               >
                 VIEW STATS
               </h2>
             </div>
           </div>
         </div>
-        <div className="flip-card-back flex flex-col border border-black dark:border-white transform rotate-y-180">
+        <div
+          className={`flip-card-back flex flex-col border border-black dark:border-white transform rotate-y-180 ${
+            !showFront && "hidden"
+          }`}
+        >
           <div className="min-h-[40px] flex items-center relative">
             <div className="px-2 flex items-center gap-[.2rem]">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex items-center justify-center"></div>
@@ -143,7 +147,7 @@ const FlipCard = ({ data }) => {
           <div className="min-h-[40px] flex justify-center item-center">
             <h2
               onClick={handleFlip}
-              className="cursor-pointer mr-2 font-teko text-[1.5rem]"
+              className="cursor-pointer mr-2 font-teko text-[1.5rem] hover:text-[#ff5277] transition-all duration-300"
             >
               VIEW MINT INFORMATION
             </h2>
