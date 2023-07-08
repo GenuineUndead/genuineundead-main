@@ -101,7 +101,7 @@ const InitSlider = ({ items }) => {
       <span className="flex md:hidden font-teko mt-[-1rem] text-xl">
         SWIPE TO VIEW COLLECTIONS
       </span>
-      <div className="h-[62px] border border-black dark:border-white w-auto flex">
+      {/* <div className="h-[62px] border border-black dark:border-white w-auto flex">
         {items.map((item, i) => {
           return (
             <div
@@ -121,7 +121,7 @@ const InitSlider = ({ items }) => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 };
