@@ -60,7 +60,7 @@ const InitCard = ({ data, currentTheme }) => {
                 DETAILS
               </h1>
             </div>
-            <div className="flex flex-col flex-1 justify-center items-center gap-[.5rem] justify-center">
+            <div className="flex flex-col flex-1 justify-center items-center gap-[.5rem]">
               <p className="text-center w-full">{data?.desc}</p>
               <p className="text-center">Contact Info Section...</p>
             </div>

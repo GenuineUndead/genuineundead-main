@@ -59,7 +59,7 @@ const Navbar = () => {
           <ToggleSwitch toggleTheme={toggleTheme} theme={currentTheme} />
         </div>
         <div className="flex items-center">
-          <WalletIcon currentTheme={currentTheme} />
+          {/* <WalletIcon currentTheme={currentTheme} /> */}
           <div
             className={`bg-[#191917] dark:bg-[#f8f8f4] transition-all duration-700 overflow-hidden above-all`}
             onClick={toggleMenu}

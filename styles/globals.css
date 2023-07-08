@@ -244,6 +244,27 @@ input:checked ~ .dot {
   height: 350px; /* This will make the line go from bottom to top*/
 }
 
+.inits-container {
+  /* padding: 150px 0px; */
+  @apply lg:py-[170px];
+}
+
+.inits-container::before {
+  content: "";
+  position: absolute;
+  left: 50%; /* Adjust as needed */
+  transform: translateX(
+    -50%
+  ); /* This will center the line on the left property*/
+  width: 1px; /* Adjust as needed */
+  @apply dark:bg-white bg-black hidden lg:block;
+}
+
+.inits-container::before {
+  top: -200px; /* Adjust as needed */
+  height: 350px;
+}
+
 .g-universe-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/images/story/GUNIVERSE.jpg);
