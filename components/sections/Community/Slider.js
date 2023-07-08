@@ -8,6 +8,7 @@ import { IconContext } from "react-icons";
 import { useTheme } from "next-themes";
 import { config } from "../../../public/data/IntiativesData";
 import Image from "next/image";
+import Link from "next/link";
 import MainButton from "../../MainButton";
 
 // Initialize Swiper core
@@ -64,15 +65,17 @@ const Slider = () => {
             return (
               <SwiperSlide key={`slide-${item.title}`}>
                 <div className="w-full h-[550px] aspect-w-3 aspect-h-1  flex justify-center">
-                  <div className="w-[350px] lg:w-[450px] min-h-full flex justify-center items-center relative">
+                  <div className="w-[350px] lg:w-[450px] min-h-full flex justify-center items-center relativem shadow-md">
                     <Image src={item.image} alt={item.title} fill />
                     <div className="z-10">
-                      <MainButton
-                        page={true}
-                        link="https://discord.gg/Z5dqQ4NCk3"
+                      <Link
+                        className={`border border-white text-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] transition-all duration-300 rounded-full`}
+                        href="#"
+                        target="_blank"
+                        rel="noreferrer noopener"
                       >
                         {item.title.toUpperCase()}
-                      </MainButton>
+                      </Link>
                     </div>
                   </div>
                 </div>
