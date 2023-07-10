@@ -41,7 +41,7 @@ const Slider = () => {
   }, [mounted, theme]);
   return (
     <>
-      <div className="relative w-full mx-auto h-[550px] flex justify-center max-w-[1024px]">
+      <div className="relative w-full mx-auto h-[550px] flex justify-center max-w-[1024px] px-[1.6rem] lg:px-0">
         <Swiper
           onSwiper={setSwiper}
           slidesPerView={3}
@@ -64,13 +64,13 @@ const Slider = () => {
           {config.map((item) => {
             return (
               <SwiperSlide key={`slide-${item.title}`}>
-                <div className="w-full h-[550px] aspect-w-3 aspect-h-1  flex justify-center">
-                  <div className="w-[350px] lg:w-[450px] min-h-full flex justify-center items-center relativem shadow-md">
+                <div className="w-full h-[550px] aspect-w-3 aspect-h-1  flex justify-center ">
+                  <div className="w-[85%] md:w-[350px] lg:w-[450px] min-h-full flex justify-center items-center relative shadow-md">
                     <Image src={item.image} alt={item.title} fill />
                     <div className="z-10">
                       <Link
                         className={`border border-white text-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] transition-all duration-300 rounded-full`}
-                        href="#"
+                        href={item.link}
                         target="_blank"
                         rel="noreferrer noopener"
                       >
@@ -104,7 +104,7 @@ const Slider = () => {
           </button>
         </IconContext.Provider>
       </div>
-      <span className="flex lg:hidden font-teko text-2xl">SWIPE TO VIEW</span>
+      <span className="flex lg:hidden font-teko text-2xl">SWIPE FOR MORE</span>
     </>
   );
 };
