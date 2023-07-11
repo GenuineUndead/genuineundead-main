@@ -17,11 +17,11 @@ const pageLinks = [
   { title: "COMMUNITY", path: "/community", i18n: "community" },
   { title: "ETHOS", path: "/ethos", i18n: "ethos" },
   { title: "STORY", path: "/story", i18n: "story" },
-  {
-    title: "MINT",
-    path: "/mint",
-    i18n: "mint",
-  },
+  // {
+  //   title: "MINT",
+  //   path: "/mint",
+  //   i18n: "mint",
+  // },
   { title: "HOME", path: "/", i18n: "home" },
 ];
 
