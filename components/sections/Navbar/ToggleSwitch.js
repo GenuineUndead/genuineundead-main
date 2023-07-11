@@ -5,7 +5,7 @@ const ToggleSwitch = ({ toggleTheme }) => {
   const { theme } = useTheme();
   return (
     <div className="flex items-center justify-center w-full gap-[5px]">
-      <span>Light</span>
+      <span className="dark:text-white text-black">Light</span>
       <label htmlFor="toggleB" className="flex items-center cursor-pointer">
         <div className="relative">
           <input
@@ -19,7 +19,7 @@ const ToggleSwitch = ({ toggleTheme }) => {
           <div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
         </div>
       </label>
-      <span>Dark</span>
+      <span className="dark:text-white text-black">Dark</span>
     </div>
   );
 };

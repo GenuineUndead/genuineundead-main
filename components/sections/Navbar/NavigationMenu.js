@@ -18,10 +18,9 @@ const pageLinks = [
   { title: "ETHOS", path: "/ethos", i18n: "ethos" },
   { title: "STORY", path: "/story", i18n: "story" },
   {
-    title: "CLUB",
-    path: "https://app.theia.club/collective/GenuineUndead/feed",
-    i18n: "events",
-    external: true,
+    title: "MINT",
+    path: "/mint",
+    i18n: "mint",
   },
   { title: "HOME", path: "/", i18n: "home" },
 ];
@@ -43,9 +42,20 @@ const socialLinks = [
     link: "https://opensea.io/collection/genuine-undead",
     i18n: "opensea",
   },
+  {
+    title: "Club",
+    link: "https://app.theia.club/collective/GenuineUndead/feed",
+    i18n: "club",
+  },
 ];
 
-const NavigationMenu = ({ menuOpen, toggleMenu, t }) => {
+const NavigationMenu = ({
+  menuOpen,
+  toggleMenu,
+  t,
+  currentTheme,
+  toggleTheme,
+}) => {
   const router = useRouter();
   const menuRef = useRef();
   const [init, setInit] = useState(false);

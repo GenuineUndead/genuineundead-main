@@ -1,11 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import MenuButton from "./MenuButton";
 import ToggleSwitch from "./ToggleSwitch";
 import NavigationMenu from "./NavigationMenu";
+import { useAccount } from "wagmi";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const WalletIcon = dynamic(() => import("./WalletIcon"), {
+  ssr: false,
+});
 
 const Navbar = () => {
+  const { isConnected, address } = useAccount();
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,11 +58,14 @@ const Navbar = () => {
         <div className="positionCenter">
           <ToggleSwitch toggleTheme={toggleTheme} theme={currentTheme} />
         </div>
-        <div
-          className={`bg-[#191917] dark:bg-[#f8f8f4] transition-all duration-700 overflow-hidden above-all`}
-          onClick={toggleMenu}
-        >
-          <MenuButton menuOpen={menuOpen} theme={currentTheme} />
+        <div className="flex items-center">
+          {/* <WalletIcon currentTheme={currentTheme} /> */}
+          <div
+            className={`bg-[#191917] dark:bg-[#f8f8f4] transition-all duration-700 overflow-hidden above-all`}
+            onClick={toggleMenu}
+          >
+            <MenuButton menuOpen={menuOpen} theme={currentTheme} />
+          </div>
         </div>
         <NavigationMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
       </nav>
