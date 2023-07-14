@@ -70,7 +70,7 @@ const Slider = () => {
                       src={item.image}
                       alt={item.title}
                       fill
-                      className="object-fit"
+                      className="object-cover rounded-md"
                     />
                     <div className="z-10">
                       <Link
