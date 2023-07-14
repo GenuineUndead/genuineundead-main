@@ -66,7 +66,12 @@ const Slider = () => {
               <SwiperSlide key={`slide-${item.title}`}>
                 <div className="w-full h-[550px] aspect-w-3 aspect-h-1  flex justify-center ">
                   <div className="w-[85%] md:w-[350px] lg:w-[450px] min-h-full flex justify-center items-center relative shadow-md">
-                    <Image src={item.image} alt={item.title} fill />
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover rounded-md"
+                    />
                     <div className="z-10">
                       <Link
                         className={`border border-white text-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] transition-all duration-300 rounded-full`}
