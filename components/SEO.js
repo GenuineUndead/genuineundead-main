@@ -15,7 +15,7 @@ const SEO = ({ title, description, imagePath, path }) => {
         description: description,
         images: [
           {
-            url: "/GU-BANNER2.jpeg",
+            url: "/GU-BANNER.png",
             width: 1500,
             height: 500,
             alt: "Og Image Alt",
