@@ -19,7 +19,7 @@ const SEO = ({ title, description, imagePath, path }) => {
             width: 1500,
             height: 500,
             alt: "Og Image Alt",
-            type: "image/jpeg",
+            type: "image/png",
           },
         ],
         site_name: "GenuineUndead",
