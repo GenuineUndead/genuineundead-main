@@ -21,7 +21,7 @@ const Timeline = () => {
         ></div>
         <RightTimelineBlock
           month="AUG"
-          content={`Genuine Undead ("GU") PFP project launches and the collection sells out. Volume reaches 2000 Eth, 10,000 followers on Twitter. Project announced as a CC0.`}
+          content={`Genuine Undead ("GU") PFP project launches and the collection sells out. Volume reaches 2000 ETH, 10,000 followers on Twitter. Project announced as a CC0.`}
         />
 
         <LeftTimelineBlock
@@ -30,7 +30,7 @@ const Timeline = () => {
         />
         <RightTimelineBlock
           month="OCT"
-          content="Verified on OpenSea. Royalties increased by 2.5%, directed to GU community wallet. GU community website live.  Founder gifts his only GU NFT, the 1/1 Nature, to the community wallet. Volume reaches 6000 Ξ, Floor reaches .94Eth (ATH)"
+          content="Verified on OpenSea. Royalties increased by 2.5%, directed to GU community wallet. GU community website live.  Founder gifts his only GU NFT, the 1/1 Nature, to the community wallet. Volume reaches 6000 ETH, Floor reaches .94 ETH (ATH)"
         />
         <LeftTimelineBlock
           month="NOV"
