@@ -112,7 +112,7 @@ const LeftTimelineBlock = ({ month, content }) => {
             {month}
           </h3>
         </div>
-        <p className="text-sm font-medium leading-snug tracking-wide text-opacity-100 w-[95%] md:w-[85%] text-right md:ml-10">
+        <p className="text-sm leading-snug tracking-wide text-opacity-100 w-[95%] md:w-[85%] text-right md:ml-10">
           {content}
         </p>
       </div>
