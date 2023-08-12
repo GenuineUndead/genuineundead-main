@@ -129,7 +129,7 @@ const YearBlock = ({ year, isStartEnd }) => {
     >
       <div className="order-1 w-6/12"></div>
       <div className="z-20 flex items-center order-1 min-w-fit dark:bg-white bg-black text-white dark:text-black">
-        <h1 className="text-2xl  border border-black dark:border-white font-teko font-bold leading-none pt-2 pb-1 px-2">
+        <h1 className="text-2xl  border border-black dark:border-white font-teko leading-none pt-2 pb-1 px-2">
           {year}
         </h1>
       </div>
