@@ -7,7 +7,7 @@ import { Parallax } from "react-scroll-parallax";
 import { useTheme } from "next-themes";
 import MobileTimeline from "../components/sections/Timeline/MobileTimeline";
 
-const seoDesc = "";
+const seoDesc = "Timeline of the first year of the Genuine Undead journey.";
 const timeline = () => {
   const router = useRouter();
   const [bodies, setBodies] = useState(null);
