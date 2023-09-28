@@ -44,7 +44,7 @@ const Slider = () => {
       <div className="relative w-full mx-auto h-[550px] flex justify-center max-w-[1024px] px-[1.6rem] lg:px-0">
         <Swiper
           onSwiper={setSwiper}
-          slidesPerView={3}
+          slidesPerView={2}
           spaceBetween={20}
           navigation={{
             prevEl: navigationPrevRef.current,
@@ -54,7 +54,7 @@ const Slider = () => {
           centeredSlides={false}
           breakpoints={{
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
             },
             0: {
               slidesPerView: 1,
