@@ -1,6 +1,9 @@
 const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
+const FROM_ADDRESS = "contact@genuineundead.io";
+const TO_ADDRESS = "thegenuineundead@gmail.com";
+
 export default async function handler(req, res) {
   let { email, subject, message } = req.body;
   if (req.method !== "POST") {
@@ -21,8 +24,8 @@ export default async function handler(req, res) {
 
   try {
     const emailData = {
-      to: "admin@genuineundead.io",
-      from: "contact@genuineundead.io",
+      to: TO_ADDRESS,
+      from: FROM_ADDRESS,
       subject,
       text: emailMessage,
       html: emailMessage.replace(/\r\n/g, "<br />"),
@@ -31,6 +34,7 @@ export default async function handler(req, res) {
     await mail.send(emailData);
     res.status(200).json({ message: "Successfully sent email" });
   } catch (err) {
+    console.log(err.response.body);
     res.status(500).json({ message: err.message });
   }
 }
