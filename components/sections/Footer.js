@@ -18,7 +18,7 @@ const Footer = ({ t }) => {
           <li>
             <a
               className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
-              href="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+              href="https://genuinemarket.io/"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -122,7 +122,7 @@ const Footer = ({ t }) => {
           <li>
             <a
               className="cursor-pointer hover:text-[#ff5277] hover:dark:text-[#ff5277]"
-              href="https://twitter.com/GenuineUndead"
+              href="https://twitter.com/GenuinelyUndead"
               target="_blank"
               rel="noreferrer noopener"
             >
