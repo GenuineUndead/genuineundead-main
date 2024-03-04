@@ -11,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: "/:path*", // Matches all paths
-        destination: "https://genuineundead.com/:path*", // Redirects to the external URL, preserving the path
+        destination: "https://www.genuineundead.com/:path*", // Redirects to the external URL, preserving the path
         permanent: true, // false for temporary redirect (307), true for permanent (308)
       },
     ];
