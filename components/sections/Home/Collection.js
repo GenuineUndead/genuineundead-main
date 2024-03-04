@@ -19,7 +19,7 @@ const Collection = ({ t }) => {
         </h2>
         <MainButton
           ariaLabel="Link to GU Marketplace"
-          link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+          link="https://portal.genuineundead.com/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
         >
           {t("viewCollection")}
         </MainButton>

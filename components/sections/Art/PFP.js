@@ -61,7 +61,7 @@ const PFP = () => {
           <MainButton
             page={true}
             styles=" mb-0"
-            link="https://portal.genuineundead.io/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
+            link="https://portal.genuineundead.com/collections/0x209e639a0EC166Ac7a1A4bA41968fa967dB30221"
           >
             MARKETPLACE
           </MainButton>
@@ -103,7 +103,7 @@ const GUImage = ({ id }) => {
             className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-all duration-300 z-10 inset-0 bg-opacity-75 bg-[#191917] rounded-full"
             onClick={() => {
               window.open(
-                `https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221/tokens/${id}`,
+                `https://portal.genuineundead.com/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221/tokens/${id}`,
                 "_blank"
               );
             }}

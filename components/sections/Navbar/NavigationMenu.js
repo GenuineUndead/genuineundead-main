@@ -9,7 +9,7 @@ import useOutsideClick from "../../../hooks/useOutsideClick";
 const pageLinks = [
   {
     title: "BUY",
-    path: "https://portal.genuineundead.io/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221",
+    path: "https://portal.genuineundead.com/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221",
     i18n: "portal",
     external: true,
   },
