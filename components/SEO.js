@@ -1,7 +1,7 @@
 import React from "react";
 import { NextSeo } from "next-seo";
 
-const baseUrl = "https://www.genuineundead.io/";
+const baseUrl = "https://www.genuineundead.com/";
 
 const SEO = ({ title, description, imagePath, path }) => {
   return (
