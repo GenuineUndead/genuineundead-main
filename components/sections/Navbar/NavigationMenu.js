@@ -8,13 +8,13 @@ import useOutsideClick from "../../../hooks/useOutsideClick";
 //CHANGE -- THESE i18n NEED TO BE IN ALL CAPITALS
 const pageLinks = [
   {
-    title: "BUY",
+    title: "MARKETPLACE",
     path: "https://portal.genuineundead.com/collections/0x209e639a0ec166ac7a1a4ba41968fa967db30221",
     i18n: "portal",
     external: true,
   },
   {
-    title: "MARKETPLACE",
+    title: "MERCH",
     path: "https://genuinemarket.io/",
     i18n: "marketplace",
     external: true,
@@ -22,7 +22,12 @@ const pageLinks = [
   { title: "ART", path: "/art", i18n: "art" },
   { title: "COMMUNITY", path: "/community", i18n: "community" },
   { title: "ETHOS", path: "/ethos", i18n: "ethos" },
-  { title: "STORY", path: "/story", i18n: "story" },
+  {
+    title: "UPGRADE",
+    path: "https://rising.genuineundead.com/",
+    i18n: "upgrade",
+    external: true,
+  },
   { title: "TIMELINE", path: "/timeline", i18n: "timeline" },
   { title: "HOME", path: "/", i18n: "home" },
 ];
