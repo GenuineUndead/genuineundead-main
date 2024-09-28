@@ -46,12 +46,12 @@ const socialLinks = [
   },
   {
     title: "Opensea",
-    link: "https://opensea.io/collection/genuine-undead",
+    link: "https://opensea.io/collection/genuine-undead-v2",
     i18n: "opensea",
   },
   {
-    title: "Club",
-    link: "https://app.theia.club/collective/GenuineUndead/feed",
+    title: "Sorter",
+    link: "https://genuine-sort.vercel.app/",
     i18n: "club",
   },
 ];
