@@ -5,7 +5,6 @@ import { withTranslation } from "next-i18next";
 import Link from "next/link";
 import useOutsideClick from "../../../hooks/useOutsideClick";
 
-//CHANGE -- THESE i18n NEED TO BE IN ALL CAPITALS
 const pageLinks = [
   {
     title: "MARKETPLACE",
