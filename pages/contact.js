@@ -225,7 +225,6 @@ const TwitterContact = ({ info }) => {
               {" "}
               Twitter
             </a>
-            
           </div>
         </div>
       </div>
