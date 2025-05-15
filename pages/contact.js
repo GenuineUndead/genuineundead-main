@@ -225,15 +225,7 @@ const TwitterContact = ({ info }) => {
               {" "}
               Twitter
             </a>
-            <a
-              href={info.linkedin}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="hover:text-[#ff5277] hover:dark:text-[#ff5277] text-[.8rem] md:text-[1rem]"
-            >
-              {" "}
-              LinkedIn
-            </a>
+            
           </div>
         </div>
       </div>
