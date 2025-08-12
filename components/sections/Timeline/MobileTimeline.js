@@ -88,6 +88,87 @@ const MobileTimeline = () => {
           content="GU celebrates a year together.  A year in and, over 95% of the collection has been held for more than a month with one of the most active discord communities in Web 3. GU community widely recognized as the gold standard for welcoming members and being a vibrant Web3 home."
         />
         <Divider />
+
+        <ContentBlock
+          month="DEC"
+          content="1hockeynut announces that the CBA (Community Business Associates) have created a legal entity to protect and hold the Genuine Undead trademarks. Genuine Undead Holding Inc. registered in Delaware, USA. And the Genuine Art Foundation, Inc., a non-profit, registered in Florida, USA. The Genuine Marketplace is announced where community members can apply to become vendors."
+        />
+        <Divider />
+
+        <YearBlock year="2024" />
+        <Divider />
+
+        <ContentBlock
+          month="JAN"
+          content="Undead 2043 officially launches and sells out 667 NFTs in 3 days."
+        />
+        <Divider />
+
+        <ContentBlock
+          month="MAR"
+          content="Chris Partlow unveils the Undead Digital Museum, a virtual gallery crafted to pay a vibrant tribute to our extraordinary artists. It showcases over one hundred stunning pieces, promising an immersive experience for all digital art enthusiasts."
+        />
+        <Divider />
+
+        <ContentBlock
+          month="APR"
+          content="First Townhall on Genuine Rising held (an initiative and a platform to migrate GU's to a new contract, including moving onchain); GU World GUp and NYC Meetup."
+        />
+        <Divider />
+
+        <ContentBlock
+          month="MAY"
+          content="Contract for Genuine Rising signed."
+        />
+        <Divider />
+
+        <ContentBlock
+          month="JUL"
+          content="Genuine Superlatives announced by Olga."
+        />
+        <Divider />
+
+        <ContentBlock
+          month="AUG"
+          content="Genuine Undead announced as a licensed trademark. GU celebrates second year!"
+        />
+        <Divider />
+
+        <ContentBlock
+          month="SEP"
+          content="Genuine Rising is launched. GU V2 (Genuine Rising) verified on OS and Magic Eden. Discord upgraded including $Bones system via Drip revamped."
+        />
+        <Divider />
+
+        <ContentBlock month="OCT" content="Undead Comics goes live." />
+        <Divider />
+
+        <ContentBlock
+          month="NOV"
+          content="Next chapter of GU announced with new CBA members."
+        />
+        <Divider />
+
+        <YearBlock year="2025" />
+        <Divider />
+
+        <ContentBlock
+          month="APR"
+          content="Forever Undead (on APE Chain) launches and mints out in a couple of hours."
+        />
+        <Divider />
+
+        <ContentBlock
+          month="JUN"
+          content="Genuine Undead achieve 5,000 NFTs migrated from GU Origin through the Genuine Rising Initiative."
+        />
+        <Divider />
+
+        <ContentBlock
+          month="JUL"
+          content="Genuine Undead receives its trademark."
+        />
+        <Divider />
       </div>
       <YearBlock year="To Be Continued" />
     </div>
