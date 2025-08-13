@@ -80,8 +80,8 @@ const contact = () => {
           <i>ACT</i>
         </h1>
         <div className="flex flex-col w-full">
-          <div className="w-full flex flex-col md:flex-row mb-[50px] lg:mb-[100px]">
-            <div className="w-[90%] md:w-[50%]">
+          <div className="w-full flex flex-col  mb-[50px] lg:mb-[100px]">
+            <div className="w-[90%] md:w-[50%] md:mx-auto">
               <form
                 className="p-8 w-full md:w-[80%] mx-auto flex flex-col gap-[1.25rem]"
                 method="post"
@@ -129,8 +129,8 @@ const contact = () => {
                     placeholder="Message"
                   ></textarea>
                 </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-col justify-center items-start gap-[.5rem] h-full">
+                <div className="flex flex-col md:flex-row items-center md:justify-between gap-2 w-full">
+                  <div className="flex flex-col justify-center items-start gap-[.5rem] h-full ">
                     <button
                       className={`border border-black dark:border-white py-[12px] px-[20px] text-[.9rem] w-[180px] hover:border-[#ff5277] hover:dark:border-[#ff5277] rounded-full transition-all duration-300`}
                       type="submit"
@@ -163,13 +163,6 @@ const contact = () => {
                   </div>
                 </div>
               </form>
-            </div>
-            <div className="flex flex-col w-[90%] md:w-[50%] items-center justify-start h-full">
-              <div className="flex flex-col gap-[3.5rem] my-[50px]">
-                {twitterContact.map((contact) => {
-                  return <TwitterContact key={contact.handle} info={contact} />;
-                })}
-              </div>
             </div>
           </div>
           <div className="md:w-full h-[300px] bg-[url('/born-undead.jpeg')] bg-center bg-cover relative overflow-hidden flex justify-center "></div>
